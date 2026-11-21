@@ -11,15 +11,10 @@ The operating system uses a **CPU scheduler** to decide which task should run.
 CPU scheduling helps the operating system:
 
 - Use CPU resources efficiently.
-    
 - Improve system responsiveness.
-    
 - Reduce waiting time.
-    
 - Share CPU time among processes.
-    
 - Manage multiple running applications.
-    
 
 ## 3. Process States and Scheduling
 
@@ -145,15 +140,10 @@ CPU scheduling is relevant to security and system reliability.
 Important considerations:
 
 - **Resource exhaustion:** Too many CPU-intensive tasks can reduce system availability.
-    
 - **Denial of Service:** Attackers may attempt to consume CPU resources.
-    
 - **Priority abuse:** Incorrect or excessive priority settings can affect system responsiveness.
-    
 - **Starvation:** A task may receive insufficient CPU time.
-    
 - **Real-time requirements:** Some security and industrial systems require predictable response times.
-    
 
 ## 10. Practical Lab — Observe CPU Activity
 
@@ -201,17 +191,11 @@ These commands inspect process information. They do not change scheduling priori
 ## 11. Practical Tasks
 
 1. Run `top` in Kali Linux.
-    
 2. Identify three processes using CPU resources.
-    
 3. Run `Get-Process` in PowerShell.
-    
 4. Compare the CPU usage information shown by both systems.
-    
 5. Explain why Round Robin scheduling is useful for interactive systems.
-    
 6. Explain what starvation means.
-    
 
 ## 12. My Understanding
 
