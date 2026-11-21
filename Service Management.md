@@ -7,15 +7,10 @@ A service can run without requiring a user to interact with it directly.
 Examples:
 
 - Windows Update
-    
 - Windows Defender services
-    
 - SSH service
-    
 - Web server services
-    
 - Database services
-    
 
 ## 2. What Is a Service?
 
