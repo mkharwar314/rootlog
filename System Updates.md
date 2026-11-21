@@ -5,17 +5,11 @@ System updates are changes released by operating system developers to improve se
 Updates may include:
 
 - Security patches.
-    
 - Bug fixes.
-    
 - Driver updates.
-    
 - Feature improvements.
-    
 - Performance improvements.
-    
 - Compatibility updates.
-    
 
 ## 2. Why Are System Updates Important?
 
