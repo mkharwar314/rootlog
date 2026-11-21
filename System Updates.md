@@ -22,17 +22,11 @@ Updates may include:
 System updates help to:
 
 - Fix known security vulnerabilities.
-    
 - Protect against newly discovered threats.
-    
 - Improve operating system stability.
-    
 - Correct software bugs.
-    
 - Maintain compatibility.
-    
 - Improve system performance.
-    
 
 ## 3. Types of System Updates
 
@@ -65,24 +59,16 @@ Windows Update is Microsoft's update mechanism for Windows.
 It can provide:
 
 - Security updates.
-    
 - Cumulative updates.
-    
 - Feature updates.
-    
 - Driver updates.
-    
 
 ### Open Windows Update
 
 1. Open Settings.
-    
 2. Select Windows Update.
-    
 3. Check the update status.
-    
 4. Review update history.
-    
 
 ### PowerShell Commands
 
@@ -152,19 +138,12 @@ Patch management is the process of identifying, testing, deploying, and verifyin
 A typical patch management process:
 
 1. Identify installed software and versions.
-    
 2. Check for available patches.
-    
 3. Evaluate security importance.
-    
 4. Test updates where appropriate.
-    
 5. Deploy updates.
-    
 6. Verify successful installation.
-    
 7. Monitor for unexpected issues.
-    
 
 ## 7. What Is a Security Vulnerability?
 
@@ -181,34 +160,21 @@ Outdated systems can expose organizations to known vulnerabilities.
 Security considerations include:
 
 - Missing security patches.
-    
 - Unsupported operating systems.
-    
 - Vulnerable third-party applications.
-    
 - Delayed critical updates.
-    
 - Unverified software packages.
-    
 - Failed update installations.
-    
 
 ### Security Best Practices
 
 - Install security updates promptly.
-    
 - Use supported operating systems.
-    
 - Review update history.
-    
 - Back up important data.
-    
 - Download updates from trusted sources.
-    
 - Test critical updates before broad deployment in enterprise environments.
-    
 - Maintain an update inventory.
-    
 
 ## 9. Practical Lab — Inspect Update Status
 
@@ -260,17 +226,11 @@ These are inspection tasks. Do not upgrade packages as part of this lab.
 ## 10. Practical Tasks
 
 1. Identify your Windows version and build number.
-    
 2. List the latest installed Windows hotfixes.
-    
 3. Identify your Kali Linux version.
-    
 4. List upgradeable packages in Kali.
-    
 5. Explain the difference between `apt update` and `apt upgrade`.
-    
 6. Explain why security patches are important.
-    
 
 Record your observations in your notebook.
 
@@ -279,17 +239,11 @@ Record your observations in your notebook.
 Answer in your own words:
 
 1. What are system updates?
-    
 2. What is a security patch?
-    
 3. What is patch management?
-    
 4. What is the difference between a feature update and a security update?
-    
 5. What is the difference between `apt update` and `apt upgrade`?
-    
 6. Why are unsupported operating systems risky?
-    
 
 ## 12. Related Notes
 
