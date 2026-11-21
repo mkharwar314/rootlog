@@ -11,19 +11,12 @@ Every user account is associated with an identity that the operating system uses
 It helps administrators:
 
 - Control access to systems.
-    
 - Assign permissions.
-    
 - Separate user activities.
-    
 - Protect sensitive information.
-    
 - Manage administrative privileges.
-    
 - Disable unused accounts.
-    
 - Monitor account activity.
-    
 
 ## 3. Types of User Accounts
 
@@ -34,11 +27,8 @@ A standard user can perform everyday tasks but has limited administrative permis
 Examples:
 
 - Browsing the internet.
-    
 - Running applications.
-    
 - Creating personal files.
-    
 
 ### B. Administrator
 
@@ -47,13 +37,9 @@ An administrator has elevated privileges to perform system-level operations.
 Examples:
 
 - Installing software.
-    
 - Managing users.
-    
 - Changing system configurations.
-    
 - Managing services.
-    
 
 **Security principle:** Use a standard account for everyday work and elevate privileges only when necessary.
 
@@ -86,13 +72,9 @@ Windows provides several tools for managing user accounts.
 ### A. Computer Management
 
 1. Press `Win + R`.
-    
 2. Enter `compmgmt.msc`.
-    
 3. Open Local Users and Groups.
-    
 4. Select Users.
-    
 
 You can inspect local accounts and groups.
 
@@ -178,19 +160,12 @@ Access to sensitive account files is restricted.
 Good account management practices include:
 
 - Use strong, unique passwords.
-    
 - Enable multi-factor authentication where supported.
-    
 - Avoid sharing accounts.
-    
 - Disable unused accounts.
-    
 - Review administrator membership.
-    
 - Follow the principle of least privilege.
-    
 - Monitor suspicious login activity.
-    
 
 ## 9. Common Security Risks
 
@@ -241,11 +216,8 @@ Get-LocalGroupMember -Group "Administrators"
 Record:
 
 - Number of local user accounts.
-    
 - Names of local groups.
-    
 - Members of the Administrators group.
-    
 
 ### Lab B: Kali Linux
 
@@ -276,28 +248,18 @@ getent group
 Record:
 
 - Your current username.
-    
 - Your user ID (UID).
-    
 - Your primary group ID (GID).
-    
 - Some group names present on your system.
-    
 
 ## 11. Practical Tasks
 
 1. Inspect local users in Windows.
-    
 2. Identify the Windows administrator account.
-    
 3. Inspect local groups.
-    
 4. Identify your current Kali Linux user.
-    
 5. Find your UID and GID.
-    
 6. Compare Windows and Linux account management.
-    
 
 Do not create, delete, or modify accounts during this introductory lab.
 
@@ -306,36 +268,22 @@ Do not create, delete, or modify accounts during this introductory lab.
 Answer in your own words:
 
 1. What is user account management?
-    
 2. What is the difference between a standard user and an administrator?
-    
 3. What is the difference between a local account and a domain account?
-    
 4. What information is stored in `/etc/passwd`?
-    
 5. Why should administrator privileges be limited?
-    
 6. What is the principle of least privilege?
-    
 
 ## 13. Related Notes
 
 - [[Windows Users and Groups]]
-    
 - [[Linux Users and Groups]]
-    
 - [[Windows Permissions]]
-    
 - [[Linux Permissions]]
-    
 - [[Privilege Management]]
-    
 - [[Access Control]]
-    
 - [[Active Directory]]
-    
 - [[Operating System Security]]
-    
 
 ---
 
