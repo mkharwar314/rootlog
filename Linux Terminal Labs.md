@@ -132,15 +132,10 @@ Deletes the copy.
 ### Tasks
 
 1. Create a text file.
-    
 2. Write two lines.
-    
 3. Display its contents.
-    
 4. Copy and rename the file.
-    
 5. Delete only the copy.
-    
 
 ## 4. Lab 03 — System Information
 
@@ -197,17 +192,11 @@ Displays system uptime and load averages.
 Record:
 
 - Hostname.
-    
 - Linux distribution.
-    
 - Kernel version.
-    
 - CPU architecture.
-    
 - Total memory.
-    
 - Available disk space.
-    
 
 ## 5. Lab 04 — User and Group Management
 
@@ -256,13 +245,9 @@ Displays the root account entry.
 ### Tasks
 
 1. Identify your current user.
-    
 2. Record your UID and GID.
-    
 3. Identify your groups.
-    
 4. Inspect the root account entry.
-    
 
 ## 6. Lab 05 — File Permissions
 
@@ -313,13 +298,9 @@ Example:
 ### Tasks
 
 1. Create a test file.
-    
 2. Inspect its permissions.
-    
 3. Identify its owner and group.
-    
 4. Explain the meaning of `r`, `w`, and `x`.
-    
 
 Do not change permissions on system files.
 
@@ -370,13 +351,9 @@ Displays memory usage.
 ### Tasks
 
 1. Display running processes.
-    
 2. Identify three process names.
-    
 3. Record their PIDs.
-    
 4. Identify a process using significant CPU or memory resources.
-    
 
 ## 8. Lab 07 — Service Management
 
@@ -413,13 +390,9 @@ Lists installed service unit files and their enablement states.
 ### Tasks
 
 1. List running services.
-    
 2. Inspect the SSH service.
-    
 3. Record its current state.
-    
 4. Research the purpose of one running service.
-    
 
 Do not stop or disable services during this exercise.
 
@@ -476,15 +449,10 @@ Looks up a hostname using configured name-service sources.
 ### Tasks
 
 1. Identify your IPv4 address.
-    
 2. Identify your default gateway.
-    
 3. Inspect network interfaces.
-    
 4. Identify listening ports.
-    
 5. Test loopback connectivity.
-    
 
 ## 10. Lab 09 — Package Management
 
@@ -527,13 +495,9 @@ Lists packages with available upgrades.
 ### Tasks
 
 1. Search for Nmap.
-    
 2. Inspect its package information.
-    
 3. Identify the installed version, if installed.
-    
 4. Check whether updates are available.
-    
 
 Do not install or remove packages during this inspection lab.
 
@@ -578,13 +542,9 @@ Searches journal entries for selected authentication-related terms.
 ### Tasks
 
 1. Display recent system logs.
-    
 2. Inspect current boot logs.
-    
 3. Review login history.
-    
 4. Identify one warning or authentication-related event.
-    
 
 ## 12. Lab 11 — Basic Security Inspection
 
@@ -633,15 +593,10 @@ Lists running services.
 ### Tasks
 
 1. Identify your current user.
-    
 2. Review sudo permissions.
-    
 3. Inspect listening ports.
-    
 4. Check firewall status.
-    
 5. Identify running services.
-    
 
 ## 13. Lab 12 — Basic Bash Scripting
 
@@ -692,13 +647,9 @@ Execute it:
 ### Tasks
 
 1. Create the script.
-    
 2. Execute it.
-    
 3. Understand every command.
-    
 4. Add a command that displays your IP addresses.
-    
 
 ## 14. Lab Documentation Template
 
@@ -731,42 +682,26 @@ What do I still need to understand?
 ## 15. Learning Principles
 
 - Understand commands before executing them.
-    
 - Use test files for file-management exercises.
-    
 - Avoid unnecessary root privileges.
-    
 - Do not execute unknown scripts.
-    
 - Record important observations.
-    
 - Compare Linux commands with Windows CMD and PowerShell.
-    
 - Practice in an authorized lab environment.
-    
 
 ## Related Notes
 
 - [[02 - Operating Systems]]
-    
 - [[Introduction to Linux]]
-    
 - [[Linux Commands]]
-    
 - [[Linux Users and Groups]]
-    
 - [[Linux Permissions]]
-    
 - [[Linux Processes]]
-    
 - [[Linux Services]]
-    
 - [[Linux Package Management]]
-    
 - [[Operating System Security]]
-    
 - [[Windows PowerShell Labs]]
-    
 - [[Windows CMD Labs]]
-    
 - [[07 - Practical Labs]]
+
+---
