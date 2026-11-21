@@ -65,15 +65,10 @@ Updates often include:
 ### 4. Secure User Accounts
 
 - Use strong passwords.
-    
 - Disable unused accounts.
-    
 - Avoid shared administrator accounts.
-    
 - Apply least privilege.
-    
 - Review account permissions.
-    
 
 ### 5. Configure Firewall Rules
 
@@ -92,15 +87,10 @@ Users should receive only the permissions required for their work.
 Use available security mechanisms such as:
 
 - Antivirus or endpoint protection.
-    
 - Disk encryption.
-    
 - Secure Boot.
-    
 - Host-based firewalls.
-    
 - Security auditing.
-    
 
 ## 4. Windows System Hardening
 
@@ -151,21 +141,13 @@ This command may not show every installed application, including some per-user o
 Important Linux security practices include:
 
 - Restrict root access.
-    
 - Use sudo appropriately.
-    
 - Configure file permissions.
-    
 - Disable unnecessary services.
-    
 - Apply package updates.
-    
 - Configure a firewall.
-    
 - Monitor system logs.
-    
 - Secure remote access.
-    
 
 Useful Kali Linux commands:
 
@@ -224,19 +206,12 @@ Organizations often use security benchmarks such as CIS Benchmarks to establish 
 ## 7. Common System Hardening Mistakes
 
 - Disabling services without understanding their purpose.
-    
 - Applying firewall rules without checking required connectivity.
-    
 - Giving users unnecessary administrator privileges.
-    
 - Ignoring application updates.
-    
 - Disabling antivirus to improve performance.
-    
 - Applying random security commands from the internet.
-    
 - Changing configurations without recording the original settings.
-    
 
 **Important:** Hardening should be planned and tested. An incorrect configuration can break system functionality.
 
@@ -256,13 +231,9 @@ whoami /groups
 Record:
 
 - Firewall status.
-    
 - Antivirus status.
-    
 - Number of running services.
-    
 - Your account's group memberships.
-    
 
 ### Kali Linux
 
@@ -276,62 +247,39 @@ id
 Record:
 
 - Listening ports.
-    
 - Running services.
-    
 - Firewall status.
-    
 - Current user and groups.
-    
 
 ## 9. Key Takeaways
 
 - System hardening reduces security weaknesses.
-    
 - Attack surface represents possible entry points into a system.
-    
 - Unnecessary services and software increase exposure.
-    
 - Secure permissions and account management are essential.
-    
 - Firewalls and security updates help protect systems.
-    
 - Hardening must preserve required system functionality.
-    
 
 ## 10. Questions to Understand
 
 1. What is System Hardening?
-    
 2. What is an attack surface?
-    
 3. Why should unnecessary services be disabled?
-    
 4. What is a security baseline?
-    
 5. How does a firewall help protect an operating system?
-    
 6. Why should system configuration changes be tested?
-    
 
 ## Related Notes
 
 - [[Operating System Security]]
-    
 - [[Access Control]]
-    
 - [[Privilege Management]]
-    
 - [[Patch Management]]
-    
 - [[Security Auditing]]
-    
 - [[Windows Services]]
-    
 - [[Linux Services]]
-    
 - [[System Configuration]]
-    
 - [[System Updates]]
-    
 - [[07 - Practical Labs]]
+
+---
