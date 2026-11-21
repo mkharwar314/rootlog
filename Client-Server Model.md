@@ -44,13 +44,9 @@ The network provides the communication path between clients and servers.
 It may use:
 
 - Ethernet.
-    
 - Wi-Fi.
-    
 - The Internet.
-    
 - Private organizational networks.
-    
 
 ## 3. How Client-Server Communication Works
 
@@ -74,19 +70,12 @@ Consider opening a website.
 ### Communication steps
 
 1. The user enters a website address.
-    
 2. The browser obtains the server's IP address through DNS if needed.
-    
 3. The client establishes the required network communication.
-    
 4. The browser sends an HTTP or HTTPS request.
-    
 5. The server processes the request.
-    
 6. The server returns a response.
-    
 7. The browser displays the received content.
-    
 
 This is a simplified example. Real applications may involve proxies, load balancers, CDNs, application servers, and databases.
 
@@ -106,30 +95,19 @@ This is a simplified example. Real applications may involve proxies, load balanc
 ## 5. Advantages of Client-Server Architecture
 
 - Centralized data management.
-    
 - Easier administration.
-    
 - Centralized authentication and authorization.
-    
 - Resources can be shared between multiple clients.
-    
 - Security policies can be managed centrally.
-    
 - Suitable for large organizations.
-    
 
 ## 6. Disadvantages
 
 - Server failure can interrupt services.
-    
 - Requires maintenance and administration.
-    
 - Infrastructure can be expensive.
-    
 - A server can become a performance bottleneck.
-    
 - Centralized servers can become attractive attack targets.
-    
 
 Organizations use backups, redundancy, monitoring, and load balancing to reduce these risks.
 
@@ -163,13 +141,9 @@ Client-server applications use protocols to communicate.
 Related notes:
 
 - [[Network Protocols]]
-    
 - [[TCP Protocol]]
-    
 - [[UDP Protocol]]
-    
 - [[HTTP and HTTPS]]
-    
 
 ## 9. Client-Server Security
 
@@ -178,38 +152,23 @@ Client-server systems face several security risks.
 ### Common risks
 
 - Unauthorized access.
-    
 - Weak authentication.
-    
 - SQL injection.
-    
 - Cross-site scripting.
-    
 - Denial-of-service attacks.
-    
 - Insecure communication.
-    
 - Server misconfiguration.
-    
 
 ### Security controls
 
 - Strong authentication.
-    
 - Access control.
-    
 - HTTPS and TLS.
-    
 - Input validation.
-    
 - Secure server configuration.
-    
 - Regular patching.
-    
 - Network firewalls.
-    
 - Logging and monitoring.
-    
 
 ## 10. Practical Observation
 
@@ -255,47 +214,30 @@ This demonstrates a client sending a request and receiving a server response.
 Write your own explanations:
 
 - What is a client?
-    
 - What is a server?
-    
 - How does a browser communicate with a web server?
-    
 - What is the difference between a request and a response?
-    
 - Why is centralized authentication useful?
-    
 - What security risks affect client-server systems?
-    
 
 ## 12. Questions & Doubts
 
 - Can one computer act as both client and server?
-    
 - Can a server communicate with another server?
-    
 - What happens when a server becomes unavailable?
-    
 - How does HTTPS protect client-server communication?
-    
 - Why do websites use load balancers?
-    
 
 ## Related Notes
 
 - [[Introduction to Computer Networking]]
-    
 - [[Network Architecture]]
-    
 - [[Peer-to-Peer Model]]
-    
 - [[Network Protocols]]
-    
 - [[HTTP and HTTPS]]
-    
 - [[DNS Protocol]]
-    
 - [[TCP Protocol]]
-    
 - [[Network Security]]
-    
 - [[03 - Networking]]
+
+---
