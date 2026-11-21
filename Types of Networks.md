@@ -78,18 +78,13 @@ A Metropolitan Area Network connects networks across a city or metropolitan regi
 **Examples:**
 
 - A university connecting multiple campuses across a city.
-    
 - A city's interconnected institutional network.
-    
 
 **Characteristics:**
 
 - Larger coverage than a LAN.
-    
 - Smaller geographical scope than a typical WAN.
-    
 - May connect multiple LANs.
-    
 
 **Cybersecurity relevance:** Multiple connected locations increase the importance of centralized monitoring, access control, and secure communication links.
 
@@ -100,29 +95,20 @@ A Wide Area Network connects devices and smaller networks across large geographi
 **Examples:**
 
 - A company connecting offices in different countries.
-    
 - Networks connecting branches across India.
-    
 - The Internet.
-    
 
 **Characteristics:**
 
 - Covers large geographical areas.
-    
 - Connects multiple LANs and other networks.
-    
 - May use leased lines, fiber-optic links, satellite links, and other technologies.
-    
 
 **Cybersecurity relevance:**
 
 - Secure communication between locations is important.
-    
 - VPNs can protect traffic across untrusted networks.
-    
 - Firewalls and network monitoring help manage security risks.
-    
 
 ## 7. Comparison of Network Types
 
@@ -141,13 +127,9 @@ Note: WLAN is a wireless form of LAN, rather than a separate geographical scale.
 Consider a college with three buildings.
 
 - Computers inside one laboratory communicate through a LAN.
-    
 - Students connect through Wi-Fi using a WLAN.
-    
 - Different college campuses across the city may be connected through a MAN.
-    
 - The college connects to external websites through an Internet service provider and the wider WAN infrastructure.
-    
 
 ## 9. Practical Understanding
 
@@ -156,13 +138,9 @@ Think about your own home network.
 Identify:
 
 1. Devices connected to your Wi-Fi.
-    
 2. Whether devices use Ethernet or wireless connections.
-    
 3. The router connecting your devices to the Internet.
-    
 4. Whether Bluetooth devices form a PAN.
-    
 
 On Windows, inspect network interfaces:
 
@@ -183,39 +161,26 @@ These commands help identify network interfaces, but they do not independently d
 Write your own explanations:
 
 - What is PAN?
-    
 - What is the difference between LAN and WAN?
-    
 - How is WLAN related to LAN?
-    
 - Why do organizations use MAN?
-    
 - Why is network classification useful in cybersecurity?
-    
 
 ## 11. Questions & Doubts
 
 - Can multiple LANs form a WAN?
-    
 - Can a home network contain both wired and wireless devices?
-    
 - Why is the Internet considered a network of networks?
-    
 - What security controls are important for a WAN?
-    
 
 ## Related Notes
 
 - [[Introduction to Computer Networking]]
-    
 - [[Network Topologies]]
-    
 - [[Network Devices]]
-    
 - [[Network Architecture]]
-    
 - [[OSI Model]]
-    
 - [[Network Security]]
-    
 - [[03 - Networking]]
+
+---
