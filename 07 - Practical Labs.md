@@ -18,7 +18,7 @@
 
 - [[Linux Labs]]
 - [[Windows Labs]]
-- [[PowerShell Labs]]
+- [[Windows PowerShell Labs]]
 
 ## 04. Cybersecurity Labs
 

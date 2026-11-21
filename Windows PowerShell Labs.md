@@ -467,13 +467,9 @@ Do not weaken system-wide execution policies just to run this beginner exercise.
 ### Tasks
 
 1. Create the script.
-    
 2. Execute it.
-    
 3. Understand each command.
-    
 4. Add a command that displays your computer's IP configuration.
-    
 
 ## 12. Lab Documentation Template
 
@@ -508,38 +504,24 @@ What do I still need to understand?
 ## 13. Learning Principles
 
 - Understand commands before executing them.
-    
 - Prefer read-only inspection before making changes.
-    
 - Use administrator privileges only when necessary.
-    
 - Never run unknown scripts without reviewing them.
-    
 - Record important commands and observations.
-    
 - Repeat exercises until you can explain the results.
-    
 
 ## Related Notes
 
 - [[02 - Operating Systems]]
-    
 - [[Windows Architecture]]
-    
 - [[Windows Commands]]
-    
 - [[Windows Users and Groups]]
-    
 - [[Windows Permissions]]
-    
 - [[Windows Services]]
-    
 - [[Windows Processes]]
-    
 - [[Windows Event Logs]]
-    
 - [[System Administration]]
-    
 - [[Operating System Security]]
-    
 - [[07 - Practical Labs]]
+
+---
