@@ -240,49 +240,31 @@ Some commands may show different results depending on your account and system co
 ## 10. Key Takeaways
 
 - Privileges determine what operations users and processes can perform.
-    
 - Administrators and root users have elevated permissions.
-    
 - Windows uses UAC, security tokens, and groups.
-    
 - Linux uses root, sudo, users, and groups.
-    
 - Privilege escalation can be vertical or horizontal.
-    
 - Least privilege reduces the impact of compromised accounts.
-    
 
 ## 11. Questions to Understand
 
 1. What is Privilege Management?
-    
 2. What is the difference between a standard user and an administrator?
-    
 3. Explain vertical and horizontal privilege escalation.
-    
 4. What is UAC?
-    
 5. What is the purpose of sudo?
-    
 6. Explain the Principle of Least Privilege.
-    
 
 ## Related Notes
 
 - [[Operating System Security]]
-    
 - [[Access Control]]
-    
 - [[System Hardening]]
-    
 - [[User Account Management]]
-    
 - [[Windows Users and Groups]]
-    
 - [[Linux Users and Groups]]
-    
 - [[Windows Permissions]]
-    
 - [[Linux Permissions]]
-    
 - [[05 - Active Directory]]
+
+---
