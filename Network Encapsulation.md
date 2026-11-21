@@ -1,5 +1,3 @@
-# Network Encapsulation
-
 > Network encapsulation is the process of adding protocol-related information to data as it moves down the network layers before transmission.
 
 ## 1. What Is Encapsulation?
@@ -13,15 +11,10 @@ This process is called **encapsulation**.
 For example, when a computer sends a request to a web server:
 
 1. The Application layer creates the data.
-    
 2. The Transport layer adds a TCP or UDP header.
-    
 3. The Internet layer adds an IP header.
-    
 4. The Network Access layer adds a frame header and trailer where applicable.
-    
 5. The physical medium transmits the resulting bits.
-    
 
 ## 2. Encapsulation Process
 
@@ -67,11 +60,8 @@ The application creates the data.
 Example:
 
 - HTTP request
-    
 - DNS query
-    
 - Email message
-    
 
 At this stage, we simply call it application data.
 
@@ -82,33 +72,22 @@ The Transport layer adds a transport header.
 For TCP, the header can contain:
 
 - Source port
-    
 - Destination port
-    
 - Sequence number
-    
 - Acknowledgment number
-    
 - Control flags
-    
 
 For UDP, the header contains:
 
 - Source port
-    
 - Destination port
-    
 - Length
-    
 - Checksum
-    
 
 The result is:
 
 - TCP segment
-    
 - UDP datagram
-    
 
 ### Layer 3 — Internet
 
@@ -117,13 +96,9 @@ The Internet layer adds an IP header.
 An IPv4 header contains information such as:
 
 - Source IP address
-    
 - Destination IP address
-    
 - Time To Live (TTL)
-    
 - Protocol field
-    
 
 The result is an IP packet.
 
@@ -134,15 +109,10 @@ The Network Access layer prepares the packet for transmission over a local netwo
 An Ethernet frame commonly contains:
 
 - Destination MAC address
-    
 - Source MAC address
-    
 - EtherType
-    
 - Payload
-    
 - Frame Check Sequence (FCS)
-    
 
 The result is an Ethernet frame.
 
@@ -155,11 +125,8 @@ The frame is transmitted as bits through a physical or wireless medium.
 Examples:
 
 - Electrical signals through copper cables
-    
 - Light through fibre-optic cables
-    
 - Radio waves through Wi-Fi
-    
 
 ## 4. Example: Sending an HTTP Request
 
@@ -205,15 +172,10 @@ Encapsulation allows different networking protocols to work together.
 It helps with:
 
 - Identifying source and destination systems.
-    
 - Delivering data to the correct application.
-    
 - Routing packets between networks.
-    
 - Delivering frames across local network links.
-    
 - Detecting certain transmission errors.
-    
 
 ## 7. Encapsulation and Cybersecurity
 
@@ -222,28 +184,18 @@ Understanding encapsulation is essential for network security.
 It helps security professionals:
 
 - Inspect packet headers using Wireshark.
-    
 - Identify source and destination IP addresses.
-    
 - Identify TCP and UDP ports.
-    
 - Analyze suspicious network traffic.
-    
 - Understand packet manipulation.
-    
 - Investigate network attacks.
-    
 
 Examples of security concepts:
 
 - IP spoofing
-    
 - TCP SYN scanning
-    
 - Packet sniffing
-    
 - Packet injection
-    
 
 ## 8. Practical Lab — Observe Encapsulation with Wireshark
 
@@ -280,11 +232,8 @@ Expand the packet details.
 Look for:
 
 - Ethernet II
-    
 - Internet Protocol Version 4
-    
 - Internet Control Message Protocol
-    
 
 **Observation:** ICMP is carried directly inside IP rather than inside TCP or UDP. This is an important exception to the simplified web-request example.
 
@@ -293,64 +242,41 @@ Look for:
 Write down:
 
 - Source MAC address
-    
 - Destination MAC address
-    
 - Source IP address
-    
 - Destination IP address
-    
 - Protocol identified
-    
 
 ## 9. Key Takeaways
 
 - Encapsulation prepares data for network transmission.
-    
 - Each layer adds protocol-related information.
-    
 - Transport adds TCP or UDP information.
-    
 - Internet adds IP information.
-    
 - Network Access adds link-layer framing information.
-    
 - Physical transmission carries bits.
-    
 - Wireshark helps inspect packet structure.
-    
 
 ## 10. My Understanding
 
 Write your own explanation:
 
 - What is network encapsulation?
-    
 - Why are headers added?
-    
 - What is the difference between a segment and a packet?
-    
 - What information is found in an IP header?
-    
 - How does Wireshark help analyze encapsulation?
-    
 
 ## Related Notes
 
 - [[OSI Model]]
-    
 - [[TCP-IP Model]]
-    
 - [[OSI vs TCP-IP]]
-    
 - [[Network Decapsulation]]
-    
 - [[TCP Protocol]]
-    
 - [[UDP Protocol]]
-    
 - [[IPv4 Addressing]]
-    
 - [[Wireshark]]
-    
 - [[Packet Analysis]]
+
+---
