@@ -13,15 +13,10 @@ The operating system and CPU work together to translate virtual addresses into p
 Virtual memory provides several advantages:
 
 - Each process gets its own virtual address space.
-    
 - Processes are isolated from one another.
-    
 - Programs can use more memory than the currently available physical RAM.
-    
 - Memory can be managed more efficiently.
-    
 - The operating system can control access to memory.
-    
 
 ## 3. Virtual Memory vs Physical Memory
 
@@ -37,15 +32,10 @@ Virtual memory provides several advantages:
 Consider a program accessing a memory address.
 
 1. The program generates a virtual address.
-    
 2. The CPU's Memory Management Unit (MMU) translates the address.
-    
 3. Page tables help map virtual addresses to physical memory.
-    
 4. The required data is accessed from physical RAM.
-    
 5. If the required page is not currently in RAM, a page fault may occur.
-    
 
 ### Basic Architecture
 
@@ -74,9 +64,7 @@ Consider a program accessing a memory address.
 Paging is a memory management technique that divides:
 
 - Virtual memory into fixed-size blocks called pages.
-    
 - Physical memory into fixed-size blocks called frames.
-    
 
 A page can be mapped to a physical frame.
 
@@ -91,13 +79,9 @@ The operating system manages page tables, while the CPU's MMU uses them during a
 A page table entry may contain:
 
 - Physical frame information.
-    
 - Present or valid status.
-    
 - Read/write permissions.
-    
 - User or supervisor access permissions.
-    
 
 ## 7. Page Fault
 
@@ -108,15 +92,10 @@ For example, the page may not currently be resident in physical RAM.
 The operating system handles the fault. Depending on the situation, it may:
 
 1. Validate the memory access.
-    
 2. Locate the required page.
-    
 3. Load the page into RAM if necessary.
-    
 4. Update the relevant page-table information.
-    
 5. Resume execution.
-    
 
 **Important:** Not every page fault is an error. Page faults are a normal part of virtual memory operation.
 
