@@ -1,72 +1,201 @@
-> Connect. Communicate. Analyze. Secure.
+> Understand how computers communicate, how networks operate, and how network security protects digital systems.
 
-## Overview
-
-Computer networking is the process of connecting computers and devices to share information and resources.
-
-## 01. Networking Fundamentals
+## 1. Networking Fundamentals
 
 - [[Introduction to Computer Networking]]
+    
 - [[Types of Networks]]
+    
 - [[Network Topologies]]
+    
+- [[Network Devices]]
+    
+- [[Network Architecture]]
+    
+- [[Client-Server Model]]
+    
+- [[Peer-to-Peer Model]]
+    
+
+## 2. Network Models
+
 - [[OSI Model]]
+    
 - [[TCP-IP Model]]
+    
+- [[OSI vs TCP-IP]]
+    
+- [[Network Encapsulation]]
+    
+- [[Network Decapsulation]]
+    
 
-## 02. Network Addressing
+## 3. IP Addressing and Subnetting
 
-- [[IP Address]]
-- [[IPv4 and IPv6]]
-- [[MAC Address]]
+- [[Introduction to IP Addressing]]
+    
+- [[IPv4 Addressing]]
+    
+- [[IPv6 Addressing]]
+    
+- [[Public and Private IP Addresses]]
+    
+- [[Static and Dynamic IP Addresses]]
+    
 - [[Subnetting]]
+    
+- [[CIDR Notation]]
+    
+- [[Subnet Masks]]
+    
 - [[Default Gateway]]
+    
+- [[MAC Address]]
+    
+- [[ARP Protocol]]
+    
 
-## 03. Network Protocols
+## 4. Network Protocols and Ports
 
-- [[TCP and UDP]]
-- [[DNS]]
-- [[DHCP]]
+- [[Introduction to Network Protocols]]
+    
+- [[TCP Protocol]]
+    
+- [[UDP Protocol]]
+    
 - [[HTTP and HTTPS]]
-- [[ARP]]
-- [[ICMP]]
+    
+- [[DNS Protocol]]
+    
+- [[DHCP Protocol]]
+    
+- [[FTP and SFTP]]
+    
+- [[SSH Protocol]]
+    
+- [[SMTP and Email Protocols]]
+    
+- [[ICMP Protocol]]
+    
+- [[Common Network Ports]]
+    
 
-## 04. Network Devices
+## 5. Routing and Switching
 
-- [[Router]]
-- [[Switch]]
-- [[Firewall]]
-- [[Access Point]]
+- [[Introduction to Routing]]
+    
+- [[Routing Tables]]
+    
+- [[Static and Dynamic Routing]]
+    
+- [[Introduction to Switching]]
+    
+- [[VLAN]]
+    
+- [[NAT]]
+    
+- [[Packet Forwarding]]
+    
 
-## 05. Network Security
+## 6. Network Services
 
-- [[Network Security Fundamentals]]
-- [[Packet Analysis]]
-- [[Network Scanning]]
+- [[Domain Name System]]
+    
+- [[Dynamic Host Configuration Protocol]]
+    
+- [[Web Servers]]
+    
+- [[Proxy Servers]]
+    
+- [[VPN]]
+    
+- [[Network Time Protocol]]
+    
+
+## 7. Network Security
+
+- [[Introduction to Network Security]]
+    
+- [[Firewalls]]
+    
 - [[IDS and IPS]]
+    
+- [[Network Segmentation]]
+    
+- [[Network Access Control]]
+    
+- [[Wireless Network Security]]
+    
+- [[Network Attacks]]
+    
+- [[Network Monitoring]]
+    
+- [[Network Security Best Practices]]
+    
 
-## 06. Networking Tools
+## 8. Network Analysis and Tools
 
-- [[Nmap]]
+- [[Introduction to Network Analysis]]
+    
 - [[Wireshark]]
+    
+- [[Nmap]]
+    
 - [[Ping]]
+    
 - [[Traceroute]]
-- [[Netstat]]
+    
+- [[Netstat and SS]]
+    
+- [[IP Configuration Commands]]
+    
+- [[DNS Enumeration]]
+    
+- [[Packet Analysis]]
+    
 
-## 07. Practical Labs
+## 9. Practical Labs
 
-- [[Networking Labs]]
+- [[Windows Networking Labs]]
+    
+- [[Linux Networking Labs]]
+    
+- [[IP Addressing Labs]]
+    
+- [[Subnetting Labs]]
+    
+- [[Wireshark Labs]]
+    
+- [[Nmap Labs]]
+    
+- [[Network Troubleshooting Labs]]
+    
+- [[Network Security Labs]]
+    
 
-## My Understanding
+## 10. My Understanding
 
-Write what I have learned about networking.
+Document:
 
-## Questions
+- Networking concepts I understand.
+- How data travels between devices.
+- Differences between networking protocols.
+- Practical observations.
+- Real-world cybersecurity applications.
+- Concepts I need to revisit.
 
-- How does data travel across networks?
-- What happens when I visit a website?
-- How does DNS work?
+## 11. Questions & Doubts
 
-## Related Notes
+Record questions that arise during learning.
+
+## Related Sections
 
 - [[01 - Cybersecurity]]
 - [[02 - Operating Systems]]
+- [[04 - Programming]]
 - [[05 - Active Directory]]
+- [[06 - Digital Forensics]]
+- [[07 - Practical Labs]]
+- [[Resources]]
+
+---
