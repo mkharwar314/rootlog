@@ -1,5 +1,3 @@
-# Introduction to Network Analysis
-
 > Learn how to observe, interpret, and troubleshoot network communication.
 
 ## 1. What is network analysis?

@@ -1,5 +1,3 @@
-# Proxy Servers
-
 > Understand how proxy systems mediate traffic between clients and destinations.
 
 ## 1. Forward proxy

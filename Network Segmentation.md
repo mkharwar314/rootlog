@@ -1,5 +1,3 @@
-# Network Segmentation
-
 > Understand how dividing a network limits exposure and controls communication.
 
 ## 1. What is segmentation?

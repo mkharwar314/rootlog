@@ -1,5 +1,3 @@
-# Nmap
-
 > Learn to discover hosts and identify exposed services on systems you are authorized to assess.
 
 ## 1. What is Nmap?

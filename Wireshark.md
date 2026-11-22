@@ -1,5 +1,3 @@
-# Wireshark
-
 > Use Wireshark to capture and inspect network packets in an authorized lab.
 
 ## 1. What is Wireshark?

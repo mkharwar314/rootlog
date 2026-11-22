@@ -1,5 +1,3 @@
-# Introduction to Network Security
-
 > Understand the principles used to protect network infrastructure, traffic, and services.
 
 ## 1. Definition

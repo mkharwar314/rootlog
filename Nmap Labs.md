@@ -1,5 +1,3 @@
-# Nmap Labs
-
 > Learn basic host discovery and port scanning against your own lab systems.
 
 ## Authorization

@@ -1,5 +1,3 @@
-# Firewalls
-
 > Understand how firewalls enforce traffic policies between systems and networks.
 
 ## 1. What is a firewall?

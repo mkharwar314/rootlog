@@ -1,5 +1,3 @@
-# Network Monitoring
-
 > Understand how network telemetry helps detect faults, performance problems, and security incidents.
 
 ## 1. What is network monitoring?

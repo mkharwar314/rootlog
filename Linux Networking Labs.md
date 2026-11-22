@@ -1,5 +1,3 @@
-# Linux Networking Labs
-
 > Practice network inspection and troubleshooting in your own Linux/Kali VM.
 
 ## Lab rules

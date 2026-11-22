@@ -1,5 +1,3 @@
-# DNS Enumeration
-
 > Collect publicly available DNS information for an explicitly authorized domain.
 
 ## 1. What is DNS enumeration?

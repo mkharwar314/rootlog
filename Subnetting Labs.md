@@ -1,5 +1,3 @@
-# Subnetting Labs
-
 > Practice calculating IPv4 subnet ranges and checking your answers.
 
 ## Method

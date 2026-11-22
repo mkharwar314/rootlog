@@ -1,5 +1,3 @@
-# Wireless Network Security
-
 > Understand how to protect Wi-Fi networks and wireless clients.
 
 ## 1. Wireless LAN basics

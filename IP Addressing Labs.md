@@ -1,5 +1,3 @@
-# IP Addressing Labs
-
 > Practice identifying IPv4/IPv6 addresses, prefixes, gateways, and address categories.
 
 ## Lab 1 — Identify your local configuration

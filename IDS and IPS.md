@@ -1,5 +1,3 @@
-# IDS and IPS
-
 > Compare systems that detect suspicious network activity with systems that can actively block it.
 
 ## 1. IDS

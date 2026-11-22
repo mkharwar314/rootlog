@@ -1,5 +1,3 @@
-# Netstat and SS
-
 > Inspect network connections, listening sockets, and protocol statistics.
 
 ## 1. What these tools show

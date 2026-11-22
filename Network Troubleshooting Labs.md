@@ -1,5 +1,3 @@
-# Network Troubleshooting Labs
-
 > Apply a structured method to diagnose common connectivity problems.
 
 ## Troubleshooting sequence

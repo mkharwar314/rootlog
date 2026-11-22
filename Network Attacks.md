@@ -1,5 +1,3 @@
-# Network Attacks
-
 > Recognize common network attack categories and understand their defensive implications.
 
 ## 1. Reconnaissance

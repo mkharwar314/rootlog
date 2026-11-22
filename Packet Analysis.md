@@ -1,5 +1,3 @@
-# Packet Analysis
-
 > Develop a repeatable method for interpreting packet captures.
 
 ## 1. What to inspect

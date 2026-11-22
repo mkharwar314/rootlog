@@ -1,5 +1,3 @@
-# Network Security Best Practices
-
 > Apply practical controls to reduce the attack surface and improve network resilience.
 
 ## 1. Asset and exposure management

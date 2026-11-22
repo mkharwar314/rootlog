@@ -1,5 +1,3 @@
-# Windows Networking Labs
-
 > Perform basic network inspection and troubleshooting on your own Windows machine.
 
 ## Lab rules

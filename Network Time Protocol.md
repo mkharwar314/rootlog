@@ -1,5 +1,3 @@
-# Network Time Protocol
-
 > Understand how systems synchronize their clocks across networks.
 
 ## 1. What is NTP?

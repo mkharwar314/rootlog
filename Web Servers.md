@@ -1,5 +1,3 @@
-# Web Servers
-
 > Understand how web-server software receives HTTP requests and serves web content.
 
 ## 1. What is a web server?

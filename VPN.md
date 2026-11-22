@@ -1,5 +1,3 @@
-# VPN
-
 > Understand how Virtual Private Networks create protected network connectivity over another network.
 
 ## 1. What is a VPN?

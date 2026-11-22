@@ -1,5 +1,3 @@
-# Traceroute
-
 > Learn how traceroute estimates the path packets take through routers.
 
 ## 1. What traceroute does

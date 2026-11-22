@@ -1,5 +1,3 @@
-# Network Access Control
-
 > Understand how organizations decide which devices and users may connect to network resources.
 
 ## 1. What is NAC?

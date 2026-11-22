@@ -1,5 +1,3 @@
-# IP Configuration Commands
-
 > Inspect and troubleshoot IP addressing, interfaces, routes, and DNS configuration.
 
 ## 1. Windows

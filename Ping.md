@@ -1,5 +1,3 @@
-# Ping
-
 > Use ping to test basic IP reachability and measure round-trip time.
 
 ## 1. What ping does
