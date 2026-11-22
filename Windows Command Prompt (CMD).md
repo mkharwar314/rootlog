@@ -894,56 +894,32 @@ The `cls` command is the reliable method to clear the CMD screen.
 ### Advanced Level
 
 - Create a batch file that accepts user input.
-    
 - Write an IF condition.
-    
 - Create a FOR loop.
-    
 - Create a menu-driven batch script.
-    
 - Generate a system report automatically.
-    
 - Add error handling to your script.
-    
 
 ## 22. Knowledge Check
 
 1. What is CMD?
-    
 2. What is the purpose of `cmd.exe`?
-    
 3. What is the difference between CMD and PowerShell?
-    
 4. Which command displays the current directory?
-    
 5. Which command displays all files?
-    
 6. What is the purpose of `ipconfig /all`?
-    
 7. What is the difference between `>` and `>>`?
-    
 8. What does `netstat -ano` display?
-    
 9. What is a PID?
-    
 10. What is the purpose of `taskkill`?
-    
 11. What is DNS?
-    
 12. What is the purpose of `tracert`?
-    
 13. What is batch scripting?
-    
 14. What does `@echo off` do?
-    
 15. What is the difference between `.bat` and `.cmd`?
-    
 16. What is an environment variable?
-    
 17. What is the purpose of `icacls`?
-    
 18. Why is hiding a file not the same as securing it?
-    
 
 ## 23. Quick Revision Sheet
 
@@ -981,7 +957,7 @@ The `cls` command is the reliable method to clear the CMD screen.
 
 - [[02 - Operating Systems]]
 - [[Introduction to Computer Networking]]
-- [[Cybersecurity Fundamentals]]
+- [[01 - Cybersecurity]]
 - [[Linux Command Line]]
 - [[Python Programming]]
 - [[Programming Fundamentals]]
