@@ -7,19 +7,12 @@ Every program works with data.
 Examples include:
 
 - Names and usernames.
-    
 - Age and account balances.
-    
 - IP addresses.
-    
 - Login status.
-    
 - File sizes.
-    
 - Network packets.
-    
 - Dates and timestamps.
-    
 
 A programming language needs a way to identify what kind of data a value represents.
 
@@ -37,30 +30,20 @@ is_student = True
 Here:
 
 - `name` is a string.
-    
 - `age` is an integer.
-    
 - `price` is a floating-point number.
-    
 - `is_student` is a Boolean.
-    
 
 ## 2. Why Are Data Types Important?
 
 Data types help programming languages:
 
 - Interpret values correctly.
-    
 - Determine which operations are supported.
-    
 - Manage memory and representation.
-    
 - Detect certain programming errors.
-    
 - Organize information.
-    
 - Process data efficiently.
-    
 
 For example:
 
@@ -132,22 +115,15 @@ count = 100
 Integers can be:
 
 - Positive.
-    
 - Negative.
-    
 - Zero.
-    
 
 Common uses:
 
 - Counting login attempts.
-    
 - Tracking the number of files.
-    
 - Representing port numbers.
-    
 - Performing arithmetic calculations.
-    
 
 Example:
 
@@ -181,13 +157,9 @@ percentage = 87.25
 Common uses:
 
 - Scientific calculations.
-    
 - Measurements.
-    
 - Financial calculations where approximate values are acceptable.
-    
 - Statistical analysis.
-    
 
 Example:
 
@@ -235,9 +207,7 @@ A Boolean represents a logical truth value.
 It has two possible values:
 
 - `True`
-    
 - `False`
-    
 
 Example:
 
@@ -252,15 +222,10 @@ print(is_locked)
 Common uses:
 
 - Authentication checks.
-    
 - Authorization decisions.
-    
 - Conditional statements.
-    
 - Security configuration.
-    
 - Validation results.
-    
 
 Example:
 
@@ -317,17 +282,11 @@ message = "Welcome to ROOTLOG"
 Strings are used to store:
 
 - Names.
-    
 - Email addresses.
-    
 - IP addresses in textual form.
-    
 - File paths.
-    
 - Log messages.
-    
 - User input.
-    
 
 Example:
 
@@ -392,15 +351,10 @@ print("Username:", username)
 Security considerations include:
 
 - Input validation.
-    
 - Output encoding.
-    
 - Safe database queries.
-    
 - Safe file path handling.
-    
 - Avoiding unsafe command construction.
-    
 
 Never assume a string supplied by a user is trustworthy.
 
@@ -423,13 +377,9 @@ print(ports)
 Characteristics:
 
 - Ordered.
-    
 - Mutable.
-    
 - Allows duplicate values.
-    
 - Can contain different data types in Python.
-    
 
 Changing a list:
 
@@ -454,11 +404,8 @@ print(network_details)
 Characteristics:
 
 - Ordered.
-    
 - Immutable at the tuple level.
-    
 - Allows duplicate values.
-    
 
 A tuple is useful when a collection should not be structurally modified.
 
@@ -487,13 +434,9 @@ student
 Common uses:
 
 - User records.
-    
 - Configuration data.
-    
 - API responses.
-    
 - Log entries.
-    
 
 ### 9.4 Set
 
@@ -512,11 +455,8 @@ The duplicate value `80` is stored only once.
 Characteristics:
 
 - Unique elements.
-    
 - No guaranteed positional indexing.
-    
 - Useful for membership checks and set operations.
-    
 
 ### 9.5 Array
 
@@ -549,15 +489,10 @@ The same concept can have different names or behavior across languages.
 Important differences:
 
 - Python is dynamically typed.
-    
 - C is statically typed.
-    
 - JavaScript is dynamically typed.
-    
 - JavaScript's `Number` type represents ordinary integer and floating-point numeric values using the same number type.
-    
 - C has several numeric types with different ranges and precision.
-    
 
 ## 11. Type Checking
 
@@ -670,11 +605,8 @@ Mutable objects can be modified.
 Common Python examples:
 
 - Lists.
-    
 - Dictionaries.
-    
 - Sets.
-    
 
 Example:
 
@@ -695,15 +627,10 @@ Immutable objects cannot be modified after creation.
 Common Python examples:
 
 - Integers.
-    
 - Floats.
-    
 - Booleans.
-    
 - Strings.
-    
 - Tuples.
-    
 
 Example:
 
@@ -726,13 +653,9 @@ Different types of data require different representations.
 For example:
 
 - Integers represent whole numbers.
-    
 - Floating-point types represent approximate real numbers.
-    
 - Strings represent sequences of text.
-    
 - Boolean types represent logical values.
-    
 
 In lower-level languages such as C, the size and representation of many types are important when working with memory.
 
@@ -756,17 +679,11 @@ The exact size of types such as `int` is implementation-dependent. The C standar
 Understanding data representation is useful when studying:
 
 - Memory management.
-    
 - Buffer overflows.
-    
 - Integer overflows.
-    
 - Binary analysis.
-    
 - File formats.
-    
 - Network protocols.
-    
 
 ## 15. Data Types in Cybersecurity
 
@@ -921,88 +838,50 @@ This uses Python's standard library to inspect an IP address.
 ## 18. Key Takeaways
 
 - Data types classify values used by programs.
-    
 - Common basic types include integers, floats, Booleans, characters, and strings.
-    
 - Composite types organize multiple values.
-    
 - Different languages implement data types differently.
-    
 - Type checking can be static or dynamic.
-    
 - Type conversion changes a value's representation or type.
-    
 - Mutable objects can be modified; immutable objects cannot.
-    
 - Data representation matters in memory and low-level programming.
-    
 - Correct type handling is important for secure software development.
-    
 
 ## 19. Questions for Self-Study
 
 1. What is a data type?
-    
 2. Why are data types important?
-    
 3. Explain integer, floating-point, Boolean, character, and string types.
-    
 4. What are composite data types?
-    
 5. Explain lists, tuples, dictionaries, and sets.
-    
 6. What is the difference between static and dynamic typing?
-    
 7. What is type conversion?
-    
 8. Explain implicit and explicit conversion.
-    
 9. What is the difference between mutable and immutable objects?
-    
 10. Why can floating-point calculations produce unexpected decimal results?
-    
 11. How are data types related to memory?
-    
 12. Why is correct type handling important in cybersecurity?
-    
 
 ## 20. Practical Tasks
 
 1. Create variables using five different data types.
-    
 2. Write a program that converts a numeric string into an integer.
-    
 3. Create a list containing five network ports.
-    
 4. Create a dictionary containing a username, role, and account status.
-    
 5. Demonstrate the difference between a mutable list and an immutable string.
-    
 6. Write a short explanation of how data types affect memory representation.
-    
 
 ## Related Notes
 
 - [[Introduction to Programming]]
-    
 - [[Programming Languages]]
-    
 - [[Variables and Constants]]
-    
 - [[Operators]]
-    
 - [[Input and Output]]
-    
 - [[Type Conversion]]
-    
 - [[Python Variables and Data Types]]
-    
 - [[C Variables and Data Types]]
-    
 - [[JavaScript Variables and Data Types]]
-    
 - [[SQL Data Types]]
-    
 - [[Memory Management]]
-    
 - [[Secure Programming]]
