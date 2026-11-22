@@ -1,4 +1,4 @@
-# I> Object-Oriented Programming (OOP) is a programming approach that organizes software around objects containing data and methods. It helps developers build modular, reusable, and maintainable applications.
+> Object-Oriented Programming (OOP) is a programming approach that organizes software around objects containing data and methods. It helps developers build modular, reusable, and maintainable applications.
 
 ## 1. What Is Object-Oriented Programming?
 
