@@ -556,7 +556,7 @@ What do I still need to understand?
 
 - [[02 - Operating Systems]]
 - [[Windows PowerShell Labs]]
-- [[Windows Commands]]
+- [[Windows Command Prompt (CMD)]]
 - [[Windows Users and Groups]]
 - [[Windows Permissions]]
 - [[Windows Services]]
