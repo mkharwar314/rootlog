@@ -6,7 +6,6 @@ tags:
   - rootlog
 publish: true
 ---
-
 # Welcome to ROOTLOG
 
 > Learn. Document. Understand. Evolve.
