@@ -11,32 +11,21 @@ A program is a set of instructions designed to perform a particular task.
 **Examples:**
 
 - A calculator program performs mathematical operations.
-    
 - A browser displays websites.
-    
 - An antivirus program detects potentially harmful files.
-    
 - A network scanner checks devices and services.
-    
 - A log analyzer identifies unusual activity in system logs.
-    
 
 ## 2. How Does Programming Work?
 
 A typical programming workflow looks like this:
 
 1. Identify a problem.
-    
 2. Design a solution.
-    
 3. Write instructions using a programming language.
-    
 4. Execute the program.
-    
 5. Test the output.
-    
 6. Debug and improve the program.
-    
 
 ### Basic Programming Flow
 
@@ -88,9 +77,7 @@ Low-level languages are closer to the hardware and provide more direct control o
 Examples:
 
 - Machine Language
-    
 - Assembly Language
-    
 
 **Machine Language:**
 
@@ -122,13 +109,9 @@ High-level languages provide abstractions that make programming easier for human
 Examples:
 
 - Python
-    
 - Java
-    
 - C++
-    
 - JavaScript
-    
 
 Example in Python:
 
@@ -160,9 +143,7 @@ A compiler translates source code into another form, often machine code or an in
 Examples include:
 
 - GCC for C and C++
-    
 - Rust compiler (`rustc`)
-    
 
 ### Interpreter
 
@@ -256,17 +237,11 @@ Programming converts an algorithm into executable instructions.
 **Example: Algorithm to add two numbers**
 
 1. Start.
-    
 2. Read the first number.
-    
 3. Read the second number.
-    
 4. Add both numbers.
-    
 5. Display the result.
-    
 6. Stop.
-    
 
 Python implementation:
 
@@ -363,25 +338,15 @@ See: [[Debugging]]
 ## 10. Good Programming Practices
 
 - Write readable and organized code.
-    
 - Use meaningful variable names.
-    
 - Avoid unnecessary code duplication.
-    
 - Add comments where they improve understanding.
-    
 - Test programs with different inputs.
-    
 - Handle errors properly.
-    
 - Validate untrusted input.
-    
 - Never expose passwords, API keys, or other secrets in source code.
-    
 - Keep software dependencies updated.
-    
 - Follow secure coding practices.
-    
 
 ## 11. Practical Example
 
@@ -405,83 +370,51 @@ Square: 25
 **Understand the code:**
 
 - `input()` receives information from the user.
-    
 - `int()` converts the input into an integer.
-    
 - `*` performs multiplication.
-    
 - `print()` displays the result.
-    
 
 ## 12. Key Takeaways
 
 - Programming means writing instructions for computers.
-    
 - A program is a collection of instructions.
-    
 - Programming languages have different purposes and characteristics.
-    
 - Algorithms describe solutions to problems.
-    
 - Variables, data types, operators, conditions, loops, and functions are fundamental programming concepts.
-    
 - Programming is useful for automation, security analysis, and software development.
-    
 - Debugging and testing help identify and correct errors.
-    
 
 ## 13. Questions for Self-Study
 
 1. What is programming?
-    
 2. What is the difference between a program and an algorithm?
-    
 3. What are high-level and low-level languages?
-    
 4. What is the role of a compiler?
-    
 5. Why is programming important in cybersecurity?
-    
 6. Explain syntax, runtime, and logical errors with examples.
-    
 
 ## 14. Practical Tasks
 
 Complete these tasks using Python:
 
 1. Display your name.
-    
 2. Add two numbers.
-    
 3. Calculate the area of a rectangle.
-    
 4. Check whether a number is positive or negative.
-    
 5. Print numbers from 1 to 10.
-    
 6. Create a function that multiplies two numbers.
-    
 
 Write your code and record the output in your physical notebook.
 
 ## Related Notes
 
 - [[Programming Languages]]
-    
 - [[Compiler and Interpreter]]
-    
 - [[Algorithms]]
-    
 - [[Variables and Constants]]
-    
 - [[Data Types]]
-    
 - [[Operators]]
-    
 - [[Input and Output]]
-    
 - [[Python Programming]]
-    
 - [[Python for Cybersecurity]]
-    
 - [[Secure Programming]]
