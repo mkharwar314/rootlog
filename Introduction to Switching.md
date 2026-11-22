@@ -1,5 +1,3 @@
-# Introduction to Switching
-
 > Understand how Ethernet switches connect devices inside a local area network.
 
 ## 1. What is a network switch?

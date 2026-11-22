@@ -1,5 +1,3 @@
-# HTTP and HTTPS
-
 > Understand how web clients and servers exchange resources and how TLS protects web traffic.
 
 ## 1. HTTP

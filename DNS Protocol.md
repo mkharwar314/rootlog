@@ -1,5 +1,3 @@
-# DNS Protocol
-
 > Understand how domain names are translated into information such as IP addresses.
 
 ## 1. What is DNS?

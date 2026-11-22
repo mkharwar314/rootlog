@@ -1,5 +1,3 @@
-# Routing Tables
-
 > Learn how hosts and routers store paths to destination networks.
 
 ## 1. What is a routing table?

@@ -1,5 +1,3 @@
-# Common Network Ports
-
 > Build familiarity with commonly encountered ports during administration and network assessment.
 
 ## 1. What is a port?

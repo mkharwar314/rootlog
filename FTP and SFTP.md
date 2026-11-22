@@ -1,5 +1,3 @@
-# FTP and SFTP
-
 > Compare file-transfer protocols and understand why encrypted transfer matters.
 
 ## 1. FTP

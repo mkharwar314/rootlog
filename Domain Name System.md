@@ -1,5 +1,3 @@
-# Domain Name System
-
 > A service-level view of DNS: zones, delegation, caching, and operational roles.
 
 ## 1. DNS hierarchy

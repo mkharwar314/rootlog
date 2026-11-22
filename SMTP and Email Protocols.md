@@ -1,5 +1,3 @@
-# SMTP and Email Protocols
-
 > Understand the protocols used to send, retrieve, and synchronize email.
 
 ## 1. Email protocol roles

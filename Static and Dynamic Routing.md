@@ -1,5 +1,3 @@
-# Static and Dynamic Routing
-
 > Compare manually configured routes with routes learned through routing protocols.
 
 ## 1. Static routing

@@ -1,5 +1,3 @@
-# Introduction to Routing
-
 > Understand how routers move packets between different IP networks.
 
 ## 1. What is routing?

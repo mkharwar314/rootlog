@@ -1,5 +1,3 @@
-# ICMP Protocol
-
 > Understand how network devices report errors and exchange diagnostic information.
 
 ## 1. What is ICMP?

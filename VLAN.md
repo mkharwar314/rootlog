@@ -1,5 +1,3 @@
-# VLAN
-
 > Understand how Virtual LANs logically separate devices on switched networks.
 
 ## 1. What is a VLAN?

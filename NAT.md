@@ -1,5 +1,3 @@
-# NAT
-
 > Understand how Network Address Translation changes IP address information as packets cross a network boundary.
 
 ## 1. What is NAT?

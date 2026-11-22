@@ -1,5 +1,3 @@
-# SSH Protocol
-
 > Understand secure remote administration and encrypted command-line access.
 
 ## 1. What is SSH?

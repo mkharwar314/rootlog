@@ -1,5 +1,3 @@
-# DHCP Protocol
-
 > Understand how devices automatically receive network configuration.
 
 ## 1. What is DHCP?

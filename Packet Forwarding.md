@@ -1,5 +1,3 @@
-# Packet Forwarding
-
 > Follow what happens to a packet as it moves through a network.
 
 ## 1. Frame vs packet

@@ -1,5 +1,3 @@
-# Dynamic Host Configuration Protocol
-
 > A service-level view of DHCP scopes, options, leases, and administration.
 
 ## 1. DHCP server responsibilities
