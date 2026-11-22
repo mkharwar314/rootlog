@@ -1,3 +1,5 @@
+# Common Network Ports
+
 > Build familiarity with commonly encountered ports during administration and network assessment.
 
 ## 1. What is a port?
@@ -87,4 +89,24 @@ Do not scan public systems without permission.
 - [[Nmap]]
 - [[Firewalls]]
 
----
+## 6. How to interpret a port scan
+
+A scan reports what the scanner can infer from responses. An `open` TCP port usually means a service accepted a connection attempt. A `closed` port usually means the host responded but no service is listening. A `filtered` result means the scanner could not determine the state because filtering or network conditions prevented a clear response.
+
+A port number is only a convention. A service can listen on a non-standard port, and a port associated with one service can be used by another application.
+
+## 7. TCP and UDP differences during assessment
+
+TCP provides connection-oriented communication, so scanners can often infer states from handshake behaviour. UDP has no connection handshake; lack of a response can mean the port is open but silent, filtered, or the probe was ignored. UDP results therefore often require additional validation.
+
+## 8. Port exposure review
+
+For every listening service, ask: What application owns it? Is it required? Which source networks need access? Is authentication enabled? Is the service patched? Is the traffic encrypted? Can access be restricted to a management subnet?
+
+## Practical activity
+
+On your own Windows system, run `Get-NetTCPConnection -State Listen` and identify one listening port. Find its owning process ID and process name. Compare the port with this reference table, but verify the actual service rather than relying only on the number.
+
+## My understanding
+
+Choose five ports from the table and explain the purpose of each, its transport protocol, and one security consideration.

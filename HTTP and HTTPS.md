@@ -1,3 +1,5 @@
+# HTTP and HTTPS
+
 > Understand how web clients and servers exchange resources and how TLS protects web traffic.
 
 ## 1. HTTP
@@ -117,3 +119,27 @@ Observe the status code and headers. Do not enter credentials into a test page.
 - [[DNS Protocol]]
 - [[Common Network Ports]]
 - [[Network Security Best Practices]]
+
+## 10. Follow one web request
+
+When you enter `https://example.com/` in a browser, several separate operations occur. The browser resolves the hostname through DNS, establishes a transport connection, negotiates TLS, and then sends an HTTP request. The server responds with a status code, headers, and possibly HTML. The browser may then request CSS, JavaScript, images, and other resources.
+
+This separation matters during troubleshooting. A DNS failure happens before the HTTP request. A TLS certificate error occurs during connection security setup. A `404` response means the server was reached and returned an HTTP-level result, but the requested resource was not found.
+
+## 11. HTTP versions
+
+HTTP/1.1 commonly uses persistent TCP connections. HTTP/2 adds multiplexing and header compression over a connection. HTTP/3 uses QUIC, which runs over UDP and incorporates transport security based on TLS 1.3. The HTTP version does not change the basic request/response concepts, but it changes transport behaviour and performance characteristics.
+
+## 12. Common mistakes
+
+- Treating `401 Unauthorized` and `403 Forbidden` as identical. A 401 generally indicates missing or invalid authentication; a 403 indicates the server refuses the request.
+- Assuming every `POST` request is unsafe or every `GET` request is harmless. Method semantics matter, but application design determines actual impact.
+- Assuming the padlock means a business is legitimate. It indicates a protected connection to the authenticated domain, not trustworthiness of the content.
+
+## Practical activity — inspect a response
+
+Run `curl.exe -I https://example.com` and record the status line, server response headers, and any redirect information. Compare this with opening the same URL in a browser's Developer Tools → Network panel. Explain which steps happen before the first HTTP response.
+
+## My understanding
+
+Write a short explanation of the difference between DNS resolution, TLS negotiation, and the HTTP request. Include why HTTPS protects traffic but cannot guarantee that a website is safe.

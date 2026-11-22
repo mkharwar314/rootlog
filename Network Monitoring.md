@@ -46,3 +46,23 @@ Capture only traffic you are authorized to inspect. Packet captures can contain 
 - [[Packet Analysis]]
 - [[IDS and IPS]]
 - [[Network Troubleshooting Labs]]
+
+## 7. Packet, flow, and log visibility
+
+Packet capture provides detailed communication content when it is not encrypted, but requires substantial storage and careful privacy controls. Flow records summarize conversations and are useful for identifying traffic patterns at scale. Logs explain events recorded by devices and applications. Combining these sources gives stronger context than relying on one alone.
+
+## 8. Baselines
+
+A baseline describes normal traffic for a system or network during expected operating periods. A sudden increase in outbound connections, DNS queries, or traffic to unusual destinations may justify investigation. However, software updates, backups, and business events can also cause spikes.
+
+## 9. Retention and integrity
+
+Define who can access monitoring data, how long it is retained, and how it is protected. For incident response, preserve relevant logs promptly because some devices rotate or overwrite them quickly. Ensure clocks are synchronized.
+
+## Practical activity
+
+Create a small monitoring plan for your lab: choose one packet source, one log source, and three metrics. State what each can tell you and one limitation.
+
+## My understanding
+
+Explain when you would choose packet capture, flow records, or device logs for a particular investigation question.

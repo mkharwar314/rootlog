@@ -45,3 +45,23 @@ Suricata and Snort can be used in IDS/IPS roles depending on configuration. Zeek
 - [[Wireshark]]
 - [[Packet Analysis]]
 - [[Network Security Best Practices]]
+
+## 6. Alert triage
+
+An alert should be treated as an investigative lead, not an automatic conclusion. Validate the source and destination, time window, rule that triggered, packet or flow evidence, asset role, and related endpoint logs. Determine whether the event is malicious, benign, or inconclusive.
+
+## 7. False positives and false negatives
+
+A false positive flags benign activity as suspicious. A false negative fails to detect malicious activity. Tuning should reduce noise without creating blind spots. Suppressions should be narrow, documented, and reviewed.
+
+## 8. Deployment trade-offs
+
+An out-of-band IDS can monitor traffic without directly interrupting it, but it cannot normally block packets by itself. An inline IPS can block traffic, but misclassification or failure may affect availability. Critical deployments require testing, redundancy, and a clear fail-open/fail-closed design.
+
+## Practical activity
+
+Review a sample alert from a lab IDS or study a documented rule. Write what evidence triggered it, what additional data you would collect, and what would make you classify it as a true positive.
+
+## My understanding
+
+Explain the operational difference between detection and prevention, including one availability risk introduced by inline blocking.

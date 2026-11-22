@@ -52,3 +52,27 @@ For each suspected attack, identify:
 - [[IDS and IPS]]
 - [[Packet Analysis]]
 - [[Firewalls]]
+
+## 8. Attack chain thinking
+
+Network attacks often form stages: reconnaissance, initial access, command and control, lateral movement, and impact. A single observed event may fit several explanations. Analysts should correlate network evidence with endpoint telemetry, identity logs, and asset context before assigning an attack stage.
+
+## 9. Defensive mapping
+
+- Reconnaissance: reduce exposed services and monitor scanning.
+- Credential attacks: MFA, rate limiting, and authentication monitoring.
+- MitM: validated TLS, secure Wi-Fi, and certificate controls.
+- Lateral movement: segmentation and least privilege.
+- DoS/DDoS: resilient architecture, filtering, and provider mitigation.
+
+## 10. Evidence quality
+
+A high number of failed logins may indicate password guessing, but it can also result from a misconfigured application or stale saved credentials. Record source, target, timing, account pattern, success events, and related activity before concluding.
+
+## Practical activity
+
+Choose one attack category and create a table with: attacker objective, required conditions, observable evidence, likely false positives, preventive controls, and detection controls.
+
+## My understanding
+
+Explain why one suspicious packet or one failed login is insufficient to prove that a system was compromised.

@@ -40,3 +40,23 @@ Only capture networks and devices within your authorization. Captures may contai
 - [[Packet Analysis]]
 - [[Network Monitoring]]
 - [[Network Troubleshooting Labs]]
+
+## 6. Choosing the right evidence source
+
+Use packet capture when you need protocol-level detail. Use flow records when you need broad communication patterns. Use device logs for configuration changes and security events. Use application logs to understand what the service did with a request. The best source depends on the question being investigated.
+
+## 7. Establishing context
+
+Before interpreting a capture, identify the network interface, capture point, time zone, clock accuracy, network topology, and whether traffic is mirrored or locally generated. A capture taken on one endpoint may not show packets dropped elsewhere in the path.
+
+## 8. Reporting findings
+
+Separate observed facts from interpretation. For example: “The capture contains repeated SYN packets to TCP port 443 with no observed SYN-ACK” is an observation. “The server is down” is an interpretation that requires additional validation.
+
+## Practical activity
+
+Write one investigation question, such as “Why can this VM resolve DNS but not reach a web service?” List the evidence sources and commands you would use before changing configuration.
+
+## My understanding
+
+Explain why the location of a packet capture point affects what an analyst can conclude.

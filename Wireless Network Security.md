@@ -57,3 +57,23 @@ Do not disclose saved Wi-Fi passwords or capture traffic from networks without p
 - [[Network Access Control]]
 - [[Network Segmentation]]
 - [[Network Security Best Practices]]
+
+## 6. Personal vs enterprise Wi-Fi
+
+Personal mode commonly authenticates users with a shared passphrase. Anyone who knows the passphrase may be able to join, so staff departures and password reuse create management challenges. Enterprise mode uses 802.1X, allowing individual credentials or certificates and centralized policy.
+
+## 7. Evil-twin risk
+
+An evil-twin access point imitates a legitimate wireless network name. A client may connect to the impostor, especially if it automatically joins familiar SSIDs. Users should verify network identity and avoid accepting unexpected certificate prompts. Enterprise Wi-Fi certificate validation is particularly important.
+
+## 8. Guest network design
+
+Guest Wi-Fi should normally be separated from internal systems and limited to Internet access. Client isolation can prevent guest devices from communicating directly with each other, depending on the access-point design.
+
+## Practical activity
+
+Inspect the wireless security mode of your own connected network using Windows Wi-Fi settings. Record whether it uses WPA2 or WPA3, without recording or sharing the password. Explain why a strong passphrase does not replace firmware updates and guest isolation.
+
+## My understanding
+
+Compare WPA2/WPA3-Personal with enterprise authentication and explain why hiding an SSID is not a meaningful security control.

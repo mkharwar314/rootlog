@@ -70,3 +70,23 @@ ICMP can be abused for reconnaissance, flooding, or covert signalling. Blocking 
 - [[IPv6 Addressing]]
 - [[TCP Protocol]]
 - [[Network Troubleshooting Labs]]
+
+## 6. ICMP does not use TCP or UDP ports
+
+ICMP is carried directly within IP. It has message types and codes rather than TCP/UDP port numbers. This is why a firewall rule for an ICMP Echo Request is not expressed as a destination TCP port.
+
+## 7. IPv6 Neighbor Discovery
+
+ICMPv6 supports Neighbor Discovery, which helps IPv6 nodes discover routers and link-layer addresses, check neighbour reachability, and perform address autoconfiguration functions. Blocking all ICMPv6 can break basic IPv6 operation.
+
+## 8. Interpreting diagnostic results
+
+A successful ping demonstrates that an Echo Reply returned from the destination address, but does not prove that a web server or database is functioning. A failed ping may result from filtering, rate limiting, routing, or host failure. Combine ping with DNS checks, route inspection, and application-specific tests.
+
+## Practical activity
+
+Run `ping -n 4 127.0.0.1` on Windows and `ping -c 4 127.0.0.1` on Linux. Then ping your default gateway. Compare packet loss and response times. Record why the loopback test and gateway test validate different parts of the network stack.
+
+## My understanding
+
+Explain why ICMP is useful to network operators and why blocking every ICMP message is not a sound universal security policy.

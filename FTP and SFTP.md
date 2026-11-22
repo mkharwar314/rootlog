@@ -1,3 +1,5 @@
+# FTP and SFTP
+
 > Compare file-transfer protocols and understand why encrypted transfer matters.
 
 ## 1. FTP
@@ -67,4 +69,22 @@ Do not connect to systems without permission. If no SFTP server is available, re
 - [[Common Network Ports]]
 - [[Network Security Best Practices]]
 
----
+## 6. FTP connection modes
+
+FTP separates its control channel from its data channel. In active mode, the server initiates the data connection back toward the client. In passive mode, the client initiates both connections, which is often easier through client-side firewalls and NAT. Passive mode still requires the server's configured data-port range to be reachable.
+
+## 7. Authentication and file permissions
+
+A secure file-transfer service should use named accounts, restrict users to approved directories, and grant only the read/write permissions required for their role. Anonymous FTP, if enabled at all, should expose only intentionally public content. Upload directories require special care because attackers may try to place executable or malicious files there.
+
+## 8. Choosing a transfer method
+
+Use SFTP when SSH-based file transfer is supported. Use FTPS when an environment specifically requires FTP semantics protected by TLS. Avoid plain FTP for credentials or confidential data on untrusted networks. Check host keys or certificates so the client knows it is connecting to the intended server.
+
+## Practical activity — understand the command sequence
+
+On paper, write the SFTP sequence for connecting, listing a remote directory, changing directories, uploading a harmless text file, downloading it, and disconnecting. If you have an authorized lab server, perform the sequence and verify the transferred file.
+
+## My understanding
+
+Explain why SFTP is not simply FTP with a different port, and distinguish SFTP from FTPS.

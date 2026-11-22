@@ -66,3 +66,23 @@ Network security is an ongoing operational process, not a one-time configuration
 - [[Firewalls]]
 - [[Network Segmentation]]
 - [[Network Monitoring]]
+
+## 8. Prioritization
+
+Start with controls that reduce major, common risks: remove unnecessary exposure, patch internet-facing systems, protect administrative access with MFA, and ensure backups can be restored. Then improve segmentation, monitoring, configuration management, and incident response. Priorities should reflect the actual assets and threat model.
+
+## 9. Change management
+
+Network changes can create outages or security gaps. Document the reason, expected impact, rollback plan, approval, implementation time, and verification steps. Review firewall rules and remote-access policies periodically.
+
+## 10. Continuous improvement
+
+Use vulnerability findings, incident lessons, access reviews, and configuration audits to update the network security baseline. A checklist is useful only if someone owns the actions and verifies completion.
+
+## Practical activity
+
+Perform a defensive review of your own lab. List five services, whether each is required, how access is restricted, and how activity would be logged. Prioritize one improvement and explain its risk reduction.
+
+## My understanding
+
+Choose three controls and map each to the risk it reduces, the evidence that it is working, and a possible limitation.

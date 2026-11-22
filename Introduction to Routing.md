@@ -59,3 +59,25 @@ Identify the default route, destination prefix, gateway, and interface.
 - [[Static and Dynamic Routing]]
 - [[Default Gateway]]
 - [[Packet Forwarding]]
+
+## 6. Routing decision example
+
+Imagine a host at `192.168.1.20/24` needs to reach `192.168.1.50`. The destination is in the same `/24` network, so the host sends directly on the local link after resolving the destination MAC address.
+
+If the same host needs to reach `8.8.8.8`, that address is outside the local `/24`. The host sends the Ethernet frame to its default gateway, while the IP packet is addressed to `8.8.8.8`. The router then makes its own routing decision.
+
+## 7. Longest-prefix match
+
+Suppose a routing table contains `10.0.0.0/8` and `10.10.0.0/16`. A packet destined for `10.10.5.4` matches both routes, but `/16` is more specific than `/8`, so it is selected. This is called longest-prefix match.
+
+## 8. Routing versus NAT
+
+Routing selects where a packet should go. NAT changes address and sometimes port information as traffic crosses a translation boundary. They may occur on the same device, but they are separate functions.
+
+## Practical activity
+
+Run `ip route` in Kali or `route print` in Windows. Identify the default route and explain where a packet to an external destination would be sent.
+
+## My understanding
+
+Draw a two-LAN topology connected by a router. Label each subnet, interface address, and default gateway. Trace one packet from a host in the first LAN to a host in the second.

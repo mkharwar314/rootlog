@@ -68,3 +68,34 @@ Record objective, environment, commands, observations, interpretation, and limit
 ## Completion criteria
 
 You can explain your own IP configuration, identify the default gateway, resolve a DNS name, and identify at least one listening service.
+
+## Additional lab — test a specific service
+
+Use `Test-NetConnection` to test a known, authorized service:
+
+```powershell
+Test-NetConnection example.com -Port 443
+```
+
+Record `TcpTestSucceeded`, the resolved remote address, and the interface/source address if shown. This is more relevant than ping when the question is whether a particular TCP service is reachable.
+
+## Additional lab — inspect DNS cache
+
+```powershell
+ipconfig /displaydns
+```
+
+Find a cached entry and explain why a cached answer may remain available until its TTL expires. Avoid sharing the full cache because it can reveal browsing and application activity.
+
+## Observation template
+
+- Question being tested:
+- Command:
+- Relevant output:
+- What the output proves:
+- What it does not prove:
+- Next diagnostic step:
+
+## My understanding
+
+Write a short troubleshooting report for one test. Include the hypothesis, result, and next step rather than copying the entire terminal output.

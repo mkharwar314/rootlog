@@ -48,3 +48,23 @@ For a small lab, draw the network, list devices and services, identify trust bou
 - [[IDS and IPS]]
 - [[Network Segmentation]]
 - [[Network Security Best Practices]]
+
+## 7. Security controls mapped to objectives
+
+Encryption supports confidentiality, integrity checks help detect modification, authentication verifies identities, and authorization limits actions. Logging and monitoring support accountability and detection. Availability requires resilience, capacity planning, backups, and response procedures. No single control satisfies every objective.
+
+## 8. Threat modelling a small network
+
+Start by listing assets such as user laptops, servers, routers, and identity services. Identify trust boundaries and likely threats. For example, a compromised guest device should not be able to connect to a file server or management interface. Translate that threat into segmentation and firewall requirements.
+
+## 9. Measuring security
+
+Useful measures include the number of unnecessary exposed services, patch age, MFA coverage, time to detect suspicious activity, and time to recover from an incident. Metrics should guide action rather than become targets that encourage superficial compliance.
+
+## Practical activity
+
+Draw your own lab topology. Mark assets, trust boundaries, exposed services, and the controls protecting each boundary. Identify the single most important risk and justify your choice.
+
+## My understanding
+
+Choose one threat and explain how prevention, detection, containment, and recovery controls work together.

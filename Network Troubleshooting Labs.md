@@ -66,3 +66,33 @@ Test-NetConnection example.com -Port 443
 ## Lab report
 
 For each test, write the hypothesis, command, result, interpretation, next test, and final conclusion. Change one variable at a time.
+
+## Additional lab — distinguish DNS from HTTPS failure
+
+First resolve the hostname:
+
+```powershell
+Resolve-DnsName example.com
+```
+
+Then test the TCP service:
+
+```powershell
+Test-NetConnection example.com -Port 443
+```
+
+Finally inspect the HTTP response:
+
+```powershell
+curl.exe -I https://example.com
+```
+
+These tests examine different stages. A DNS answer does not prove TCP connectivity; a successful TCP connection does not prove that the web application returns a valid response.
+
+## Incident-style record
+
+For one failure, write a timeline of tests and results. State which layer appears to be working, where the failure occurs, and what additional evidence is required before concluding root cause.
+
+## My understanding
+
+Explain why troubleshooting should proceed from interface configuration through routing and DNS to the application layer.

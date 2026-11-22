@@ -37,3 +37,23 @@ Use strong identity verification, certificate-based authentication where appropr
 - [[Wireless Network Security]]
 - [[Firewalls]]
 - [[Active Directory]]
+
+## 6. 802.1X authentication flow
+
+In a common wired 802.1X deployment, the endpoint supplicant communicates with the authenticator (such as a switch). The authenticator relays authentication messages to a RADIUS server. If authentication succeeds, the switch applies the returned access policy. The endpoint does not directly communicate with the RADIUS server in the normal relay model.
+
+## 7. Authentication outcomes
+
+A policy may grant normal access, place a device in a restricted VLAN, or provide remediation access. Guest access may use a separate workflow. A device being authenticated does not automatically mean every resource should be reachable; authorization and segmentation still apply.
+
+## 8. Operational risks
+
+Misconfigured certificates, unavailable RADIUS servers, incorrect switch trust settings, and weak fallback policies can disrupt access or create bypasses. Test certificate renewal and failure scenarios before deployment.
+
+## Practical activity
+
+Draw the supplicant–authenticator–RADIUS relationship. Label the role of each component and explain what policy might be applied after successful authentication.
+
+## My understanding
+
+Explain the difference between authenticating a device to the network and authorizing that device to access a particular server.

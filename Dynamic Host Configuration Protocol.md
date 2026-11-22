@@ -55,3 +55,23 @@ ip route
 - [[IPv4 Addressing]]
 - [[Default Gateway]]
 - [[Network Services]]
+
+## 6. Address-pool planning example
+
+Suppose a lab subnet is `192.168.10.0/24`. The network and broadcast addresses are not normally leased to hosts. An administrator might reserve low addresses for routers and infrastructure, then define a DHCP pool for client devices. The exact range should be documented and checked against static addresses to prevent conflicts.
+
+## 7. Failover and availability
+
+A DHCP outage may not immediately disconnect clients with valid leases, but new devices may fail to obtain configuration and existing clients may eventually lose their leases. Redundant DHCP servers or failover arrangements reduce this risk. The design must avoid two independent servers leasing overlapping addresses without coordination.
+
+## 8. DHCP security
+
+DHCP snooping on supported switches can distinguish trusted server-facing ports from untrusted access ports and block unauthorized DHCP server messages. It can also build bindings used by other protections. Correct switch configuration is essential; an incorrectly trusted port can defeat the control.
+
+## Practical activity
+
+Create a small address plan for a `/24` lab network. Mark the gateway, infrastructure reservations, DHCP pool, and excluded addresses. Check that no ranges overlap.
+
+## My understanding
+
+Explain how a DHCP scope, reservation, exclusion, and relay agent differ.

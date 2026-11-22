@@ -65,3 +65,23 @@ Check:
 - [[Static and Dynamic Routing]]
 - [[Default Gateway]]
 - [[Network Troubleshooting Labs]]
+
+## 6. Connected, static, and default routes
+
+A connected route is installed when an interface has an address and prefix configured and is active. A static route is added by an administrator. A default route is a catch-all route used when no more specific entry matches. Dynamic routing protocols can also install routes learned from neighbouring routers.
+
+## 7. Why a route can exist but still fail
+
+A route entry does not guarantee end-to-end reachability. The next-hop router may be unavailable, a firewall may drop traffic, return routing may be missing, or the destination service may be down. Routing is only one part of the communication path.
+
+## 8. Route lookup example
+
+For a destination `10.20.30.40`, the system compares the destination against route prefixes. If both `10.0.0.0/8` and `10.20.0.0/16` exist, the `/16` route wins because it is more specific.
+
+## Practical activity
+
+Use `ip route get 1.1.1.1` in Linux. Record the selected interface and gateway. Then compare it with the default route shown by `ip route`.
+
+## My understanding
+
+Explain the difference between a route's destination prefix, next hop, outgoing interface, and metric.

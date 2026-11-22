@@ -62,3 +62,23 @@ List listening TCP ports on your own Windows or Kali system. Identify one servic
 - [[Common Network Ports]]
 - [[Network Monitoring]]
 - [[Nmap]]
+
+## 6. Understanding listening vs established sockets
+
+A listening TCP socket is waiting for incoming connections. An established socket represents an active TCP connection. UDP does not have a TCP-style connection state, so a UDP endpoint listing should not be interpreted as an established session in the same way.
+
+## 7. Process correlation
+
+A port should be correlated with the process ID and service that owns it. A port number alone is not enough to identify an application. On shared systems, several services may use dynamic ports, and process information may require administrator privileges.
+
+## 8. Defensive use
+
+Unexpected listeners can indicate an installed application, a development server, remote administration software, or potentially unwanted software. Verify the executable path, signature, service configuration, and business purpose before taking action.
+
+## Practical activity
+
+On Windows, run `netstat -ano`, choose one LISTENING entry, and use `Get-Process -Id <PID>`. On Kali, run `sudo ss -tulpen` and identify one listening service. Record the local address, port, and owning process.
+
+## My understanding
+
+Explain the difference between a listening socket and an established TCP connection, and why neither state alone proves malicious activity.

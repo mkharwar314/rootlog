@@ -63,3 +63,25 @@ These commands show installed routes, but they do not by themselves tell you whe
 - [[Introduction to Routing]]
 - [[Routing Tables]]
 - [[Packet Forwarding]]
+
+## 5. Dynamic routing protocol families
+
+Interior Gateway Protocols (IGPs), such as OSPF and IS-IS, exchange routing information within an autonomous system. RIP is a simpler distance-vector IGP. BGP is an Exterior Gateway Protocol used to exchange reachability information between autonomous systems and apply routing policy.
+
+OSPF calculates paths using link-state information and a cost metric. BGP makes policy-driven path decisions using path attributes; it is not simply a shortest-distance protocol.
+
+## 6. Route convergence
+
+When a link or router fails, dynamic routing protocols detect changes and recalculate or advertise alternate paths. The time and stability of this process are part of convergence. During convergence, some traffic may be temporarily lost or misrouted.
+
+## 7. Design trade-offs
+
+Static routing is easier to reason about in a tiny stable network, but manual maintenance becomes difficult as networks grow. Dynamic routing improves adaptability but introduces protocol configuration, authentication, monitoring, and troubleshooting requirements.
+
+## Practical activity
+
+Inspect the routes on your own machine with `ip route` or `route print`. Identify which routes appear connected and which route is the default. Your endpoint may not run a routing protocol; explain why the presence of routes does not prove dynamic routing is in use.
+
+## My understanding
+
+Give one scenario where static routing is appropriate and one where dynamic routing is more practical. Justify each choice.

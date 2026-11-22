@@ -48,3 +48,23 @@ Test loopback, local address, default gateway, and then a permitted remote desti
 - [[ICMP Protocol]]
 - [[Traceroute]]
 - [[Network Troubleshooting Labs]]
+
+## 6. Ping and packet loss
+
+Ping reports the number of requests sent and replies received. Packet loss can result from congestion, wireless interference, routing faults, filtering, or rate limiting. A small number of lost probes is not enough to identify the cause.
+
+## 7. Latency
+
+Round-trip time is the time between sending a probe and receiving its reply. It includes forward-path delay, destination processing, and return-path delay. It is not a direct measurement of one-way application latency.
+
+## 8. Diagnostic sequence
+
+Start with loopback to test the local IP stack, then the local interface/gateway, then a permitted remote IP, and finally a hostname. This helps separate local configuration, routing, and DNS issues. Follow up with an application-specific test if the application is the real concern.
+
+## Practical activity
+
+Run four pings to your gateway and four to a permitted external hostname. Compare response time and loss. Note that ICMP may be filtered, so use a TCP test such as `Test-NetConnection` when testing a specific service.
+
+## My understanding
+
+Explain what a successful ping proves and list two things it does not prove.

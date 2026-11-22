@@ -51,3 +51,19 @@ Use a subnet calculator only after doing the calculation manually. Compare resul
 ## Completion criteria
 
 You can calculate the mask, block size, network address, broadcast address, and host range for common prefixes.
+
+## Exercise 5 — divide a /24 into /28 subnets
+
+A `/28` has 16 total addresses and a block size of 16 in the final octet. The subnet network addresses are `.0`, `.16`, `.32`, `.48`, and so on. For a conventional subnet, each block has a network address and broadcast address, leaving 14 usable host addresses.
+
+## Exercise 6 — variable-length prefixes
+
+Compare `/24`, `/26`, `/27`, and `/28`. As the prefix length increases, the network portion grows and the number of host bits decreases. This creates smaller subnets and more possible subnet boundaries.
+
+## Verification method
+
+Calculate the prefix and block size manually before using a subnet calculator. Check that the selected host address falls between the network and broadcast addresses. Be aware of special cases such as `/31` point-to-point links and `/32` host routes.
+
+## My understanding
+
+Create two subnets from a `/24` address block for two lab segments. Show the network address, prefix, broadcast address, and conventional usable host range for each. Ensure the subnets do not overlap.

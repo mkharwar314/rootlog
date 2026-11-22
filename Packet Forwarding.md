@@ -48,3 +48,25 @@ Ask:
 - [[Introduction to Switching]]
 - [[ARP Protocol]]
 - [[Default Gateway]]
+
+## 6. A packet's journey across two LANs
+
+A host first decides whether the destination belongs to its local subnet. If it is remote, the host resolves the default gateway's MAC address and builds a frame addressed to that gateway. The IP packet still carries the final destination IP. The router removes the incoming frame, performs a route lookup, and creates a new frame for the next link.
+
+At each routed hop, the Layer 2 header changes. The source and destination IP addresses normally remain end-to-end, except when NAT or another network function changes them.
+
+## 7. MTU and fragmentation considerations
+
+Each link has a Maximum Transmission Unit (MTU). If a packet is too large for a link, behaviour depends on IP version and path-MTU mechanisms. IPv4 routers may fragment packets when permitted; IPv6 routers do not fragment packets in transit. Incorrect MTU settings can cause unusual connectivity problems, especially when large transfers fail but small requests succeed.
+
+## 8. Troubleshooting by layer
+
+Use address configuration checks first, then neighbour discovery, gateway reachability, route lookup, firewall inspection, and finally application testing. This prevents confusing a DNS problem with a routing problem or a closed application port.
+
+## Practical activity
+
+Draw the Ethernet frame and IP packet for a host sending traffic to a remote network. Label which addresses are local-link addresses and which identify the end-to-end IP endpoints.
+
+## My understanding
+
+Explain why a router changes the Ethernet header at every hop but usually does not change the source and destination IP addresses.

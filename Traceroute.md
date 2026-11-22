@@ -47,3 +47,23 @@ Trace a route to a permitted public hostname. Record the first hop, number of vi
 - [[ICMP Protocol]]
 - [[Ping]]
 - [[Routing Tables]]
+
+## 6. Why hops may be missing
+
+A router may forward traffic normally while refusing to send diagnostic ICMP responses, or it may rate-limit them. Some routers also use control-plane policies that treat traceroute probes differently from ordinary traffic. Therefore, asterisks in traceroute output are not proof of packet loss for application traffic.
+
+## 7. Forward and return paths
+
+Traceroute shows responses from routers along the probe path, but the return path for those responses may differ from the outbound path. Load balancing can also cause different probes to follow different paths.
+
+## 8. Use with other tools
+
+Combine traceroute with ping, route-table inspection, DNS checks, and application-specific connectivity tests. If a web service fails but traceroute reaches the destination network, inspect the service port and firewall policy.
+
+## Practical activity
+
+Run `tracert example.com` on Windows or `tracepath example.com` on Linux. Identify the first hop and any hops that do not respond. Write two possible explanations for a missing hop.
+
+## My understanding
+
+Explain how TTL/Hop Limit makes traceroute possible and why a missing response does not necessarily mean the router failed to forward traffic.

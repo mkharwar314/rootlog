@@ -79,3 +79,27 @@ Service/version detection uses probes and response analysis. Results can be inco
 - [[Introduction to Network Analysis]]
 - [[Network Security Labs]]
 - [[Network Troubleshooting Labs]]
+
+## 6. Scan techniques and trade-offs
+
+A TCP connect scan (`-sT`) uses the operating system's connect call and completes a TCP connection when a port is open. A SYN scan (`-sS`) sends SYN probes and interprets responses without completing the full connection in the same way; it generally requires raw-packet privileges. UDP scans are harder to interpret because many services do not respond to arbitrary probes.
+
+## 7. Host discovery is not certainty
+
+Nmap may use ICMP, TCP, or other probes to determine whether a host appears online. Firewalls can block discovery probes, so a host may be marked down even though it is active. In an authorized assessment, use appropriate discovery options and validate important targets through known services.
+
+## 8. Service detection
+
+Nmap's version detection sends probes and compares responses with its service database. It can provide useful service guesses, but banners may be hidden, customized, or misleading. Confirm findings with service configuration or a second source.
+
+## 9. Reporting responsibly
+
+Record the exact target scope, time, scan options, source network, and tool version. Avoid scanning outside the agreed range. Do not describe an open port as a vulnerability without evidence of a weakness.
+
+## Practical activity
+
+Run a small scan against your own lab VM using `nmap -sT -sV -p 22,80,443 <lab-target-ip>`. Compare the result with the services actually installed and listening on the target.
+
+## My understanding
+
+Explain the difference between an open port, a detected service, and a confirmed vulnerability.

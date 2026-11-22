@@ -1,3 +1,5 @@
+# SMTP and Email Protocols
+
 > Understand the protocols used to send, retrieve, and synchronize email.
 
 ## 1. Email protocol roles
@@ -79,4 +81,20 @@ Do not send test messages to strangers or attempt to access another person's mai
 - [[Common Network Ports]]
 - [[Network Security Best Practices]]
 
----
+## 7. SMTP conversation
+
+SMTP is a command-and-response protocol. A simplified session may include a greeting, `EHLO`, sender declaration, recipient declaration, message-data phase, and completion. Real deployments add authentication, policy checks, TLS, spam filtering, and message handling.
+
+The sending server uses DNS MX records to identify mail exchangers for the recipient domain. If a domain has multiple MX records, preference values help determine which server should be tried first.
+
+## 8. Email authentication limitations
+
+SPF checks whether a sending host is authorized by a domain's published policy. DKIM verifies a cryptographic signature associated with a domain. DMARC evaluates alignment and tells receivers how to handle failures. These mechanisms improve domain-level authenticity, but a compromised legitimate mailbox can still send malicious messages.
+
+## 9. Practical analysis
+
+Inspect MX and TXT records for a domain using `dig MX example.com` and `dig TXT example.com`. When reviewing a real email in an authorized mailbox, examine the message headers for the sending path and authentication results. Do not treat a display name or visible From address as proof of sender identity.
+
+## My understanding
+
+Explain the difference between SMTP, IMAP, and POP3. Then describe what SPF, DKIM, and DMARC each contribute and one limitation of each.

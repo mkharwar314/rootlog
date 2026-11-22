@@ -66,3 +66,31 @@ Record the VM network mode, interface, commands, outputs summarized in your own 
 ## Completion criteria
 
 You can inspect interfaces, routes, neighbours, DNS, and local listening sockets without changing network configuration.
+
+## Additional lab — test a TCP service
+
+If `curl` is installed, test an authorized HTTPS endpoint:
+
+```bash
+curl -I --connect-timeout 5 https://example.com
+```
+
+Record whether DNS resolution, connection establishment, TLS negotiation, and the HTTP response succeeded. A failure message can help locate the stage where the request stopped.
+
+## Additional lab — inspect a neighbour entry
+
+After communicating with your gateway, run:
+
+```bash
+ip neigh
+```
+
+Identify the gateway's neighbour entry and its state. States such as REACHABLE, STALE, or DELAY describe neighbour-cache status; they are not direct security verdicts.
+
+## Observation template
+
+Document the command, interface, target, result, interpretation, and limitation. Avoid copying sensitive output such as internal hostnames or public IP details into public repositories.
+
+## My understanding
+
+Explain how the `ip address`, `ip route`, and `ip neigh` commands answer three different networking questions.

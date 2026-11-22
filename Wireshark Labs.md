@@ -53,3 +53,19 @@ Observe handshake metadata. Application payload is normally encrypted; do not ex
 ## Lab report
 
 Include capture interface, time, test traffic, filters, observations, and limitations. Do not include unrelated personal traffic.
+
+## Additional lab — compare DNS and HTTPS visibility
+
+Capture a DNS lookup and then visit an HTTPS test page. Apply the `dns` and `tls` display filters separately. Explain why a traditional DNS query may show the requested name, while HTTPS application content is encrypted. If the device uses DNS over HTTPS or DNS over TLS, ordinary DNS packets may not be visible.
+
+## Additional lab — inspect a TCP stream
+
+Select a TCP packet and choose Follow → TCP Stream. Observe how Wireshark reconstructs the stream. Do not expect readable page content from a normal HTTPS session.
+
+## Lab record
+
+Record the interface, capture start/stop time, generated traffic, filters, packets inspected, and findings. Keep only the traffic required for the exercise.
+
+## My understanding
+
+Explain what metadata can remain visible even when application data is encrypted, and why this does not mean the encryption has failed.

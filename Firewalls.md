@@ -53,3 +53,23 @@ Do not change firewall rules on a remote machine unless you have a safe recovery
 - [[Network Segmentation]]
 - [[Network Access Control]]
 - [[Common Network Ports]]
+
+## 7. Rule evaluation and state
+
+Firewall rules are evaluated according to the product's policy model and rule ordering. Stateful firewalls track connection information, so return traffic for an allowed session may be permitted without a separate broad reverse-direction rule. Exact behaviour differs by platform and configuration.
+
+## 8. Rule design example
+
+If a workstation subnet needs HTTPS access to a server, a narrow rule should specify the source subnet, destination server, TCP protocol, and destination port 443. A rule allowing all traffic from every network to every server is much broader than required.
+
+## 9. Logging and change control
+
+Log denied traffic where it helps investigation, but avoid excessive logging that obscures important events. Every significant rule should have an owner, purpose, scope, and review date. Test changes carefully because an incorrect remote firewall rule can lock administrators out.
+
+## Practical activity
+
+Write three example policies for a lab: allow workstation-to-web-server TCP 443, deny guest-to-management access, and allow DNS only to an approved resolver. Do not apply rules to a production firewall for this exercise.
+
+## My understanding
+
+Explain why a stateful firewall can allow return packets for an established connection and why that does not mean all inbound traffic is allowed.

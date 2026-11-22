@@ -1,13 +1,20 @@
-# ROOTLOG — Remaining Networking Notes
+# ROOTLOG — Expanded Remaining Networking Notes
 
-This archive contains the remaining standalone Markdown notes for Section 03 — Networking, starting at **HTTP and HTTPS** and continuing through the remaining sections of the existing `03 - Networking.md` index.
+This is the expanded replacement for the earlier condensed archive.
 
-## How to use
-1. Extract the ZIP archive.
+## Contents
+- 47 standalone Markdown files.
+- Explanations of operation and protocol behaviour.
+- Security implications and common troubleshooting considerations.
+- Practical exercises and reflection prompts.
+- Obsidian wikilinks to related ROOTLOG notes.
+
+## Import
+1. Extract this ZIP.
 2. Copy all `.md` files directly into the root of your existing ROOTLOG vault.
-3. Do not place them in a folder; the notes are designed for the root-level architecture.
-4. In `03 - Networking.md`, the wikilinks already listed in the index should resolve automatically when filenames match.
+3. Allow Obsidian to merge the files into the vault. If prompted about same-name files, replace the earlier condensed versions with these expanded versions.
+4. Do not create folders; ROOTLOG uses root-level Markdown files.
 
-The archive does not include notes you have already completed, such as the Networking Fundamentals, Network Models, IP Addressing notes, TCP Protocol, or UDP Protocol.
+The files begin with HTTP and HTTPS because the earlier notes through UDP Protocol were already completed. This archive does not duplicate those completed notes.
 
-All examples use documentation/test addresses where appropriate. Run network commands only on systems and networks you own or are explicitly authorized to assess.
+Commands and scans are intended for systems and networks you own or are explicitly authorized to assess. Review each command before running it.

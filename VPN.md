@@ -51,3 +51,23 @@ This lists configured VPN connections for the current user where supported.
 - [[Proxy Servers]]
 - [[Firewalls]]
 - [[Network Segmentation]]
+
+## 6. Tunnelling and routing
+
+A VPN encapsulates traffic so it can travel through an underlying network between tunnel endpoints. Depending on configuration, the client may send only selected private-network traffic through the tunnel (split tunnel) or route most/all traffic through it (full tunnel). DNS routing and IPv6 handling must also be considered to avoid unintended traffic paths.
+
+## 7. Authentication and trust
+
+A VPN tunnel may authenticate devices, users, gateways, or a combination. Strong cryptography is not enough if credentials are weak, endpoints are compromised, or access policy is overly broad. MFA and device posture checks can reduce risk.
+
+## 8. Common troubleshooting points
+
+Check credentials, MFA, client version, gateway reachability, time synchronization, DNS, routes installed by the VPN, and firewall policy. A tunnel can show as connected while a particular internal service remains unreachable due to missing routes or access controls.
+
+## Practical activity
+
+On your own Windows device, inspect configured connections with `Get-VpnConnection`. If you have a legitimate VPN profile, compare the routes before and after connecting. Do not alter organizational VPN settings without authorization.
+
+## My understanding
+
+Explain the difference between a VPN tunnel being established and an application being reachable through that tunnel.

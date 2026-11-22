@@ -55,3 +55,23 @@ dig SOA example.com
 - [[DNS Protocol]]
 - [[DNS Enumeration]]
 - [[Network Services]]
+
+## 6. Delegation and zone boundaries
+
+A parent zone can delegate a subdomain to a different set of authoritative servers. This lets separate teams or providers administer different parts of a namespace. Delegation records in the parent zone point resolvers toward the child zone's name servers.
+
+## 7. Primary and secondary servers
+
+A primary (or source) server is where zone changes are maintained in a traditional primary/secondary model. Secondary servers obtain zone data through transfers and provide authoritative answers as well. Modern DNS hosting can use different management models, but redundancy remains important.
+
+## 8. Operational failure scenarios
+
+A stale A record can direct users to an old host. Incorrect MX records can interrupt email delivery. Missing glue records in certain delegation arrangements can prevent resolvers from locating authoritative servers. Incorrect TTL expectations can make changes appear inconsistent while cached answers remain valid.
+
+## Practical activity
+
+Query `NS`, `SOA`, and `A` records for a test domain. Explain which records identify the authoritative name servers, which provide zone metadata, and which map a host to an IPv4 address.
+
+## My understanding
+
+Draw the DNS hierarchy from root to TLD to authoritative zone. Explain how delegation differs from a simple CNAME alias.

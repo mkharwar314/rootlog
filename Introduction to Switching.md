@@ -45,3 +45,23 @@ Risks include MAC flooding, rogue devices, VLAN misconfiguration, and unauthoriz
 - [[VLAN]]
 - [[MAC Address]]
 - [[Network Segmentation]]
+
+## 6. Unknown unicast and broadcast handling
+
+If a switch does not know the destination MAC address, it normally floods the frame out eligible ports in the same VLAN, except the port on which it arrived. Broadcast frames are also flooded within the VLAN. This is one reason VLAN boundaries matter: they limit the scope of Layer 2 broadcasts.
+
+## 7. MAC address table behaviour
+
+A switch learns from the source MAC address of incoming frames. Entries can age out after a period of inactivity. If a device moves to another port, the switch can relearn the address from the new source traffic.
+
+## 8. Security implications
+
+MAC flooding attempts to overwhelm a switch's MAC table. Port security can limit the number of learned MAC addresses on an access port. 802.1X can require device or user authentication before normal network access is granted.
+
+## Practical activity
+
+On a managed lab switch, inspect the MAC address table and identify which port has learned a test device. If you do not have a managed switch, draw the learning process for two hosts communicating through a switch.
+
+## My understanding
+
+Explain what a switch does when it knows the destination MAC address and what it does when the destination is unknown.

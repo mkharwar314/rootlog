@@ -76,3 +76,23 @@ Identify the query, response, record type, and returned address. DNS over HTTPS 
 - [[Packet Analysis]]
 - [[Network Monitoring]]
 - [[DNS Protocol]]
+
+## 7. Capture filters and display filters
+
+Capture filters use a syntax designed to decide which packets are saved. Display filters use Wireshark's protocol-aware syntax to select packets from a capture already loaded. A capture filter that is too restrictive can permanently omit evidence; a display filter can be changed later without altering the original capture.
+
+## 8. Reading packet layers
+
+Select a packet and expand the protocol tree. For an ordinary TCP web connection, you may see Ethernet, IP, TCP, and TLS or HTTP layers. Each layer adds information needed by the next layer. Compare the packet details with the raw bytes to understand that Wireshark is decoding the original captured data.
+
+## 9. Common limitations
+
+A local capture may miss traffic that does not traverse the selected interface. Hardware offloading can affect how packets appear. Encrypted application data is not normally readable. Packet timestamps depend on the capture system's clock.
+
+## Practical activity — TCP handshake
+
+Capture a connection to a test site and apply `tcp.flags.syn == 1`. Find the initial SYN and, if visible, the SYN-ACK and ACK. Record source/destination addresses and ports. Explain which side initiated the connection.
+
+## My understanding
+
+Explain the difference between a capture filter and a display filter, and why encrypted HTTPS traffic can still reveal some connection metadata.

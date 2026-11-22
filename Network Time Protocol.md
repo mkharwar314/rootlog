@@ -50,3 +50,23 @@ timedatectl
 - [[Common Network Ports]]
 - [[Windows Event Logs]]
 - [[Digital Forensics]]
+
+## 6. Why accurate time matters in security
+
+When investigating an incident, analysts compare endpoint, firewall, authentication, DNS, and application logs. If clocks differ, events may appear out of order. Time synchronization makes correlation more reliable, although investigators must still account for time zones, clock drift, and log timestamp formats.
+
+## 7. NTP hierarchy and configuration
+
+An organization may operate internal time servers that synchronize from approved upstream sources. Internal devices then use those servers, reducing dependence on many separate external sources. Critical systems should use redundant and monitored time sources.
+
+## 8. Troubleshooting time problems
+
+Check the configured source, synchronization status, network reachability, UDP 123 filtering, and local time-service state. Large clock offsets can cause authentication and certificate-validation failures.
+
+## Practical activity
+
+Run `w32tm /query /status` on Windows. Record the source and last successful synchronization time. Explain why a forensic timeline should note the time source and any known clock offset.
+
+## My understanding
+
+Describe how poor time synchronization can complicate a security investigation even when every system has collected logs correctly.

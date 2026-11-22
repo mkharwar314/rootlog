@@ -50,3 +50,23 @@ Draw a simple network with three VLANs. For each pair of zones, document whether
 - [[Firewalls]]
 - [[Network Access Control]]
 - [[Active Directory]]
+
+## 7. Segmentation policy matrix
+
+A useful design tool is a matrix with source zones on one axis and destination zones on the other. For each pair, record required protocols and business justification. For example, workstations may need HTTPS to an application server, while guest devices should have no route to internal server networks.
+
+## 8. Containment value
+
+If one workstation is compromised, segmentation can prevent direct access to domain controllers, backups, and management interfaces. It does not eliminate risk: attackers may use allowed application paths, stolen credentials, or misconfigured exceptions.
+
+## 9. Validation
+
+Test both allowed and denied paths. Confirm that the network enforces the intended policy and that logs show blocked attempts. Review rules after application changes because new dependencies can create broad exceptions.
+
+## Practical activity
+
+Create a three-zone diagram: user, server, and guest. Write at least two allowed flows and two denied flows. Explain what should happen if a guest device attempts to connect to an administrative service.
+
+## My understanding
+
+Explain why a VLAN is useful for separation but does not, by itself, guarantee that devices in different VLANs are securely isolated.

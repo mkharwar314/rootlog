@@ -52,3 +52,25 @@ nmap -oN nmap-lab-results.txt <lab-target-ip>
 ## Report
 
 Record scope, target, command, date/time, discovered hosts, port states, service guesses, and limitations. An open port is not proof of a vulnerability.
+
+## Additional lab — compare port states
+
+On your own isolated lab VM, scan one port known to be listening and one port where no service is configured:
+
+```bash
+nmap -sT -p 22,65000 <lab-target-ip>
+```
+
+Compare the reported states. A firewall may cause a port to appear filtered, so results depend on network policy as well as the target's local service state.
+
+## Additional lab — save evidence
+
+Use `-oN` to save normal output and record the exact command used. Do not edit the original scan output; make a separate working copy for annotations.
+
+## Reporting checklist
+
+Include authorization, target scope, scan time, Nmap version, options, port state, service/version result, validation, and limitations. Avoid claiming that a service is vulnerable based only on its banner.
+
+## My understanding
+
+Explain how you would validate an unexpected open port without immediately running intrusive scripts or exploiting the service.

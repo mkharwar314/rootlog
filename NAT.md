@@ -41,3 +41,23 @@ NAT can hide internal addressing from external observers, but it does not provid
 - [[Firewalls]]
 - [[Network Segmentation]]
 - [[Packet Forwarding]]
+
+## 7. How PAT tracks connections
+
+When an internal host initiates a connection, the NAT device creates a translation entry that associates the internal address and source port with an external address and translated port. Return packets can then be mapped back to the correct internal host. The mapping is stateful and normally expires after inactivity.
+
+## 8. NAT and inbound reachability
+
+An internal host using a private address is not automatically reachable from the Internet. Port forwarding or another explicit mapping may be required. Exposing an internal service through port forwarding increases its attack surface and should be paired with authentication, patching, logging, and source restrictions where possible.
+
+## 9. Troubleshooting NAT
+
+Check the internal host's gateway, the NAT device's translation state, outbound firewall policy, port-forwarding rules, and the return route. A successful outbound connection does not prove that unsolicited inbound traffic can reach the host.
+
+## Practical activity
+
+Draw a packet flow from a private host to a public web server. Label the source/destination IP before NAT and the translated source address after PAT. Then show how the return packet is mapped to the internal host.
+
+## My understanding
+
+Explain the difference between routing, NAT, and firewall filtering. Give an example where a device performs all three functions.

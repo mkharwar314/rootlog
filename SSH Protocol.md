@@ -1,3 +1,5 @@
+# SSH Protocol
+
 > Understand secure remote administration and encrypted command-line access.
 
 ## 1. What is SSH?
@@ -86,4 +88,27 @@ Use SSH only against your own VM or a system for which you have explicit permiss
 - [[Linux Services]]
 - [[Common Network Ports]]
 
----
+## 8. SSH connection sequence
+
+An SSH connection begins with protocol version exchange and key exchange. The client and server negotiate algorithms and establish shared session keys. The client verifies the server's host key, then user authentication takes place. After authentication, the client can request a shell, command execution, file transfer, or forwarding channel.
+
+The server's host key and the user's authentication key serve different purposes. A host key identifies the server; a user key proves the client's identity.
+
+## 9. Public-key authentication
+
+The public key is placed in the server account's authorized-key configuration. The private key remains on the client. During authentication, the client proves possession of the private key without sending the private key itself across the network. A passphrase protects the local private-key file if the device is lost or accessed by another person.
+
+## 10. Troubleshooting
+
+- `Connection timed out`: routing, firewall, host availability, or wrong address may be involved.
+- `Connection refused`: the host may be reachable but no service is listening on that port, or a firewall actively rejected it.
+- `Permission denied`: the SSH service was reached, but authentication or account policy failed.
+- Host-key warning: verify whether the server was legitimately rebuilt or its key rotated before proceeding.
+
+## Practical activity — inspect your client
+
+Run `ssh -V` to identify the client version and `ssh-keygen -t ed25519` only if you need a new key pair. Do not overwrite an existing private key without checking what uses it. In a lab, verify a server fingerprint through a separate trusted channel.
+
+## My understanding
+
+In your own words, distinguish encryption, server host authentication, and user authentication in an SSH session.

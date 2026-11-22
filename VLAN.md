@@ -41,3 +41,27 @@ Use deliberate VLAN assignments, restrict trunk VLAN lists, disable unused ports
 - [[Network Segmentation]]
 - [[NAT]]
 - [[Network Access Control]]
+
+## 6. VLAN tagging
+
+IEEE 802.1Q inserts a VLAN tag into an Ethernet frame on a trunk link. The tag includes a VLAN identifier (VID). The receiving switch uses this information to keep traffic associated with the correct VLAN. Frames on an access link are commonly sent untagged to the end device.
+
+## 7. VLAN design example
+
+A small lab might use VLAN 10 for workstations, VLAN 20 for servers, and VLAN 30 for guests. A Layer 3 switch or router provides gateways for these networks. Firewall or ACL rules can allow workstations to reach approved server ports while preventing guest devices from accessing internal management systems.
+
+## 8. Common misconfigurations
+
+- An access port assigned to the wrong VLAN.
+- A trunk allowing more VLANs than required.
+- Mismatched native VLAN settings.
+- An overly permissive inter-VLAN routing policy.
+- Management interfaces exposed to ordinary user networks.
+
+## Practical activity
+
+Create a small topology diagram with two access switches and one trunk. Label the VLANs allowed on the trunk. Write down which devices should communicate and which flows should be denied.
+
+## My understanding
+
+Explain why two devices in different VLANs normally cannot communicate directly at Layer 2 and what component enables controlled communication between them.

@@ -88,3 +88,23 @@ Commands such as release/renew, interface resets, and route changes can interrup
 - [[IPv6 Addressing]]
 - [[Default Gateway]]
 - [[Network Troubleshooting Labs]]
+
+## 5. Address, route, and DNS are separate configuration areas
+
+An interface can have a valid IP address but an incorrect default gateway. It can have a correct route but an unavailable DNS resolver. It can resolve a hostname but fail to connect to the service. Diagnose each component independently rather than changing all settings together.
+
+## 6. DHCP and static configuration
+
+DHCP supplies configuration dynamically. Static configuration is entered manually and must match the network plan. A manually assigned address inside a DHCP pool can create an address conflict unless the server excludes or reserves it.
+
+## 7. Safe command use
+
+Read-only commands such as `ipconfig /all`, `ip address`, and `ip route` are good first steps. Commands that release leases, reset adapters, or alter routes can disconnect you. Record the original settings and ensure you have a recovery path before making changes.
+
+## Practical activity
+
+Create a short diagnostic record with four fields: interface/address, default route, DNS server, and test result. Use one Windows or Linux device and explain which command produced each value.
+
+## My understanding
+
+Explain how a device can have working IP connectivity but still fail to open a website because of DNS.

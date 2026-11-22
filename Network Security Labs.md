@@ -75,3 +75,25 @@ Capture a short DNS lookup in Wireshark and record the query and response. Keep 
 ## Completion criteria
 
 You can inventory assets, inspect listening services, review firewall state, identify unexpected exposure, and propose a least-privilege network policy.
+
+## Additional lab — create a least-privilege flow policy
+
+For each pair of zones in your lab, write:
+- Source zone and host role.
+- Destination zone and service.
+- Required protocol and port.
+- Business or lab reason.
+- Whether the flow should be logged.
+- What should happen to all other traffic.
+
+## Additional lab — verify a service exposure
+
+Compare the listening sockets on a lab VM with an authorized Nmap scan from another lab VM. Explain why local socket output and remote scan results may differ because of host firewalls, routing, or interface binding.
+
+## Final report quality
+
+Separate evidence from interpretation. Include only relevant outputs, redact secrets, and provide remediation steps that are practical for the lab environment.
+
+## My understanding
+
+Describe one unnecessary exposed service you would remove or restrict, the risk it creates, and how you would verify that the change worked.
