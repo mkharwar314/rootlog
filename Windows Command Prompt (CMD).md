@@ -15,19 +15,12 @@ The executable responsible for CMD is:
 ### Why is CMD important?
 
 - Manage files and directories.
-    
 - View system information.
-    
 - Troubleshoot network problems.
-    
 - Manage running processes.
-    
 - Automate repetitive tasks.
-    
 - Inspect user accounts and permissions.
-    
 - Perform basic cybersecurity investigations.
-    
 
 ### CMD vs GUI
 
@@ -55,29 +48,20 @@ Three common methods:
 **Method 1: Run Dialog**
 
 1. Press `Win + R`.
-    
 2. Type `cmd`.
-    
 3. Press Enter.
-    
 
 **Method 2: Start Menu**
 
 1. Open Start.
-    
 2. Search for Command Prompt.
-    
 3. Click the application.
-    
 
 **Method 3: Administrator CMD**
 
 1. Search for Command Prompt.
-    
 2. Right-click it.
-    
 3. Select Run as administrator.
-    
 
 Administrator mode provides elevated permissions. Use it only when necessary.
 
@@ -92,13 +76,9 @@ C:\Users\Student>
 Explanation:
 
 - `C:` – Current drive.
-    
 - `Users` – Parent directory.
-    
 - `Student` – Current user directory.
-    
 - `>` – Command input separator.
-    
 
 General command structure:
 
@@ -115,9 +95,7 @@ dir /a
 Here:
 
 - `dir` is the command.
-    
 - `/a` is an option.
-    
 
 ### Getting Help
 
@@ -350,17 +328,11 @@ ipconfig /all
 Displays:
 
 - IPv4 address.
-    
 - IPv6 address.
-    
 - Subnet mask.
-    
 - Default gateway.
-    
 - DNS servers.
-    
 - Network adapter information.
-    
 
 ### 10.2 Ping
 
@@ -396,9 +368,7 @@ ipconfig /flushdns
 ```
 
 - `/displaydns` displays cached DNS records.
-    
 - `/flushdns` clears the DNS resolver cache.
-    
 
 ### 10.6 Network Connections
 
@@ -606,9 +576,7 @@ Batch scripting is the process of writing multiple CMD commands into a script fi
 Batch files commonly use:
 
 - `.bat`
-    
 - `.cmd`
-    
 
 They help automate repetitive Windows tasks.
 
@@ -752,19 +720,12 @@ pause
 This script:
 
 1. Creates a report directory on the desktop.
-    
 2. Creates a text report.
-    
 3. Collects date and time.
-    
 4. Collects computer and username information.
-    
 5. Collects Windows system information.
-    
 6. Collects network configuration.
-    
 7. Saves everything in a single report.
-    
 
 **Cybersecurity application:** Basic system inventory and information collection during authorized security assessments.
 
@@ -804,19 +765,12 @@ route print
 Record:
 
 - Computer name.
-    
 - Current user.
-    
 - Network configuration.
-    
 - Active connections.
-    
 - Listening ports.
-    
 - Process IDs.
-    
 - Network routes.
-    
 
 Remember that a process or connection should not be classified as malicious based on one command alone.
 
@@ -850,46 +804,27 @@ The `cls` command is the reliable method to clear the CMD screen.
 ### Beginner Level
 
 - Open Command Prompt.
-    
 - Display your Windows version.
-    
 - Find your computer name.
-    
 - Find your current username.
-    
 - Create a folder called `CMD-Practice`.
-    
 - Create three subdirectories.
-    
 - Create a text file.
-    
 - Copy and rename the file.
-    
 - Display the contents of the file.
-    
 
 ### Intermediate Level
 
 - Display complete system information.
-    
 - Display IP configuration.
-    
 - Test connectivity using ping.
-    
 - Perform DNS lookup.
-    
 - Trace a network route.
-    
 - Display active network connections.
-    
 - Find the PID of a running application.
-    
 - Identify the process associated with that PID.
-    
 - Display local users and groups.
-    
 - Inspect file permissions.
-    
 
 ### Advanced Level
 
