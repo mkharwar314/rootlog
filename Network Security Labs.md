@@ -1,5 +1,3 @@
-# Network Security Labs
-
 > Practice foundational defensive network-security checks in an isolated, authorized environment.
 
 ## Safety and scope
