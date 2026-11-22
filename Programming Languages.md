@@ -7,36 +7,22 @@ A programming language is a formal language used to communicate instructions to 
 It allows developers to write programs that perform tasks such as:
 
 - Performing calculations.
-    
 - Managing files and data.
-    
 - Building websites and applications.
-    
 - Communicating over networks.
-    
 - Automating repetitive tasks.
-    
 - Analyzing security events.
-    
 
 Examples:
 
 - Python
-    
 - C
-    
 - C++
-    
 - Java
-    
 - JavaScript
-    
 - Go
-    
 - Rust
-    
 - SQL
-    
 
 A programming language provides rules and structures that allow humans to express instructions in a form that software tools can translate or execute.
 
@@ -61,17 +47,11 @@ The high-level instruction is easier to read and understand.
 Programming languages help developers:
 
 - Write instructions efficiently.
-    
 - Organize complex programs.
-    
 - Reuse code.
-    
 - Build large applications.
-    
 - Maintain software.
-    
 - Solve problems systematically.
-    
 
 ## 3. Main Components of a Programming Language
 
@@ -118,15 +98,10 @@ A runtime environment provides the components required to execute a program.
 Depending on the language, it may include:
 
 - Runtime libraries.
-    
 - Memory management.
-    
 - Execution engines.
-    
 - Virtual machines.
-    
 - System interfaces.
-    
 
 ## 4. Levels of Programming Languages
 
@@ -145,13 +120,9 @@ Example:
 Characteristics:
 
 - Uses binary instructions.
-    
 - Processor-specific.
-    
 - Difficult for humans to read.
-    
 - Does not require translation from a higher-level language at execution time.
-    
 
 ### 4.2 Assembly Language
 
@@ -167,13 +138,9 @@ ADD AX, 20
 Characteristics:
 
 - Uses short instruction names.
-    
 - Closely related to processor architecture.
-    
 - Requires an assembler.
-    
 - Useful in low-level system programming and reverse engineering.
-    
 
 ### 4.3 High-Level Languages
 
@@ -191,26 +158,17 @@ print(number1 + number2)
 Characteristics:
 
 - Easier to read and maintain.
-    
 - Provide abstraction from hardware.
-    
 - Often support reusable libraries.
-    
 - Require translation or execution through language-specific tools.
-    
 
 Examples:
 
 - Python
-    
 - Java
-    
 - C++
-    
 - JavaScript
-    
 - Go
-    
 
 ## 5. Programming Paradigms
 
@@ -233,11 +191,8 @@ print(result)
 Characteristics:
 
 - Uses functions and procedures.
-    
 - Follows a sequence of instructions.
-    
 - Encourages structured code.
-    
 
 Examples: C and procedural-style Python.
 
@@ -262,17 +217,11 @@ pc.display()
 Important concepts:
 
 - Classes
-    
 - Objects
-    
 - Encapsulation
-    
 - Inheritance
-    
 - Polymorphism
-    
 - Abstraction
-    
 
 Examples: Java, C++, Python.
 
@@ -293,11 +242,8 @@ print(squares)
 Characteristics:
 
 - Uses functions as important building blocks.
-    
 - Often favors immutable data.
-    
 - Can reduce unintended side effects.
-    
 
 Examples: Haskell and functional features in JavaScript and Python.
 
@@ -330,13 +276,9 @@ document.querySelector("button").addEventListener("click", function () {
 Examples of events:
 
 - Mouse clicks.
-    
 - Keyboard input.
-    
 - Network responses.
-    
 - Timer events.
-    
 
 Commonly used in web applications and graphical interfaces.
 
@@ -368,11 +310,8 @@ Program Execution
 Advantages:
 
 - Can provide efficient execution.
-    
 - Some errors are detected before execution.
-    
 - Can produce standalone executables.
-    
 
 Examples include typical C and C++ compilation workflows.
 
@@ -395,11 +334,8 @@ Program Execution
 Advantages:
 
 - Convenient development workflow.
-    
 - Often supports interactive execution.
-    
 - Useful for scripting and automation.
-    
 
 Python is commonly described as interpreted, although its standard implementation generally compiles source code into bytecode before executing it using a virtual machine.
 
@@ -453,11 +389,8 @@ float price = 99.5;
 Characteristics:
 
 - Types are explicitly declared or inferred.
-    
 - Many type errors can be detected before execution.
-    
 - Can improve maintainability in large applications.
-    
 
 Examples: C, C++, Java, Go.
 
@@ -477,11 +410,8 @@ The variable can refer to values of different types during execution.
 Characteristics:
 
 - Flexible variable assignment.
-    
 - Less type declaration.
-    
 - Some type errors appear during execution.
-    
 
 Examples: Python and JavaScript.
 
@@ -502,9 +432,7 @@ Python raises a `TypeError` because it does not automatically combine a string a
 Do not confuse these concepts:
 
 - Static typing is not the same as strong typing.
-    
 - Dynamic typing is not the same as weak typing.
-    
 
 They describe different aspects of a language.
 
@@ -517,19 +445,12 @@ General-purpose languages can be used to develop many different kinds of softwar
 Examples:
 
 - Python
-    
 - C
-    
 - C++
-    
 - Java
-    
 - JavaScript
-    
 - Go
-    
 - Rust
-    
 
 ### 8.2 Domain-Specific Languages
 
@@ -576,13 +497,9 @@ What are you building?
 Examples:
 
 - Web application: JavaScript or TypeScript.
-    
 - Automation: Python or PowerShell.
-    
 - Operating system component: C or Rust.
-    
 - Database queries: SQL.
-    
 
 ### 10.2 Performance
 
@@ -595,17 +512,11 @@ C, C++, and Rust are common choices for performance-sensitive systems.
 Consider:
 
 - Memory safety.
-    
 - Type safety.
-    
 - Input validation support.
-    
 - Dependency ecosystem.
-    
 - Security libraries.
-    
 - Available auditing tools.
-    
 
 ### 10.4 Ecosystem
 
@@ -620,15 +531,10 @@ Consider whether the code will be easy to understand, test, update, and maintain
 Consider where and how the application will run:
 
 - Windows
-    
 - Linux
-    
 - Web browser
-    
 - Cloud infrastructure
-    
 - Embedded devices
-    
 
 ## 11. Importance of Programming Languages in Cybersecurity
 
@@ -639,88 +545,59 @@ Programming knowledge is essential for understanding how systems and application
 Python is useful for:
 
 - Automating repetitive tasks.
-    
 - Parsing log files.
-    
 - Processing network data.
-    
 - Working with APIs.
-    
 - Building security scripts.
-    
 
 ### 11.2 C and C++ for Low-Level Security
 
 C and C++ help security professionals understand:
 
 - Memory allocation.
-    
 - Pointers.
-    
 - Buffer overflows.
-    
 - Operating system internals.
-    
 - Binary analysis.
-    
 
 ### 11.3 JavaScript for Web Security
 
 JavaScript knowledge helps understand:
 
 - DOM manipulation.
-    
 - Browser execution.
-    
 - Client-side validation.
-    
 - Cross-Site Scripting (XSS).
-    
 - Web application behavior.
-    
 
 ### 11.4 SQL for Database Security
 
 SQL knowledge helps understand:
 
 - Database queries.
-    
 - Database permissions.
-    
 - Data retrieval.
-    
 - SQL injection.
-    
 - Secure query practices.
-    
 
 ### 11.5 Bash and PowerShell for System Administration
 
 These shell languages are useful for:
 
 - System automation.
-    
 - User management.
-    
 - Log collection.
-    
 - Service monitoring.
-    
 - Security configuration.
-    
 
 ### 11.6 Go and Rust for Security Tools
 
 Go and Rust are increasingly used to build:
 
 - Network utilities.
-    
 - Command-line tools.
-    
 - Security services.
-    
 - System-level applications.
-    
 
 ## 12. Common Misconceptions
 
@@ -768,91 +645,53 @@ Both programs produce:
 Notice the differences:
 
 - Python uses indentation and does not require semicolons.
-    
 - JavaScript commonly uses braces for code blocks and semicolons to terminate statements.
-    
 - Both support variables, arithmetic, and output.
-    
 
 ## 14. Key Takeaways
 
 - Programming languages allow humans to write instructions for computers.
-    
 - Languages have syntax, semantics, and execution environments.
-    
 - Machine, assembly, and high-level languages provide different levels of abstraction.
-    
 - Programming paradigms describe different approaches to organizing code.
-    
 - Compiled and interpreted execution are not always completely separate categories.
-    
 - Static and dynamic typing describe how types are checked.
-    
 - General-purpose and domain-specific languages serve different needs.
-    
 - Language selection depends on purpose, performance, security, ecosystem, and maintainability.
-    
 - Programming knowledge is an important foundation for cybersecurity.
-    
 
 ## 15. Questions for Self-Study
 
 1. What is a programming language?
-    
 2. Why are high-level languages easier to use than machine language?
-    
 3. What is the difference between syntax and semantics?
-    
 4. Explain machine, assembly, and high-level languages.
-    
 5. What is a programming paradigm?
-    
 6. Explain procedural and object-oriented programming.
-    
 7. What is the difference between compiled and interpreted execution?
-    
 8. What is bytecode?
-    
 9. Explain static and dynamic typing.
-    
 10. Why are SQL and HTML considered domain-specific or specialized languages?
-    
 11. Which programming languages are useful in cybersecurity and why?
-    
 12. Why does choosing the correct language matter?
-    
 
 ## 16. Practical Tasks
 
 1. Write down five programming languages and one common use for each.
-    
 2. Compare Python and JavaScript.
-    
 3. Write the same addition program in both languages.
-    
 4. Identify which programming languages are commonly used in web security, system programming, and automation.
-    
 5. Explain why programming language knowledge alone does not guarantee application security.
-    
 
 ## Related Notes
 
 - [[Introduction to Programming]]
-    
 - [[Compiler and Interpreter]]
-    
 - [[Programming Paradigms]]
-    
 - [[Data Types]]
-    
 - [[Introduction to Python]]
-    
 - [[Introduction to C]]
-    
 - [[Introduction to JavaScript]]
-    
 - [[Introduction to SQL]]
-    
 - [[Introduction to Secure Coding]]
-    
 - [[Python for Cybersecurity]]
