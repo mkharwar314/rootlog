@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rootlog — mkharwar314</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            canvas: '#090c10',
+            sidebar: '#0d1117',
+            elevated: '#11161f',
+            surface: '#161d29',
+            hairline: '#1b2432',
+            hairlineHover: '#273449',
+            ink: '#e6edf3',
+            prose: '#9fb0c7',
+            muted: '#5c6f87',
+            accent: '#38bdf8',
+            teal: '#2dd4bf',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Marked.js for Markdown Parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+
+  <!-- DOMPurify for Safe Rich HTML Sanitization -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
+  <!-- Highlight.js (Tokyo Night Dark theme) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <style>
+    /* Ambient Midnight Cyan Canvas Glow */
+    .ambient-canvas {
+      background-color: #090c10;
+      background-image: radial-gradient(ellipse 80% 35% at 50% -10%, rgba(56, 189, 248, 0.06), transparent);
+    }
+
+    /* Minimalist Scrollbars */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1b2432;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #273449;
+    }
+
+    /* WikiLink Cool Ice-Cyan Pill */
+    .wikilink-pill {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.09);
+      border-bottom: 1px dashed rgba(45, 212, 191, 0.55);
+      padding: 0.05rem 0.38rem;
+      border-radius: 0.25rem;
+      font-size: 0.92em;
+      text-decoration: none !important;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .wikilink-pill:hover {
+      background: rgba(56, 189, 248, 0.18);
+      color: #67e8f9;
+      border-bottom-color: #2dd4bf;
+    }
+
+    /* Cool Midnight Document Typography */
+    .markdown-body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #b8c7da;
+      line-height: 1.75;
+      font-size: clamp(15px, 1vw + 13px, 16.5px);
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    .markdown-body > *:first-child {
+      margin-top: 0 !important;
+    }
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      color: #e6edf3;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      scroll-margin-top: 4rem;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .markdown-body h1 {
+      font-size: clamp(1.45rem, 2.5vw + 1rem, 1.75rem);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #1b2432;
+    }
+    .markdown-body h2 {
+      font-size: clamp(1.2rem, 1.8vw + 0.85rem, 1.35rem);
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid #141c27;
+    }
+    .markdown-body h3 {
+      font-size: clamp(1.05rem, 1.2vw + 0.8rem, 1.125rem);
+    }
+    .markdown-body > *:first-child {
+      margin-top: 0 !important;
+    }
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      color: #e6edf3;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      scroll-margin-top: 4rem;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .markdown-body h1 {
+      font-size: 1.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #1b2432;
+    }
+    .markdown-body h2 {
+      font-size: 1.35rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid #141c27;
+    }
+    .markdown-body h3 {
+      font-size: 1.125rem;
+    }
+    .markdown-body h4 {
+      font-size: 0.95rem;
+      color: #9fb0c7;
+    }
+    .markdown-body p {
+      margin-bottom: 1.25rem;
+    }
+    .markdown-body strong {
+      color: #e6edf3;
+      font-weight: 600;
+    }
+    .markdown-body a {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(56, 189, 248, 0.35);
+      transition: color 0.15s ease, text-decoration-color 0.15s ease;
+    }
+    .markdown-body a:hover {
+      color: #67e8f9;
+      text-decoration-color: #2dd4bf;
+    }
+    .markdown-body ul,
+    .markdown-body ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .markdown-body ul ul,
+    .markdown-body ol ol,
+    .markdown-body ul ol,
+    .markdown-body ol ul {
+      margin-top: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+    .markdown-body ul {
+      list-style-type: disc;
+    }
+    .markdown-body ol {
+      list-style-type: decimal;
+    }
+    .markdown-body li {
+      margin-bottom: 0.4rem;
+      padding-left: 0.15rem;
+    }
+    .markdown-body li::marker {
+      color: #38bdf8;
+    }
+    .markdown-body li:has(> input[type="checkbox"]) {
+      list-style-type: none;
+      margin-left: -1.35rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+    }
+    .markdown-body input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1rem;
+      height: 1rem;
+      margin-top: 0.36rem;
+      border: 1.5px solid #273449;
+      border-radius: 0.25rem;
+      background: #0d1117;
+      display: inline-grid;
+      place-content: center;
+      flex-shrink: 0;
+    }
+    .markdown-body input[type="checkbox"]:checked {
+      background: rgba(45, 212, 191, 0.14);
+      border-color: #2dd4bf;
+    }
+    .markdown-body input[type="checkbox"]:checked::before {
+      content: "✓";
+      color: #2dd4bf;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .markdown-body blockquote {
+      border-left: 2px solid #273449;
+      padding: 0.25rem 0 0.25rem 1rem;
+      margin: 1.25rem 0;
+      color: #9fb0c7;
+    }
+    .markdown-body blockquote > *:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Cool Midnight Left-Bordered Callouts */
+    .markdown-callout {
+      border-left: 2px solid #38bdf8;
+      background: #0d1117;
+      border-top: 1px solid #1b2432;
+      border-right: 1px solid #1b2432;
+      border-bottom: 1px solid #1b2432;
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0.85rem 1.1rem;
+      margin: 1.35rem 0;
+    }
+    .markdown-callout-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.35rem;
+      color: #38bdf8;
+    }
+    .markdown-callout > *:last-child {
+      margin-bottom: 0;
+    }
+    .callout-note { border-left-color: #38bdf8; }
+    .callout-note .markdown-callout-title { color: #38bdf8; }
+    .callout-tip { border-left-color: #2dd4bf; }
+    .callout-tip .markdown-callout-title { color: #2dd4bf; }
+    .callout-important { border-left-color: #818cf8; }
+    .callout-important .markdown-callout-title { color: #818cf8; }
+    .callout-warning { border-left-color: #fbbf24; }
+    .callout-warning .markdown-callout-title { color: #fbbf24; }
+    .callout-caution { border-left-color: #fb7185; }
+    .callout-caution .markdown-callout-title { color: #fb7185; }
+
+    /* Inline Code & Fenced Code Blocks */
+    .markdown-body :not(pre) > code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85em;
+      background: rgba(56, 189, 248, 0.09);
+      color: #67e8f9;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      padding: 0.14rem 0.38rem;
+      border-radius: 0.28rem;
+    }
+    .markdown-body kbd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78em;
+      padding: 0.12rem 0.4rem;
+      color: #e6edf3;
+      background: #11161f;
+      border: 1px solid #273449;
+      border-radius: 0.28rem;
+    }
+    .markdown-body pre {
+      position: relative;
+      background: #11161f !important;
+      border: 1px solid #1b2432;
+      border-radius: 0.5rem;
+      margin: 1.35rem 0;
+      overflow: hidden;
+    }
+    .markdown-body pre code {
+      display: block;
+      padding: 0.95rem 1.15rem;
+      padding-right: 4rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.84rem;
+      line-height: 1.65;
+      background: transparent !important;
+    }
+
+    /* Clean Cool-Slate Tables */
+    .markdown-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.4rem 0;
+      border-radius: 0.5rem;
+      border: 1px solid #1b2432;
+      background: #11161f;
+    }
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .markdown-body th {
+      background: #161d29;
+      color: #e6edf3;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-align: left;
+      padding: 0.65rem 0.9rem;
+      border-bottom: 1px solid #1b2432;
+    }
+    .markdown-body td {
+      padding: 0.6rem 0.9rem;
+      border-bottom: 1px solid #161d29;
+      color: #9fb0c7;
+    }
+    .markdown-body tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Collapsible Details */
+    .markdown-body details {
+      background: #11161f;
+      border: 1px solid #1b2432;
+      border-radius: 0.5rem;
+      padding: 0.7rem 0.95rem;
+      margin: 1.25rem 0;
+    }
+    .markdown-body summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #e6edf3;
+      font-size: 0.92rem;
+    }
+    .markdown-body details[open] summary {
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid #1b2432;
+    }
+
+    .markdown-body hr {
+      border: 0;
+      height: 1px;
+      background: #1b2432;
+      margin: 2rem 0;
+    }
+    .markdown-body img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      border: 1px solid #1b2432;
+      margin: 1.25rem 0;
+    }
+  </style>
+</head>
+
+<body class="ambient-canvas text-ink font-sans antialiased h-[100dvh] flex flex-col overflow-x-hidden overflow-y-hidden selection:bg-accent/25 selection:text-ink">
+
+  <!-- Top Reading Progress Hairline -->
+  <div class="fixed top-0 left-0 right-0 h-[2px] z-50 pointer-events-none bg-transparent">
+    <div id="reading-progress-bar" class="h-full w-0 transition-[width] duration-75" style="background: linear-gradient(90deg, #38bdf8, #2dd4bf);"></div>
+  </div>
+
+  <!-- Minimal 48px Frosted Top Header -->
+  <header class="h-12 bg-[#0d1117]/85 backdrop-blur-md border-b border-hairline px-2.5 sm:px-4 flex items-center justify-between gap-2 sm:gap-3 shrink-0 z-30">
+    <!-- Left: Sidebar Toggle + Repo / File Breadcrumb -->
+    <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
+      <button onclick="toggleSidebar()" class="p-2.5 sm:p-1.5 rounded-md text-muted hover:text-ink hover:bg-elevated active:bg-surface transition shrink-0" title="Toggle sidebar" aria-label="Toggle sidebar">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="flex items-center gap-1.5 text-xs min-w-0 truncate">
+        <button onclick="openSetupModal()" id="header-repo-name" class="font-medium text-ink hover:text-accent transition shrink-0 py-1">
+          rootlog
+        </button>
+        <span class="text-muted/60 shrink-0">/</span>
+        <span id="breadcrumb-path" class="text-prose truncate">README.md</span>
+      </div>
+    </div>
+
+    <!-- Right: Search Trigger + Optional Outline Popover + Settings Gear -->
+    <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+      <button onclick="focusSearchInput()" class="flex items-center gap-2 p-2.5 sm:px-2.5 sm:py-1 rounded-md bg-elevated border border-hairline hover:border-hairlineHover text-xs text-prose hover:text-ink transition" title="Search notes (/ or Cmd+K)" aria-label="Search notes">
+        <svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <span class="hidden sm:inline">Search</span>
+        <kbd class="hidden md:inline font-mono text-[10px] text-muted bg-canvas px-1.5 py-0.2 rounded border border-hairline">/</kbd>
+      </button>
+
+      <!-- Optional Floating Outline Toggle -->
+      <div class="relative">
+        <button id="outline-toggle-btn" onclick="toggleOutlinePopover()" class="p-2.5 sm:p-1.5 rounded-md text-muted hover:text-ink hover:bg-elevated transition" title="Document outline" aria-label="Document outline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h10M4 12h16M4 18h12" />
+          </svg>
+        </button>
+
+        <div id="outline-popover" class="hidden fixed sm:absolute right-3 sm:right-0 top-13 sm:top-auto sm:mt-2 w-[calc(100vw-1.5rem)] max-w-72 sm:w-64 max-h-[65dvh] sm:max-h-80 overflow-y-auto bg-elevated border border-hairline rounded-lg shadow-2xl p-2 z-40">
+          <div class="px-2 py-1 text-[11px] font-medium text-accent border-b border-hairline mb-1">
+            Outline
+          </div>
+          <nav id="toc-container" class="space-y-0.5 text-xs">
+            <p class="text-muted px-2 py-1.5">No headings</p>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Repo Config Gear Button -->
+      <button onclick="openSetupModal()" class="p-2.5 sm:p-1.5 rounded-md text-muted hover:text-ink hover:bg-elevated transition" title="Repository configuration" aria-label="Repository settings">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="flex-1 flex overflow-hidden relative min-w-0">
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="mobile-backdrop" onclick="toggleSidebar(false)" class="fixed inset-0 bg-black/65 backdrop-blur-xs z-30 hidden lg:hidden"></div>
+
+    <!-- Responsive Left Sidebar (Drawer on mobile/tablet, docked 260px/280px on desktop) -->
+    <aside id="left-sidebar" class="fixed lg:static inset-y-0 left-0 z-40 w-[82vw] max-w-[300px] lg:w-[260px] xl:w-[280px] bg-[#0d1117]/95 lg:bg-[#0d1117]/85 backdrop-blur-md border-r border-hairline flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-out shrink-0">
+      <!-- Mobile Drawer Header -->
+      <div class="flex lg:hidden items-center justify-between px-3 py-2.5 border-b border-hairline">
+        <span class="text-xs font-medium text-ink">Notes Explorer</span>
+        <button onclick="toggleSidebar(false)" class="p-2 rounded-md text-muted hover:text-ink hover:bg-elevated transition" aria-label="Close sidebar">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Minimalist Search Input -->
+      <div class="p-2.5 border-b border-hairline flex items-center gap-1.5">
+        <div class="relative flex-1">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Filter notes..."
+            oninput="handleSearchInput(this.value)"
+            class="w-full bg-canvas border border-hairline focus:border-accent rounded-md pl-3 pr-7 py-2 sm:py-1.5 text-xs text-ink placeholder-muted focus:outline-none transition"
+          />
+          <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-2 top-1/2 -translate-y-1/2 p-1 text-muted hover:text-ink text-xs" aria-label="Clear search">
+            ✕
+          </button>
+        </div>
+        <button onclick="refreshRepository()" class="p-2 sm:p-1.5 rounded-md text-muted hover:text-accent hover:bg-elevated transition shrink-0" title="Sync repository" aria-label="Sync repository">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Quiet Collapsible File Tree -->
+      <div id="file-tree-container" class="flex-1 overflow-y-auto overscroll-contain p-2 space-y-0.5 text-[13px]">
+        <!-- Rendered dynamically -->
+      </div>
+    </aside>
+
+    <!-- Centered Distraction-Free Document Canvas -->
+    <main id="reader-scroll-container" onscroll="updateReadingProgress()" class="flex-1 min-w-0 overflow-y-auto overflow-x-hidden scroll-smooth bg-transparent">
+      <!-- Subtle Status Notice (Only shown on connection fallback or errors) -->
+      <div id="status-banner" class="hidden max-w-[740px] mx-auto px-4 sm:px-8 pt-5 sm:pt-6">
+        <div class="px-3.5 py-2.5 rounded-md bg-elevated border border-hairline text-xs text-prose flex items-center justify-between gap-3">
+          <span id="status-banner-msg"></span>
+          <button onclick="hideBanner()" class="p-1 text-muted hover:text-ink shrink-0" aria-label="Dismiss notice">✕</button>
+        </div>
+      </div>
+
+      <!-- Centered Responsive Reading Column -->
+      <div class="max-w-[740px] mx-auto px-4 sm:px-8 py-7 sm:py-12 lg:py-14">
+
+        <!-- Clean Document Header -->
+        <header class="mb-7 sm:mb-8 pb-5 sm:pb-6 border-b border-hairline">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3.5 sm:gap-4">
+            <div class="min-w-0">
+              <h1 id="note-display-title" class="text-xl sm:text-2xl md:text-[28px] font-semibold text-ink tracking-tight leading-snug break-words">
+                Loading...
+              </h1>
+              <!-- Optional Inline Metadata (date · tags) -->
+              <p id="frontmatter-meta-line" class="hidden mt-2 text-xs text-muted font-mono break-words"></p>
+            </div>
+
+            <!-- Subtle Segmented Toggle + Action Icons -->
+            <div class="flex items-center justify-between sm:justify-end gap-1.5 shrink-0 pt-0.5 sm:pt-1">
+              <div class="inline-flex rounded-md bg-elevated p-0.5 border border-hairline text-xs">
+                <button id="btn-mode-rendered" onclick="setViewMode('rendered')" class="px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium bg-surface text-accent transition">
+                  Read
+                </button>
+                <button id="btn-mode-raw" onclick="setViewMode('raw')" class="px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium text-muted hover:text-ink transition">
+                  Raw
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <button onclick="copyActiveNoteMarkdown()" class="p-2 sm:p-1.5 rounded-md text-muted hover:text-accent hover:bg-elevated transition" title="Copy Markdown" aria-label="Copy Markdown">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+
+                <a id="open-github-link" href="https://github.com/mkharwar314/rootlog" target="_blank" rel="noopener noreferrer" class="p-2 sm:p-1.5 rounded-md text-muted hover:text-accent hover:bg-elevated transition" title="Open on GitHub" aria-label="Open on GitHub">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Minimal Loading Skeleton -->
+        <div id="reader-loader" class="hidden space-y-4 py-4">
+          <div class="h-4 bg-elevated rounded w-3/4 animate-pulse"></div>
+          <div class="h-4 bg-elevated rounded w-full animate-pulse"></div>
+          <div class="h-4 bg-elevated rounded w-5/6 animate-pulse"></div>
+          <div class="h-28 bg-elevated rounded-md animate-pulse"></div>
+        </div>
+
+        <!-- Plain Text Notice (For .txt files) -->
+        <div id="txt-render-notice" class="hidden mb-5 px-3 py-2.5 rounded-md bg-elevated border border-hairline flex items-center justify-between gap-2 text-xs text-prose">
+          <span>Plain text file</span>
+          <button id="btn-force-md" onclick="toggleForceMarkdownOnTxt()" class="py-1 text-accent hover:text-teal transition">
+            Render as Markdown
+          </button>
+        </div>
+
+        <!-- Rendered Markdown View -->
+        <article id="markdown-output" class="markdown-body"></article>
+
+        <!-- Raw Text View -->
+        <div id="raw-output-container" class="hidden">
+          <pre class="bg-elevated border border-hairline rounded-lg p-3.5 sm:p-5 overflow-x-auto font-mono text-xs sm:text-[13px] text-ink/90 leading-relaxed whitespace-pre-wrap break-words"><code id="raw-output"></code></pre>
+        </div>
+
+        <!-- Understated Prev / Next Footer Navigation -->
+        <footer id="note-footer-nav" class="mt-12 sm:mt-14 pt-6 border-t border-hairline flex items-center justify-between gap-4 text-xs text-muted">
+          <button id="prev-note-btn" onclick="navigateRelativeNote(-1)" class="py-2 hover:text-accent transition truncate text-left max-w-[46%] disabled:opacity-0 disabled:pointer-events-none">
+            ← Previous
+          </button>
+          <button id="next-note-btn" onclick="navigateRelativeNote(1)" class="py-2 hover:text-accent transition truncate text-right max-w-[46%] disabled:opacity-0 disabled:pointer-events-none">
+            Next →
+          </button>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Minimalist Repository Configuration Modal -->
+  <div id="setup-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-xs p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-elevated border border-hairline rounded-xl w-full max-w-md shadow-2xl overflow-hidden my-auto">
+      <div class="px-4 sm:px-5 py-3.5 border-b border-hairline flex items-center justify-between">
+        <h2 class="text-sm font-medium text-ink">Repository Settings</h2>
+        <button onclick="closeSetupModal()" class="text-muted hover:text-ink text-xs p-2 -mr-1" aria-label="Close settings">✕</button>
+      </div>
+
+      <form id="repo-config-form" onsubmit="saveAndConnectRepo(event)" class="p-4 sm:p-5 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs text-prose mb-1.5">Owner</label>
+            <input
+              id="input-owner"
+              type="text"
+              required
+              value="mkharwar314"
+              placeholder="mkharwar314"
+              class="w-full bg-canvas border border-hairline focus:border-accent rounded-md px-3 py-2 sm:py-1.5 font-mono text-xs text-ink focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs text-prose mb-1.5">Repository</label>
+            <div class="flex gap-1.5">
+              <input
+                id="input-repo"
+                type="text"
+                required
+                value="rootlog"
+                placeholder="rootlog"
+                class="w-full bg-canvas border border-hairline focus:border-accent rounded-md px-3 py-2 sm:py-1.5 font-mono text-xs text-ink focus:outline-none"
+              />
+              <button type="button" onclick="discoverUserRepos()" class="px-3 py-2 sm:px-2.5 sm:py-1.5 rounded-md bg-canvas hover:bg-surface border border-hairline hover:border-hairlineHover text-xs text-prose hover:text-ink shrink-0 transition">
+                List
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Public Repo Picker -->
+        <div id="repo-picker-box" class="hidden bg-canvas border border-hairline rounded-md p-2 space-y-1">
+          <div class="flex items-center justify-between text-[11px] text-muted px-1">
+            <span>Select repository</span>
+            <button type="button" onclick="document.getElementById('repo-picker-box').classList.add('hidden')" class="p-1 hover:text-ink">✕</button>
+          </div>
+          <div id="repo-picker-list" class="max-h-36 overflow-y-auto space-y-0.5 font-mono text-xs"></div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-prose mb-1.5">Branch</label>
+          <input
+            id="input-branch"
+            type="text"
+            value="main"
+            placeholder="main"
+            class="w-full bg-canvas border border-hairline focus:border-accent rounded-md px-3 py-2 sm:py-1.5 font-mono text-xs text-ink focus:outline-none"
+          />
+        </div>
+
+        <div>
+          <label class="block text-xs text-prose mb-1.5">Personal Access Token (Optional)</label>
+          <input
+            id="input-token"
+            type="password"
+            placeholder="ghp_... (for private repos or higher rate limits)"
+            class="w-full bg-canvas border border-hairline focus:border-accent rounded-md px-3 py-2 sm:py-1.5 font-mono text-xs text-ink focus:outline-none"
+          />
+        </div>
+
+        <div class="pt-3 border-t border-hairline flex flex-wrap items-center justify-between gap-3">
+          <button type="button" onclick="activateDemoMode(true)" class="py-1.5 text-xs text-muted hover:text-teal transition">
+            Load sample notes
+          </button>
+
+          <div class="flex items-center gap-2 ml-auto">
+            <button type="button" onclick="closeSetupModal()" class="px-3 py-2 sm:py-1.5 rounded-md text-xs text-muted hover:text-ink transition">
+              Cancel
+            </button>
+            <button type="submit" class="px-4 py-2 sm:px-3.5 sm:py-1.5 rounded-md bg-accent text-canvas font-semibold text-xs hover:opacity-90 transition">
+              Connect
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Minimal Toast -->
+  <div id="toast" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 z-50 transform translate-y-16 opacity-0 transition-all duration-150 pointer-events-none flex justify-center sm:justify-end">
+    <div class="bg-elevated border border-hairlineHover text-ink px-3.5 py-2 rounded-md shadow-lg text-xs flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-teal shrink-0"></span>
+      <span id="toast-message">Copied</span>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. DEFAULT CONFIG & FALLBACK SAMPLE NOTES
+    // =========================================================================
+    const STORAGE_KEY = 'gitvault_config_v2';
+
+    const DEFAULT_CONFIG = {
+      owner: 'mkharwar314',
+      repo: 'rootlog',
+      branch: 'main',
+      token: ''
+    };
+
+    const DEMO_NOTES = [
+      {
+        path: 'README.md',
+        sha: 'demo-readme',
+        content: `---
+title: rootlog
+date: 2026-11-22
+tags: [notes, markdown, github]
+---
+
+A distraction-free Markdown reader connected to \`mkharwar314/rootlog\`.
+
+> [!NOTE]
+> Currently displaying offline sample notes. Click **rootlog** or the settings icon in the top bar to reconnect or update your GitHub repository settings.
+
+## Features
+
+- [x] Rich Markdown rendering with YAML frontmatter and task lists
+- [x] Obsidian-style \`[[WikiLinks]]\` and GitHub callout blocks
+- [x] Relative image and internal document link resolution
+- [x] Keyboard shortcuts (\`/\` or \`Cmd+K\` to search, \`Esc\` to close dialogs)
+
+## Quick Reference
+
+| Shortcut | Action |
+| :--- | :--- |
+| \`/\` or \`Cmd + K\` | Filter notes in sidebar |
+| \`Esc\` | Close modal or outline |
+`
+      },
+      {
+        path: 'Guides/Nmap-Enumeration.md',
+        sha: 'demo-nmap',
+        content: `---
+title: Nmap Enumeration
+category: Security
+tags: [nmap, recon]
+---
+
+Systematic port scanning and service discovery workflow.
+
+> [!TIP]
+> Save scan output in all formats using \`-oA scan_name\` for easy parsing later.
+
+## Two-Stage Scan
+
+\`\`\`bash
+export TARGET=10.10.142.88
+nmap -p- --min-rate 5000 -Pn -n $TARGET -oN all_ports.nmap
+\`\`\`
+
+Run targeted NSE scripts and version detection on discovered ports:
+
+\`\`\`bash
+PORTS=$(grep '^[0-9]' all_ports.nmap | cut -d '/' -f 1 | tr '\\n' ',' | sed 's/,$//')
+nmap -sC -sV -p $PORTS -Pn $TARGET -oN detailed.nmap
+\`\`\`
+`
+      }
+    ];
+
+    // =========================================================================
+    // 2. APPLICATION STATE
+    // =========================================================================
+    let state = {
+      config: { ...DEFAULT_CONFIG },
+      isDemoMode: false,
+      files: [],
+      contentCache: {},
+      activePath: null,
+      viewMode: 'rendered',
+      forceMarkdownTxt: false,
+      searchQuery: '',
+      sidebarCollapsed: false,
+      expandedFolders: new Set()
+    };
+
+    if (typeof marked !== 'undefined' && typeof marked.use === 'function') {
+      marked.use({ gfm: true, breaks: true });
+    }
+
+    // =========================================================================
+    // 3. INITIALIZATION & KEYBOARD SHORTCUTS
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      loadConfigFromStorage();
+      setupKeyboardShortcuts();
+      setupOutsideClickHandlers();
+      setupTouchGestures();
+
+      if (state.config.owner && state.config.repo) {
+        connectToGitHubRepo(state.config);
+      } else {
+        activateDemoMode(false);
+      }
+    });
+
+    function setupTouchGestures() {
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      document.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) return;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+
+      document.addEventListener('touchend', (e) => {
+        if (window.innerWidth >= 1024 || e.changedTouches.length !== 1) return;
+        const deltaX = e.changedTouches[0].clientX - touchStartX;
+        const deltaY = Math.abs(e.changedTouches[0].clientY - touchStartY);
+
+        // Ignore vertical scrolls or diagonal gestures
+        if (deltaY > 50 || Math.abs(deltaX) < 65) return;
+
+        const sidebar = document.getElementById('left-sidebar');
+        const isSidebarOpen = !sidebar.classList.contains('-translate-x-full');
+
+        // Swipe right from left edge opens drawer; swipe left closes drawer
+        if (!isSidebarOpen && touchStartX <= 36 && deltaX > 65) {
+          toggleSidebar(true);
+        } else if (isSidebarOpen && deltaX < -65) {
+          toggleSidebar(false);
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        const sidebar = document.getElementById('left-sidebar');
+        const backdrop = document.getElementById('mobile-backdrop');
+        if (window.innerWidth >= 1024) {
+          backdrop.classList.add('hidden');
+          sidebar.classList.remove('-translate-x-full');
+          sidebar.classList.toggle('hidden', state.sidebarCollapsed);
+        } else {
+          sidebar.classList.remove('hidden');
+        }
+      });
+    }
+
+    function setupOutsideClickHandlers() {
+      document.addEventListener('click', (e) => {
+        const popover = document.getElementById('outline-popover');
+        const btn = document.getElementById('outline-toggle-btn');
+        if (!popover.classList.contains('hidden') && !popover.contains(e.target) && !btn.contains(e.target)) {
+          toggleOutlinePopover(false);
+        }
+      });
+    }
+
+    function setupKeyboardShortcuts() {
+      document.addEventListener('keydown', (e) => {
+        const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+        const isTyping = tag === 'input' || tag === 'textarea' || (e.target && e.target.isContentEditable);
+
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          focusSearchInput();
+          return;
+        }
+
+        if (e.key === '/' && !isTyping) {
+          e.preventDefault();
+          focusSearchInput();
+          return;
+        }
+
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('setup-modal');
+          if (!modal.classList.contains('hidden')) {
+            closeSetupModal();
+            return;
+          }
+          const popover = document.getElementById('outline-popover');
+          if (!popover.classList.contains('hidden')) {
+            toggleOutlinePopover(false);
+            return;
+          }
+          if (window.innerWidth < 1024) {
+            toggleSidebar(false);
+          }
+        }
+      });
+    }
+
+    function focusSearchInput() {
+      if (window.innerWidth < 1024) {
+        toggleSidebar(true);
+      } else if (state.sidebarCollapsed) {
+        toggleSidebar(true);
+      }
+      const input = document.getElementById('search-input');
+      input.focus();
+      input.select();
+    }
+
+    function loadConfigFromStorage() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          state.config = {
+            owner: parsed.owner || DEFAULT_CONFIG.owner,
+            repo: parsed.repo || DEFAULT_CONFIG.repo,
+            branch: parsed.branch || DEFAULT_CONFIG.branch,
+            token: parsed.token || ''
+          };
+        } else {
+          state.config = { ...DEFAULT_CONFIG };
+        }
+      } catch (err) {
+        state.config = { ...DEFAULT_CONFIG };
+      }
+      syncFormWithState();
+    }
+
+    function saveConfigToStorage() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.config));
+      } catch (err) {
+        console.warn('Unable to persist config:', err);
+      }
+    }
+
+    function syncFormWithState() {
+      document.getElementById('input-owner').value = state.config.owner || DEFAULT_CONFIG.owner;
+      document.getElementById('input-repo').value = state.config.repo || DEFAULT_CONFIG.repo;
+      document.getElementById('input-branch').value = state.config.branch || DEFAULT_CONFIG.branch;
+      document.getElementById('input-token').value = state.config.token || '';
+    }
+
+    // =========================================================================
+    // 4. GITHUB REPOSITORY SYNC
+    // =========================================================================
+    function getGitHubHeaders() {
+      const headers = { 'Accept': 'application/vnd.github+json' };
+      if (state.config.token && state.config.token.trim().length > 0) {
+        headers['Authorization'] = `Bearer ${state.config.token.trim()}`;
+      }
+      return headers;
+    }
+
+    async function fetchRepoTreeResponse(owner, repo, branch) {
+      const treeUrl = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/git/trees/${encodeURIComponent(branch)}?recursive=1&_t=${Date.now()}`;
+      return fetch(treeUrl, { headers: getGitHubHeaders(), cache: 'no-store' });
+    }
+
+    async function connectToGitHubRepo(cfg, preserveActiveNote = false) {
+      const owner = cfg.owner.trim();
+      const repo = cfg.repo.trim();
+      let branch = (cfg.branch || 'main').trim();
+      const previousPath = preserveActiveNote ? state.activePath : null;
+
+      if (!owner || !repo) {
+        activateDemoMode(false);
+        return;
+      }
+
+      document.getElementById('header-repo-name').textContent = repo;
+      setLoadingState(true);
+      hideBanner();
+
+      try {
+        let response = await fetchRepoTreeResponse(owner, repo, branch);
+
+        // Automatic fallback from 'main' to 'master'
+        if (response.status === 404 && branch === 'main') {
+          const fallbackRes = await fetchRepoTreeResponse(owner, repo, 'master');
+          if (fallbackRes.ok) {
+            response = fallbackRes;
+            branch = 'master';
+            state.config.branch = 'master';
+            saveConfigToStorage();
+            syncFormWithState();
+          }
+        }
+
+        if (!response.ok) {
+          if (response.status === 403 || response.status === 429) {
+            throw new Error(`GitHub API rate limit reached (${response.status}). Add a Personal Access Token in settings.`);
+          } else if (response.status === 404) {
+            throw new Error(`Repository "${owner}/${repo}" (${branch}) not found.`);
+          } else {
+            throw new Error(`GitHub API error (${response.status}).`);
+          }
+        }
+
+        const data = await response.json();
+        const treeItems = Array.isArray(data.tree) ? data.tree : [];
+
+        const noteFiles = treeItems
+          .filter(item => item.type === 'blob' && /\.(md|markdown|mdx|txt)$/i.test(item.path))
+          .map(item => ({
+            path: item.path,
+            sha: item.sha,
+            url: item.url
+          }))
+          .sort((a, b) => a.path.localeCompare(b.path));
+
+        if (noteFiles.length === 0) {
+          throw new Error(`No Markdown or text notes found in "${owner}/${repo}".`);
+        }
+
+        const previousExpanded = new Set(state.expandedFolders);
+        state.isDemoMode = false;
+        state.files = noteFiles;
+        state.contentCache = {};
+
+        // Preserve open folders on sync, or expand top-level directories on initial load
+        if (preserveActiveNote && previousExpanded.size > 0) {
+          state.expandedFolders = previousExpanded;
+        } else {
+          state.expandedFolders = new Set();
+          noteFiles.forEach(f => {
+            const parts = f.path.split('/');
+            if (parts.length > 1) {
+              state.expandedFolders.add(parts[0]);
+            }
+          });
+        }
+
+        renderFileTree();
+
+        const targetNote =
+          (previousPath && noteFiles.find(f => f.path === previousPath)) ||
+          noteFiles.find(f => /(^|\/)readme\.md$/i.test(f.path)) ||
+          noteFiles[0];
+        await selectNote(targetNote.path);
+      } catch (error) {
+        setLoadingState(false);
+        showBanner(`${error.message} Showing sample notes.`);
+        activateDemoMode(false, true);
+      }
+    }
+
+    function activateDemoMode(showNotification = true, keepBanner = false) {
+      state.isDemoMode = true;
+      state.files = DEMO_NOTES.map(n => ({ path: n.path, sha: n.sha }));
+      state.contentCache = {};
+      DEMO_NOTES.forEach(n => {
+        state.contentCache[n.path] = n.content;
+      });
+      state.expandedFolders = new Set(['Guides']);
+
+      document.getElementById('header-repo-name').textContent = state.config.repo || 'rootlog';
+      if (!keepBanner) hideBanner();
+
+      renderFileTree();
+      selectNote('README.md');
+
+      if (showNotification) {
+        closeSetupModal();
+        showToast('Loaded sample notes');
+      }
+    }
+
+    async function refreshRepository(silent = false) {
+      if (!silent) showToast('Syncing latest notes...');
+      await connectToGitHubRepo(state.config, true);
+      if (!silent) showToast('Up to date');
+    }
+
+    // Automatically re-sync when switching back to this tab after pushing to GitHub
+    let lastAutoSync = Date.now();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && !state.isDemoMode && Date.now() - lastAutoSync > 15000) {
+        lastAutoSync = Date.now();
+        refreshRepository(true);
+      }
+    });
+
+    // =========================================================================
+    // 5. NOTE LOADING & RICH MARKDOWN RENDERING
+    // =========================================================================
+    async function selectNote(filePath) {
+      state.activePath = filePath;
+      state.forceMarkdownTxt = false;
+
+      if (state.viewMode !== 'rendered') {
+        setViewMode('rendered');
+      }
+
+      renderFileTree();
+      updateFooterNavigation();
+
+      if (window.innerWidth < 1024) {
+        toggleSidebar(false);
+      }
+
+      const parts = filePath.split('/');
+      const fileName = parts[parts.length - 1];
+      document.getElementById('breadcrumb-path').textContent = filePath;
+      document.getElementById('note-display-title').textContent = fileName.replace(/\.(md|markdown|mdx|txt)$/i, '');
+
+      const ghLink = document.getElementById('open-github-link');
+      if (state.isDemoMode) {
+        ghLink.href = `https://github.com/${encodeURIComponent(state.config.owner || 'mkharwar314')}/${encodeURIComponent(state.config.repo || 'rootlog')}`;
+      } else {
+        const encodedPath = filePath.split('/').map(encodeURIComponent).join('/');
+        ghLink.href = `https://github.com/${encodeURIComponent(state.config.owner)}/${encodeURIComponent(state.config.repo)}/blob/${encodeURIComponent(state.config.branch || 'main')}/${encodedPath}`;
+      }
+
+      if (state.contentCache[filePath] !== undefined) {
+        renderNoteContent(filePath, state.contentCache[filePath]);
+        return;
+      }
+
+      setLoadingState(true);
+      try {
+        const encodedPath = filePath.split('/').map(encodeURIComponent).join('/');
+        const contentUrl = `https://api.github.com/repos/${encodeURIComponent(state.config.owner)}/${encodeURIComponent(state.config.repo)}/contents/${encodedPath}?ref=${encodeURIComponent(state.config.branch || 'main')}&_t=${Date.now()}`;
+
+        const res = await fetch(contentUrl, { headers: getGitHubHeaders(), cache: 'no-store' });
+        if (!res.ok) {
+          throw new Error(`Unable to load "${filePath}" (${res.status})`);
+        }
+
+        const data = await res.json();
+        let decodedContent = '';
+
+        if (data.encoding === 'base64' && data.content) {
+          decodedContent = decodeBase64UTF8(data.content);
+        } else if (data.download_url) {
+          const rawRes = await fetch(data.download_url);
+          decodedContent = await rawRes.text();
+        }
+
+        state.contentCache[filePath] = decodedContent;
+        renderNoteContent(filePath, decodedContent);
+      } catch (err) {
+        setLoadingState(false);
+        showBanner(err.message);
+      }
+    }
+
+    function decodeBase64UTF8(base64Str) {
+      const cleaned = base64Str.replace(/\s/g, '');
+      const binaryString = atob(cleaned);
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+      }
+      return new TextDecoder('utf-8').decode(bytes);
+    }
+
+    function toggleForceMarkdownOnTxt() {
+      if (!state.activePath || state.contentCache[state.activePath] === undefined) return;
+      state.forceMarkdownTxt = !state.forceMarkdownTxt;
+      renderNoteContent(state.activePath, state.contentCache[state.activePath]);
+    }
+
+    function resolveRepoRelativePath(baseFilePath, relativeUrl) {
+      if (!relativeUrl || /^(https?:|data:|mailto:|#)/i.test(relativeUrl)) {
+        return relativeUrl;
+      }
+      const baseParts = baseFilePath.split('/');
+      baseParts.pop();
+      const relParts = relativeUrl.replace(/^\.\//, '').split('/');
+
+      for (const segment of relParts) {
+        if (segment === '..') {
+          baseParts.pop();
+        } else if (segment !== '.' && segment !== '') {
+          baseParts.push(segment);
+        }
+      }
+      return baseParts.join('/');
+    }
+
+    function transformGitHubCallouts(container) {
+      const labels = {
+        NOTE: { cls: 'callout-note', label: 'Note' },
+        TIP: { cls: 'callout-tip', label: 'Tip' },
+        IMPORTANT: { cls: 'callout-important', label: 'Important' },
+        WARNING: { cls: 'callout-warning', label: 'Warning' },
+        CAUTION: { cls: 'callout-caution', label: 'Caution' }
+      };
+
+      container.querySelectorAll('blockquote').forEach(bq => {
+        const firstP = bq.querySelector('p');
+        if (!firstP) return;
+
+        const match = firstP.innerHTML.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(?:<br\s*\/?>|\n)?/i);
+        if (!match) return;
+
+        const type = match[1].toUpperCase();
+        const cfg = labels[type] || labels.NOTE;
+
+        firstP.innerHTML = firstP.innerHTML.replace(match[0], '').trim();
+        if (!firstP.innerHTML) firstP.remove();
+
+        const wrapper = document.createElement('div');
+        wrapper.className = `markdown-callout ${cfg.cls}`;
+
+        const titleEl = document.createElement('div');
+        titleEl.className = 'markdown-callout-title';
+        titleEl.textContent = cfg.label;
+
+        wrapper.appendChild(titleEl);
+        while (bq.firstChild) {
+          wrapper.appendChild(bq.firstChild);
+        }
+        bq.replaceWith(wrapper);
+      });
+    }
+
+    function enhanceRenderedDOM(container, filePath) {
+      transformGitHubCallouts(container);
+
+      container.querySelectorAll('a[data-wikilink]').forEach(wLink => {
+        const targetRaw = wLink.getAttribute('data-wikilink');
+        wLink.onclick = (e) => {
+          e.preventDefault();
+          openWikiLinkTarget(targetRaw);
+        };
+      });
+
+      container.querySelectorAll('table').forEach(table => {
+        if (table.parentElement && table.parentElement.classList.contains('markdown-table-wrap')) return;
+        const wrap = document.createElement('div');
+        wrap.className = 'markdown-table-wrap';
+        table.parentNode.insertBefore(wrap, table);
+        wrap.appendChild(table);
+      });
+
+      container.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !/^(https?:|data:)/i.test(src) && !state.isDemoMode && state.config.owner && state.config.repo) {
+          const resolved = resolveRepoRelativePath(filePath, src);
+          const encodedPath = resolved.split('/').map(encodeURIComponent).join('/');
+          img.src = `https://raw.githubusercontent.com/${encodeURIComponent(state.config.owner)}/${encodeURIComponent(state.config.repo)}/${encodeURIComponent(state.config.branch || 'main')}/${encodedPath}`;
+        }
+      });
+
+      container.querySelectorAll('a:not([data-wikilink])').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#')) return;
+
+        if (!/^(https?:|mailto:)/i.test(href)) {
+          const resolved = resolveRepoRelativePath(filePath, href);
+          const matchedNote = state.files.find(f => f.path.toLowerCase() === resolved.toLowerCase());
+          if (matchedNote) {
+            link.href = '#';
+            link.onclick = (e) => {
+              e.preventDefault();
+              selectNote(matchedNote.path);
+            };
+            return;
+          } else if (!state.isDemoMode && state.config.owner && state.config.repo) {
+            const encodedPath = resolved.split('/').map(encodeURIComponent).join('/');
+            link.href = `https://github.com/${encodeURIComponent(state.config.owner)}/${encodeURIComponent(state.config.repo)}/blob/${encodeURIComponent(state.config.branch || 'main')}/${encodedPath}`;
+          }
+        }
+
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
+      container.querySelectorAll('pre code').forEach((block) => {
+        if (typeof hljs !== 'undefined') {
+          hljs.highlightElement(block);
+        }
+      });
+      injectCodeCopyButtons(container);
+    }
+
+    function parseYamlFrontmatter(rawText) {
+      const fmMatch = rawText.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+      if (!fmMatch) {
+        return { metadata: null, body: rawText };
+      }
+
+      const yamlBlock = fmMatch[1];
+      const body = rawText.slice(fmMatch[0].length);
+      const metadata = {};
+      let currentArrayKey = null;
+
+      yamlBlock.split(/\r?\n/).forEach(line => {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#')) return;
+
+        if (trimmed.startsWith('- ') && currentArrayKey) {
+          const itemVal = trimmed.slice(2).trim().replace(/^['"]|['"]$/g, '');
+          if (!Array.isArray(metadata[currentArrayKey])) {
+            metadata[currentArrayKey] = [];
+          }
+          metadata[currentArrayKey].push(itemVal);
+          return;
+        }
+
+        const kvMatch = line.match(/^([A-Za-z0-9_-]+)\s*:\s*(.*)$/);
+        if (kvMatch) {
+          const key = kvMatch[1].toLowerCase();
+          const val = kvMatch[2].trim();
+
+          if (val === '') {
+            currentArrayKey = key;
+            metadata[key] = [];
+          } else if (val.startsWith('[') && val.endsWith(']')) {
+            currentArrayKey = null;
+            metadata[key] = val
+              .slice(1, -1)
+              .split(',')
+              .map(s => s.trim().replace(/^['"]|['"]$/g, ''))
+              .filter(Boolean);
+          } else {
+            currentArrayKey = null;
+            metadata[key] = val.replace(/^['"]|['"]$/g, '');
+          }
+        }
+      });
+
+      return { metadata, body };
+    }
+
+    function renderFrontmatterHeader(filePath, metadata) {
+      const parts = filePath.split('/');
+      const defaultTitle = parts[parts.length - 1].replace(/\.(md|markdown|mdx|txt)$/i, '');
+      const titleEl = document.getElementById('note-display-title');
+      const metaLine = document.getElementById('frontmatter-meta-line');
+
+      titleEl.textContent = (metadata && metadata.title) ? metadata.title : defaultTitle;
+
+      if (!metadata || Object.keys(metadata).length === 0) {
+        metaLine.classList.add('hidden');
+        metaLine.textContent = '';
+        return;
+      }
+
+      const segments = [];
+      if (metadata.date) segments.push(String(metadata.date));
+      if (metadata.category) segments.push(String(metadata.category));
+      if (metadata.tags) {
+        const tagList = Array.isArray(metadata.tags)
+          ? metadata.tags
+          : String(metadata.tags).split(',').map(t => t.trim()).filter(Boolean);
+        if (tagList.length > 0) {
+          segments.push(tagList.map(t => `#${t.replace(/^#/, '')}`).join(' '));
+        }
+      }
+
+      if (segments.length > 0) {
+        metaLine.textContent = segments.join('  ·  ');
+        metaLine.classList.remove('hidden');
+      } else {
+        metaLine.classList.add('hidden');
+      }
+    }
+
+    function preprocessObsidianWikiLinks(markdownBody) {
+      const codeTokens = [];
+      const protectedText = markdownBody.replace(/(```[\s\S]*?```|`[^`\n]+`)/g, (match) => {
+        const token = `@@CODE_TOKEN_${codeTokens.length}@@`;
+        codeTokens.push(match);
+        return token;
+      });
+
+      const converted = protectedText.replace(/\[\[([^\]\n]+)\]\]/g, (_, inner) => {
+        const [rawTarget, rawAlias] = inner.split('|');
+        const target = (rawTarget || '').trim();
+        const label = (rawAlias || target.split('/').pop() || target).trim();
+        return `<a href="#wikilink" data-wikilink="${escapeHtml(target)}" class="wikilink-pill">${escapeHtml(label)}</a>`;
+      });
+
+      return converted.replace(/@@CODE_TOKEN_(\d+)@@/g, (_, idx) => codeTokens[Number(idx)]);
+    }
+
+    function openWikiLinkTarget(targetRaw) {
+      const cleaned = targetRaw.split('#')[0].trim().replace(/^\.\//, '');
+      const normalized = cleaned.toLowerCase();
+      const withMd = normalized.endsWith('.md') ? normalized : `${normalized}.md`;
+
+      const match =
+        state.files.find(f => f.path.toLowerCase() === normalized || f.path.toLowerCase() === withMd) ||
+        state.files.find(f => {
+          const fileName = f.path.split('/').pop().toLowerCase();
+          return fileName === normalized || fileName === withMd;
+        });
+
+      if (match) {
+        selectNote(match.path);
+      } else {
+        showToast(`Note "${cleaned}" not found`);
+      }
+    }
+
+    function renderNoteContent(filePath, rawText) {
+      setLoadingState(false);
+      document.getElementById('raw-output').textContent = rawText;
+
+      const mdContainer = document.getElementById('markdown-output');
+      const txtNotice = document.getElementById('txt-render-notice');
+      const forceMdBtn = document.getElementById('btn-force-md');
+      const isPlainTxt = /\.txt$/i.test(filePath);
+
+      if (isPlainTxt) {
+        txtNotice.classList.remove('hidden');
+        forceMdBtn.textContent = state.forceMarkdownTxt ? 'View plain text' : 'Render as Markdown';
+      } else {
+        txtNotice.classList.add('hidden');
+      }
+
+      if (isPlainTxt && !state.forceMarkdownTxt) {
+        renderFrontmatterHeader(filePath, null);
+        mdContainer.innerHTML = `<pre><code class="language-plaintext">${escapeHtml(rawText)}</code></pre>`;
+        injectCodeCopyButtons(mdContainer);
+      } else {
+        const { metadata, body } = parseYamlFrontmatter(rawText);
+        renderFrontmatterHeader(filePath, metadata);
+        const processedBody = preprocessObsidianWikiLinks(body);
+
+        let parsedHtml = '';
+        if (typeof marked !== 'undefined' && typeof marked.parse === 'function') {
+          parsedHtml = marked.parse(processedBody);
+        } else if (typeof marked === 'function') {
+          parsedHtml = marked(processedBody);
+        } else {
+          parsedHtml = `<p>${escapeHtml(processedBody)}</p>`;
+        }
+
+        if (typeof DOMPurify !== 'undefined') {
+          parsedHtml = DOMPurify.sanitize(parsedHtml, {
+            ADD_TAGS: ['kbd', 'details', 'summary', 'input'],
+            ADD_ATTR: ['type', 'checked', 'disabled', 'open', 'target', 'rel', 'data-wikilink', 'class']
+          });
+        }
+
+        mdContainer.innerHTML = parsedHtml;
+        enhanceRenderedDOM(mdContainer, filePath);
+      }
+
+      generateTableOfContents(mdContainer);
+      const scrollEl = document.getElementById('reader-scroll-container');
+      scrollEl.scrollTop = 0;
+      updateReadingProgress();
+    }
+
+    function injectCodeCopyButtons(container) {
+      container.querySelectorAll('pre').forEach((pre) => {
+        const codeEl = pre.querySelector('code');
+        if (!codeEl) return;
+
+        const copyBtn = document.createElement('button');
+        copyBtn.type = 'button';
+        copyBtn.className = 'absolute top-2 right-2 px-2 py-0.5 rounded bg-surface/90 border border-hairline hover:border-hairlineHover text-[11px] font-mono text-prose hover:text-accent transition';
+        copyBtn.textContent = 'Copy';
+        copyBtn.onclick = () => {
+          copyTextToClipboard(codeEl.innerText);
+          copyBtn.textContent = 'Copied';
+          copyBtn.classList.add('text-teal');
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy';
+            copyBtn.classList.remove('text-teal');
+          }, 1500);
+        };
+
+        pre.appendChild(copyBtn);
+      });
+    }
+
+    // =========================================================================
+    // 6. QUIET DIRECTORY TREE & SEARCH FILTER
+    // =========================================================================
+    function handleSearchInput(val) {
+      state.searchQuery = val.trim().toLowerCase();
+      const clearBtn = document.getElementById('clear-search-btn');
+      clearBtn.classList.toggle('hidden', state.searchQuery.length === 0);
+      renderFileTree();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      input.value = '';
+      handleSearchInput('');
+    }
+
+    function getFilteredFiles() {
+      if (!state.searchQuery) return state.files;
+      return state.files.filter(file => {
+        const pathMatch = file.path.toLowerCase().includes(state.searchQuery);
+        const cachedText = state.contentCache[file.path];
+        const contentMatch = cachedText ? cachedText.toLowerCase().includes(state.searchQuery) : false;
+        return pathMatch || contentMatch;
+      });
+    }
+
+    function buildTreeStructure(files) {
+      const root = { name: '', path: '', folders: {}, files: [] };
+
+      files.forEach(file => {
+        const parts = file.path.split('/');
+        let current = root;
+
+        for (let i = 0; i < parts.length - 1; i++) {
+          const folderName = parts[i];
+          const folderPath = parts.slice(0, i + 1).join('/');
+          if (!current.folders[folderName]) {
+            current.folders[folderName] = {
+              name: folderName,
+              path: folderPath,
+              folders: {},
+              files: []
+            };
+          }
+          current = current.folders[folderName];
+        }
+
+        current.files.push({
+          name: parts[parts.length - 1],
+          path: file.path
+        });
+      });
+
+      return root;
+    }
+
+    function renderFileTree() {
+      const container = document.getElementById('file-tree-container');
+      const filteredFiles = getFilteredFiles();
+
+      if (filteredFiles.length === 0) {
+        container.innerHTML = `<p class="px-3 py-6 text-center text-xs text-muted">No matching notes</p>`;
+        return;
+      }
+
+      const tree = buildTreeStructure(filteredFiles);
+      const isSearching = state.searchQuery.length > 0;
+      container.innerHTML = renderTreeNode(tree, 0, isSearching);
+    }
+
+    function renderTreeNode(node, depth, forceExpand) {
+      let html = '';
+
+      const folderKeys = Object.keys(node.folders).sort((a, b) => a.localeCompare(b));
+      for (const key of folderKeys) {
+        const folder = node.folders[key];
+        const isExpanded = forceExpand || state.expandedFolders.has(folder.path);
+        const paddingLeft = depth * 12 + 8;
+
+        html += `
+          <div>
+            <button
+              onclick="toggleFolder('${escapeHtml(folder.path)}')"
+              style="padding-left: ${paddingLeft}px"
+              class="w-full flex items-center gap-1.5 py-2 lg:py-1 pr-2 rounded text-muted hover:text-ink hover:bg-elevated/70 active:bg-elevated transition text-left"
+            >
+              <svg class="w-3 h-3 shrink-0 transition-transform duration-150 ${isExpanded ? 'rotate-90' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+              <span class="truncate font-medium">${escapeHtml(folder.name)}</span>
+            </button>
+            ${isExpanded ? `<div class="border-l border-hairline/70 ml-3">${renderTreeNode(folder, depth + 1, forceExpand)}</div>` : ''}
+          </div>
+        `;
+      }
+
+      const sortedFiles = [...node.files].sort((a, b) => a.name.localeCompare(b.name));
+      for (const file of sortedFiles) {
+        const isActive = state.activePath === file.path;
+        const paddingLeft = depth * 12 + 12;
+        const displayName = file.name.replace(/\.(md|markdown|mdx)$/i, '');
+
+        html += `
+          <button
+            onclick="selectNote('${escapeHtml(file.path)}')"
+            style="padding-left: ${paddingLeft}px"
+            class="relative w-full flex items-center gap-2 py-2 lg:py-1 pr-2 rounded transition text-left ${
+              isActive
+                ? 'bg-elevated text-accent font-medium'
+                : 'text-prose hover:text-ink hover:bg-elevated/60 active:bg-elevated'
+            }"
+          >
+            ${isActive ? '<span class="absolute left-0 top-1.5 bottom-1.5 w-[2px] rounded-full bg-teal"></span>' : ''}
+            <svg class="w-3.5 h-3.5 shrink-0 ${isActive ? 'text-teal' : 'opacity-60'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span class="truncate">${escapeHtml(displayName)}</span>
+          </button>
+        `;
+      }
+
+      return html;
+    }
+
+    function toggleFolder(folderPath) {
+      if (state.expandedFolders.has(folderPath)) {
+        state.expandedFolders.delete(folderPath);
+      } else {
+        state.expandedFolders.add(folderPath);
+      }
+      renderFileTree();
+    }
+
+    // =========================================================================
+    // 7. OUTLINE POPOVER, VIEW MODES & FOOTER NAVIGATION
+    // =========================================================================
+    function generateTableOfContents(container) {
+      const tocEl = document.getElementById('toc-container');
+      const headings = container.querySelectorAll('h1, h2, h3');
+
+      if (headings.length === 0) {
+        tocEl.innerHTML = `<p class="text-muted px-2 py-1">No headings</p>`;
+        return;
+      }
+
+      const items = [];
+      headings.forEach((h, idx) => {
+        const id = `heading-${idx}`;
+        h.id = id;
+        const level = parseInt(h.tagName.substring(1), 10);
+        const indent = level === 1 ? 'pl-2 text-ink font-medium' : level === 2 ? 'pl-4 text-muted' : 'pl-6 text-muted/80';
+
+        items.push(`
+          <a
+            href="#${id}"
+            onclick="scrollToHeading(event, '${id}')"
+            class="block py-1 pr-2 rounded hover:bg-surface hover:text-accent truncate transition ${indent}"
+          >
+            ${escapeHtml(h.textContent)}
+          </a>
+        `);
+      });
+
+      tocEl.innerHTML = items.join('');
+    }
+
+    function scrollToHeading(e, id) {
+      e.preventDefault();
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        toggleOutlinePopover(false);
+      }
+    }
+
+    function toggleOutlinePopover(forceState) {
+      const popover = document.getElementById('outline-popover');
+      const isHidden = popover.classList.contains('hidden');
+      const nextShow = typeof forceState === 'boolean' ? forceState : isHidden;
+      popover.classList.toggle('hidden', !nextShow);
+    }
+
+    function setViewMode(mode) {
+      state.viewMode = mode;
+      const btnRendered = document.getElementById('btn-mode-rendered');
+      const btnRaw = document.getElementById('btn-mode-raw');
+      const mdOut = document.getElementById('markdown-output');
+      const rawOut = document.getElementById('raw-output-container');
+
+      if (mode === 'rendered') {
+        btnRendered.className = 'px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium bg-surface text-accent transition';
+        btnRaw.className = 'px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium text-muted hover:text-ink transition';
+        mdOut.classList.remove('hidden');
+        rawOut.classList.add('hidden');
+      } else {
+        btnRaw.className = 'px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium bg-surface text-accent transition';
+        btnRendered.className = 'px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-[4px] font-medium text-muted hover:text-ink transition';
+        rawOut.classList.remove('hidden');
+        mdOut.classList.add('hidden');
+      }
+    }
+
+    function updateReadingProgress() {
+      const container = document.getElementById('reader-scroll-container');
+      const bar = document.getElementById('reading-progress-bar');
+      if (!container || !bar) return;
+
+      const scrollable = container.scrollHeight - container.clientHeight;
+      if (scrollable <= 0) {
+        bar.style.width = '0%';
+        return;
+      }
+      const pct = Math.min(100, Math.max(0, (container.scrollTop / scrollable) * 100));
+      bar.style.width = `${pct}%`;
+    }
+
+    function updateFooterNavigation() {
+      const idx = state.files.findIndex(f => f.path === state.activePath);
+      const prevBtn = document.getElementById('prev-note-btn');
+      const nextBtn = document.getElementById('next-note-btn');
+
+      if (idx > 0) {
+        const prevTitle = state.files[idx - 1].path.split('/').pop().replace(/\.(md|markdown|mdx|txt)$/i, '');
+        prevBtn.textContent = `← ${prevTitle}`;
+        prevBtn.disabled = false;
+      } else {
+        prevBtn.disabled = true;
+      }
+
+      if (idx >= 0 && idx < state.files.length - 1) {
+        const nextTitle = state.files[idx + 1].path.split('/').pop().replace(/\.(md|markdown|mdx|txt)$/i, '');
+        nextBtn.textContent = `${nextTitle} →`;
+        nextBtn.disabled = false;
+      } else {
+        nextBtn.disabled = true;
+      }
+    }
+
+    function navigateRelativeNote(offset) {
+      const idx = state.files.findIndex(f => f.path === state.activePath);
+      const nextIdx = idx + offset;
+      if (nextIdx >= 0 && nextIdx < state.files.length) {
+        selectNote(state.files[nextIdx].path);
+      }
+    }
+
+    // =========================================================================
+    // 8. SIDEBAR, MODAL & UTILITIES
+    // =========================================================================
+    function toggleSidebar(forceState) {
+      const sidebar = document.getElementById('left-sidebar');
+      const backdrop = document.getElementById('mobile-backdrop');
+
+      if (window.innerWidth < 1024) {
+        const isOpen = !sidebar.classList.contains('-translate-x-full');
+        const nextOpen = typeof forceState === 'boolean' ? forceState : !isOpen;
+        sidebar.classList.toggle('-translate-x-full', !nextOpen);
+        backdrop.classList.toggle('hidden', !nextOpen);
+      } else {
+        const nextVisible = typeof forceState === 'boolean' ? forceState : state.sidebarCollapsed;
+        state.sidebarCollapsed = !nextVisible;
+        sidebar.classList.toggle('hidden', state.sidebarCollapsed);
+      }
+    }
+
+    function openSetupModal() {
+      syncFormWithState();
+      const modal = document.getElementById('setup-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeSetupModal() {
+      const modal = document.getElementById('setup-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    async function saveAndConnectRepo(e) {
+      e.preventDefault();
+      state.config = {
+        owner: document.getElementById('input-owner').value.trim() || 'mkharwar314',
+        repo: document.getElementById('input-repo').value.trim(),
+        branch: document.getElementById('input-branch').value.trim() || 'main',
+        token: document.getElementById('input-token').value.trim()
+      };
+      saveConfigToStorage();
+      closeSetupModal();
+      await connectToGitHubRepo(state.config);
+    }
+
+    async function discoverUserRepos() {
+      const owner = document.getElementById('input-owner').value.trim() || 'mkharwar314';
+      const token = document.getElementById('input-token').value.trim();
+      const pickerBox = document.getElementById('repo-picker-box');
+      const pickerList = document.getElementById('repo-picker-list');
+
+      pickerBox.classList.remove('hidden');
+      pickerList.innerHTML = `<p class="text-muted px-1 py-1">Loading...</p>`;
+
+      try {
+        const headers = { 'Accept': 'application/vnd.github+json' };
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+
+        const res = await fetch(`https://api.github.com/users/${encodeURIComponent(owner)}/repos?sort=updated&per_page=30`, { headers });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const repos = await res.json();
+        if (!Array.isArray(repos) || repos.length === 0) {
+          pickerList.innerHTML = `<p class="text-muted px-1 py-1">No public repositories found.</p>`;
+          return;
+        }
+
+        pickerList.innerHTML = repos.map(r => `
+          <button
+            type="button"
+            onclick="pickDiscoveredRepo('${escapeHtml(r.name)}', '${escapeHtml(r.default_branch || 'main')}')"
+            class="w-full flex items-center justify-between px-2 py-1 rounded hover:bg-elevated text-left text-ink transition"
+          >
+            <span class="truncate">${escapeHtml(r.name)}</span>
+            <span class="text-[11px] text-muted shrink-0 ml-2">${escapeHtml(r.default_branch || 'main')}</span>
+          </button>
+        `).join('');
+      } catch (err) {
+        pickerList.innerHTML = `<p class="text-muted px-1 py-1">Unable to list repositories (${escapeHtml(err.message)}).</p>`;
+      }
+    }
+
+    function pickDiscoveredRepo(repoName, defaultBranch) {
+      document.getElementById('input-repo').value = repoName;
+      document.getElementById('input-branch').value = defaultBranch;
+      document.getElementById('repo-picker-box').classList.add('hidden');
+    }
+
+    function setLoadingState(isLoading) {
+      const loader = document.getElementById('reader-loader');
+      const mdOut = document.getElementById('markdown-output');
+      const rawOut = document.getElementById('raw-output-container');
+
+      if (isLoading) {
+        loader.classList.remove('hidden');
+        mdOut.classList.add('hidden');
+        rawOut.classList.add('hidden');
+      } else {
+        loader.classList.add('hidden');
+        setViewMode(state.viewMode);
+      }
+    }
+
+    function showBanner(message) {
+      const banner = document.getElementById('status-banner');
+      document.getElementById('status-banner-msg').textContent = message;
+      banner.classList.remove('hidden');
+    }
+
+    function hideBanner() {
+      document.getElementById('status-banner').classList.add('hidden');
+    }
+
+    function copyActiveNoteMarkdown() {
+      if (!state.activePath || state.contentCache[state.activePath] === undefined) return;
+      copyTextToClipboard(state.contentCache[state.activePath]);
+      showToast('Markdown copied');
+    }
+
+    function copyTextToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        console.error('Copy failed:', err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2000);
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+</body>
+</html>
