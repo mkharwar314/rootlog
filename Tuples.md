@@ -687,6 +687,6 @@ Use this section to record:
     
 - [[Stacks and Queues]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Python Data Structures]]

@@ -622,7 +622,7 @@ Write down the similarities and differences.
     
 - [[Input Validation]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     

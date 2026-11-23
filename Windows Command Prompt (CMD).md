@@ -894,7 +894,7 @@ The `cls` command is the reliable method to clear the CMD screen.
 - [[Introduction to Computer Networking]]
 - [[01 - Cybersecurity]]
 - [[Linux Command Line]]
-- [[Python Programming]]
+- [[Introduction to Python]]
 - [[Programming Fundamentals]]
 - [[Batch Scripting]]
 
