@@ -737,6 +737,6 @@ Record:
     
 - [[SQL Injection Prevention]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Introduction to Secure Coding]]

@@ -528,6 +528,6 @@ connection.close()
     
 - [[OWASP Top 10]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Database Fundamentals]]
