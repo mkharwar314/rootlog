@@ -415,6 +415,6 @@ Write your code and record the output in your physical notebook.
 - [[Data Types]]
 - [[Operators]]
 - [[Input and Output]]
-- [[Python Programming]]
+- [[Introduction to Python]]
 - [[Python for Cybersecurity]]
 - [[Secure Programming]]

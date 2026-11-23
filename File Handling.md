@@ -652,7 +652,7 @@ Write down:
 
 ## 21. Related Topics
 
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Python File Handling]]
     

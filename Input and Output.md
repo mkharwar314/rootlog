@@ -586,7 +586,7 @@ Write a small input/output program in Python and C. Identify the differences bet
     
 - [[Secure Error Handling]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     

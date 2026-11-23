@@ -608,7 +608,7 @@ Identify how each language defines and executes conditional blocks.
     
 - [[Break and Continue]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     

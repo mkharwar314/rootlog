@@ -585,6 +585,6 @@ Use this section to record:
     
 - [[Time and Space Complexity]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C Programming]]

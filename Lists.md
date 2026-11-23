@@ -804,7 +804,7 @@ Use this section to record:
     
 - [[Linked Lists]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Python Data Structures]]
     

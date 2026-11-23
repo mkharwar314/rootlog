@@ -698,7 +698,7 @@ Use this section to record:
     
 - [[Functions]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Python Modules]]
     

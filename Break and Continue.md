@@ -501,7 +501,7 @@ Create two nested loops. Use `break` in the inner loop and observe whether the o
     
 - [[Log Analysis with Python]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     

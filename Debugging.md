@@ -599,7 +599,7 @@ Record:
 
 - [[Programming Languages]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[Python Exception Handling]]
     

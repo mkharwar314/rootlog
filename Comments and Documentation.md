@@ -611,7 +611,7 @@ Use official documentation as a reference.
     
 - [[Functions and Modular Programming]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     

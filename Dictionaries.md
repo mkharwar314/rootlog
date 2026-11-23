@@ -705,7 +705,7 @@ Complete these tasks using Python:
     
 - [[Python Data Structures]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[JSON]]
     

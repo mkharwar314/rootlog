@@ -643,7 +643,7 @@ Compare their syntax.
     
 - [[Time and Space Complexity]]
     
-- [[Python Programming]]
+- [[Introduction to Python]]
     
 - [[C and C++ Programming]]
     
