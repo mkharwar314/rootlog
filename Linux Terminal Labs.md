@@ -691,7 +691,7 @@ What do I still need to understand?
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Introduction to Linux]]
 - [[Linux Commands]]
 - [[Linux Users and Groups]]
@@ -702,6 +702,6 @@ What do I still need to understand?
 - [[Operating System Security]]
 - [[Windows PowerShell Labs]]
 - [[Windows CMD Labs]]
-- [[07 - Practical Labs]]
+- [[Practical Labs]]
 
 ---

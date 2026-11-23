@@ -177,7 +177,7 @@ Answer in your own words:
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Introduction to Operating Systems]]
 - [[Functions of an Operating System]]
 - [[Kernel]]

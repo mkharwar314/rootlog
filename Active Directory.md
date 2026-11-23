@@ -51,7 +51,7 @@ Document my observations and learning.
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
-- [[03 - Networking]]
+- [[Operating Systems]]
+- [[Networking]]
 - [[Windows PowerShell]]
-- [[07 - Practical Labs]]
+- [[Practical Labs]]

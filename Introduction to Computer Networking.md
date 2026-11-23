@@ -232,6 +232,6 @@ Write your own explanation:
 - [[Peer-to-Peer Model]]
 - [[OSI Model]]
 - [[TCP-IP Model]]
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 
 ---

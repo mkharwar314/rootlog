@@ -185,7 +185,7 @@ Common tools:
 - ExifTool
     
 
-Related note: [[06 - Digital Forensics]]
+Related note: [[Digital Forensics]]
 
 ### 2.6 Malware Analysis Lab
 
@@ -247,7 +247,7 @@ Common components:
 - PowerShell
     
 
-Related note: [[05 - Active Directory]]
+Related note: [[Active Directory]]
 
 ## 3. Building a Cybersecurity Lab
 
@@ -508,7 +508,7 @@ Explain:
 - What you should investigate next.
     
 
-Related note: [[07 - Practical Labs]]
+Related note: [[Practical Labs]]
 
 ## 7. Practical Lab — Inspect Your Own System
 

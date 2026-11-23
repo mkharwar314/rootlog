@@ -265,6 +265,6 @@ Some commands may show different results depending on your account and system co
 - [[Linux Users and Groups]]
 - [[Windows Permissions]]
 - [[Linux Permissions]]
-- [[05 - Active Directory]]
+- [[Active Directory]]
 
 ---

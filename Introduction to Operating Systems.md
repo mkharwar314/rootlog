@@ -134,7 +134,7 @@ Answer these in your own words:
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Functions of an Operating System]]
 - [[Types of Operating Systems]]
 - [[Kernel]]

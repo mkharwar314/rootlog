@@ -200,7 +200,7 @@ Answer in your own words:
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Introduction to Windows]]
 - [[Kernel]]
 - [[System Calls]]

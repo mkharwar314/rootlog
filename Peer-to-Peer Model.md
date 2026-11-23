@@ -205,6 +205,6 @@ Write your own explanations:
 - [[Network Topologies]]
 - [[Network Devices]]
 - [[Network Security]]
-- [[03 - Networking]]
+- [[Networking]]
 
 ---

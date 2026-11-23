@@ -50,7 +50,7 @@ Write my investigation observations.
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
-- [[02 - Operating Systems]]
-- [[03 - Networking]]
-- [[07 - Practical Labs]]
+- [[Cybersecurity]]
+- [[Operating Systems]]
+- [[Networking]]
+- [[Practical Labs]]

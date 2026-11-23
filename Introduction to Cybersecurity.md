@@ -50,10 +50,10 @@ Write what you understood in your own words.
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
 - [[CIA Triad]]
-- [[03 - Networking]]
-- [[02 - Operating Systems]]
+- [[Networking]]
+- [[Operating Systems]]
 
 ---
 

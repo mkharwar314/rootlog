@@ -53,8 +53,8 @@ For every practical experiment, document:
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
-- [[02 - Operating Systems]]
-- [[03 - Networking]]
-- [[05 - Active Directory]]
-- [[06 - Digital Forensics]]
+- [[Cybersecurity]]
+- [[Operating Systems]]
+- [[Networking]]
+- [[Active Directory]]
+- [[Digital Forensics]]

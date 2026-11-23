@@ -73,12 +73,12 @@ Explain in your own words:
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
 - [[Introduction to Cybersecurity]]
 - [[CIA Triad]]
 - [[Cybersecurity Terminology]]
 - [[Types of Cyber Attacks]]
-- [[05 - Active Directory]]
+- [[Active Directory]]
 
 ---
 

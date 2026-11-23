@@ -294,6 +294,6 @@ Some commands may require administrative privileges or may not be available on e
 - [[User Account Management]]
 - [[Service Management]]
 - [[System Updates]]
-- [[06 - Digital Forensics]]
+- [[Digital Forensics]]
 
 ---

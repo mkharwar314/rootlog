@@ -117,12 +117,12 @@ Record questions that arise during learning.
 
 ## Related Sections
 
-- [[01 - Cybersecurity]]
-- [[02 - Operating Systems]]
-- [[04 - Programming]]
-- [[05 - Active Directory]]
-- [[06 - Digital Forensics]]
-- [[07 - Practical Labs]]
+- [[Cybersecurity]]
+- [[Operating Systems]]
+- [[Programming]]
+- [[Active Directory]]
+- [[Digital Forensics]]
+- [[Practical Labs]]
 - [[Resources]]
 
 ---

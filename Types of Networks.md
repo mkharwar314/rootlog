@@ -181,6 +181,6 @@ Write your own explanations:
 - [[Network Architecture]]
 - [[OSI Model]]
 - [[Network Security]]
-- [[03 - Networking]]
+- [[Networking]]
 
 ---

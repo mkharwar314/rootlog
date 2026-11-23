@@ -270,7 +270,7 @@ Some logs may be unavailable because of permissions or logging configuration.
 - [[Patch Management]]
 - [[Windows Event Logs]]
 - [[Digital Forensics]]
-- [[07 - Practical Labs]]
-- [[08 - Research Papers]]
+- [[Practical Labs]]
+- [[Research Papers]]
 
 ---

@@ -238,6 +238,6 @@ Write your own explanations:
 - [[DNS Protocol]]
 - [[TCP Protocol]]
 - [[Network Security]]
-- [[03 - Networking]]
+- [[Networking]]
 
 ---

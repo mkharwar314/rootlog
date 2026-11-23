@@ -512,7 +512,7 @@ What do I still need to understand?
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Windows Architecture]]
 - [[Windows Command Prompt (CMD)]]
 - [[Windows Users and Groups]]
@@ -522,6 +522,6 @@ What do I still need to understand?
 - [[Windows Event Logs]]
 - [[System Administration]]
 - [[Operating System Security]]
-- [[07 - Practical Labs]]
+- [[Practical Labs]]
 
 ---

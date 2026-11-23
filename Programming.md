@@ -172,10 +172,10 @@
 
 ## Related Sections
 
-- [[01 - Cybersecurity]]
-- [[02 - Operating Systems]]
-- [[03 - Networking]]
-- [[05 - Active Directory]]
-- [[06 - Digital Forensics]]
-- [[07 - Practical Labs]]
+- [[Cybersecurity]]
+- [[Operating Systems]]
+- [[Networking]]
+- [[Active Directory]]
+- [[Digital Forensics]]
+- [[Practical Labs]]
 - [[Resources]]

@@ -36,6 +36,6 @@ Document questions and potential research topics.
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
-- [[03 - Networking]]
-- [[04 - Programming]]
+- [[Cybersecurity]]
+- [[Networking]]
+- [[Programming]]

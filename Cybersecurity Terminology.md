@@ -87,7 +87,7 @@ Write one real-world example for each term.
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
 - [[Introduction to Cybersecurity]]
 - [[CIA Triad]]
 - [[Types of Cyber Attacks]]

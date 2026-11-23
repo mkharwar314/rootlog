@@ -589,7 +589,7 @@ Record your sources and distinguish confirmed facts from reported claims or your
 
 ## 10. Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
     
 - [[Types of Cyber Attacks]]
     
@@ -607,7 +607,7 @@ Record your sources and distinguish confirmed facts from reported claims or your
     
 - [[Security Tools]]
     
-- [[07 - Practical Labs]]
+- [[Practical Labs]]
     
 - [[Resources]]
     

@@ -239,7 +239,7 @@ Common investigation activities:
 
 Forensic work requires evidence integrity, proper documentation, and repeatable procedures.
 
-Related: [[06 - Digital Forensics]]
+Related: [[Digital Forensics]]
 
 ### 2.7 Password Auditing Tools
 
@@ -384,7 +384,7 @@ Operating systems provide built-in tools that are useful for security investigat
 
 These built-in tools are often sufficient for initial system investigation.
 
-Related: [[02 - Operating Systems]]
+Related: [[Operating Systems]]
 
 ## 3. Important Security Tool Comparisons
 
@@ -623,7 +623,7 @@ Record your findings:
 
 ## 10. Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
     
 - [[Network Security]]
     
@@ -633,9 +633,9 @@ Record your findings:
     
 - [[Malware]]
     
-- [[06 - Digital Forensics]]
+- [[Digital Forensics]]
     
-- [[07 - Practical Labs]]
+- [[Practical Labs]]
     
 - [[Resources]]
     

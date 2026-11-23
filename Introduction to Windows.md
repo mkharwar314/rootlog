@@ -181,7 +181,7 @@ Answer in your own words:
 
 ## Related Notes
 
-- [[02 - Operating Systems]]
+- [[Operating Systems]]
 - [[Windows Architecture]]
 - [[Windows File System]]
 - [[Windows Registry]]

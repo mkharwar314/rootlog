@@ -88,12 +88,12 @@ Record questions that arise during learning.
 
 ## Related Sections
 
-- [[01 - Cybersecurity]]
-- [[03 - Networking]]
-- [[04 - Programming]]
-- [[05 - Active Directory]]
-- [[06 - Digital Forensics]]
-- [[07 - Practical Labs]]
+- [[Cybersecurity]]
+- [[Networking]]
+- [[Programming]]
+- [[Active Directory]]
+- [[Digital Forensics]]
+- [[Practical Labs]]
 
 ---
 

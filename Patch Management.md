@@ -280,6 +280,6 @@ Record:
 - [[Linux Services]]
 - [[System Configuration]]
 - [[System Updates]]
-- [[07 - Practical Labs]]
+- [[Practical Labs]]
 
 ---

@@ -77,11 +77,11 @@ Write one real-world example of any three attacks.
 
 ## Related Notes
 
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
 - [[Cybersecurity Terminology]]
 - [[CIA Triad]]
-- [[03 - Networking]]
-- [[07 - Practical Labs]]
+- [[Networking]]
+- [[Practical Labs]]
 
 ---
 

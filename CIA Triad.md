@@ -83,7 +83,7 @@ Write your own explanation:
 ## Related Notes
 
 - [[Introduction to Cybersecurity]]
-- [[01 - Cybersecurity]]
+- [[Cybersecurity]]
 - [[Cybersecurity Terminology]]
 
 ---

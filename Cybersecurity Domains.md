@@ -315,7 +315,7 @@ Main responsibilities:
 - Preparing forensic reports.
     
 
-Related note: [[06 - Digital Forensics]]
+Related note: [[Digital Forensics]]
 
 ### 2.10 Malware Analysis
 
